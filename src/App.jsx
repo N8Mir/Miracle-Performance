@@ -99,17 +99,17 @@ function HomePage() {
   ];
 
   const memberships = [
-    { name: "4 sessions / mo", sub: "Budget-friendly", price: 69, features: ["Any studio", "App booking", "Coach feedback"], cta: "Start Free Week" },
-    { name: "8 sessions / mo", sub: "Most popular", price: 119, features: ["All studio access", "Priority waitlist", "Progress tracking"], cta: "Start Free Week" },
-    { name: "12 sessions / mo", sub: "Train 3x/week", price: 149, features: ["All studio access", "Monthly check-ins", "Coach feedback"], cta: "Start Free Week" },
-    { name: "Unlimited / mo", sub: "Best results", price: 199, features: ["Unlimited classes", "Priority waitlist", "Community events"], cta: "Start Free Week" },
+    { name: "4 sessions / mo", sub: "Budget-friendly", price: 69, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
+    { name: "8 sessions / mo", sub: "Most popular", price: 119, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
+    { name: "12 sessions / mo", sub: "Train 3x/week", price: 149, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
+    { name: "Unlimited / mo", sub: "Best results", price: 199, features: ["Unlimited classes",  "App booking", "Coach feedback"], cta: "Start Free Week" },
   ];
   const packages = [
     { name: "Drop-In", sub: "Single class", price: 22, features: ["Any studio", "Coach guidance"], cta: "Book a Class" },
-    { name: "5 Sessions", sub: "Pack of 5", price: 99, features: ["Flexible", "2-month expiry"], cta: "Get 5-Pack" },
-    { name: "10 Sessions", sub: "Pack of 10", price: 169, features: ["Great value", "3-month expiry"], cta: "Get 10-Pack" },
-    { name: "20 Sessions", sub: "Pack of 20", price: 299, features: ["Best per-class price", "6-month expiry"], cta: "Get 20-Pack" },
-    { name: "30 Sessions", sub: "Pack of 30", price: 399, features: ["Max savings", "9-month expiry"], cta: "Get 30-Pack" },
+    { name: "5 Sessions", sub: "Pack of 5", price: 99, features: ["Flexible", "3-month expiry"], cta: "Get 5-Pack" },
+    { name: "10 Sessions", sub: "Pack of 10", price: 169, features: ["Great value", "1-year expiry"], cta: "Get 10-Pack" },
+    { name: "20 Sessions", sub: "Pack of 20", price: 299, features: ["Great Savings", "1-year expiry"], cta: "Get 20-Pack" },
+    { name: "30 Sessions", sub: "Pack of 30", price: 399, features: ["Best per-class price", "1-year expiry"], cta: "Get 30-Pack" },
   ];
 
   return (
@@ -128,7 +128,7 @@ function HomePage() {
             Miracle Performance — <span className="text-white/80">4 Studios, 1 Membership</span>
           </motion.h1>
           <p className="mt-4 md:mt-6 text-white/80 max-w-2xl">
-            Strength. Conditioning. VersaClimber. Boxing (as one of our classes). Small-group pods with expert coaches so you get real coaching in every class.
+            Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class. Zero intimidation with fun, supportive environment!
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#trial" className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90">Start Free Week</a>
