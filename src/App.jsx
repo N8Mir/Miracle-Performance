@@ -12,17 +12,17 @@ const REVIEW_SCORES = {
 
 function PricingPage() {
   const memberships = [
-    { name: "4 sessions / mo", sub: "Budget-friendly", price: 69, features: ["Any studio", "App booking", "Coach feedback"], cta: "Start Free Week" },
-    { name: "8 sessions / mo", sub: "Most popular", price: 119, features: ["All studio access", "Priority waitlist", "Progress tracking"], cta: "Start Free Week" },
-    { name: "12 sessions / mo", sub: "Train 3x/week", price: 149, features: ["All studio access", "Monthly check-ins", "Coach feedback"], cta: "Start Free Week" },
-    { name: "Unlimited / mo", sub: "Best results", price: 199, features: ["Unlimited classes", "Priority waitlist", "Community events"], cta: "Start Free Week" },
+    { name: "4 sessions / mo", sub: "Budget-friendly", price: 69, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
+    { name: "8 sessions / mo", sub: "Better Resukts", price: 119, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
+    { name: "12 sessions / mo", sub: "Train 3x/week", price: 149, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
+    { name: "Unlimited / mo", sub: "Best results", price: 199, features: ["Unlimited classes", "App booking", "Coach feedback"], cta: "Start Free Week" },
   ];
   const packages = [
     { name: "Drop-In", sub: "Single class", price: 22, features: ["Any studio", "Coach guidance"], cta: "Book a Class" },
-    { name: "5 Sessions", sub: "Pack of 5", price: 99, features: ["Flexible", "2-month expiry"], cta: "Get 5-Pack" },
-    { name: "10 Sessions", sub: "Pack of 10", price: 169, features: ["Great value", "3-month expiry"], cta: "Get 10-Pack" },
-    { name: "20 Sessions", sub: "Pack of 20", price: 299, features: ["Best per-class price", "6-month expiry"], cta: "Get 20-Pack" },
-    { name: "30 Sessions", sub: "Pack of 30", price: 399, features: ["Max savings", "9-month expiry"], cta: "Get 30-Pack" },
+    { name: "5 Sessions", sub: "Pack of 5", price: 99, features: ["Flexible", "1-Year expiry"], cta: "Get 5-Pack" },
+    { name: "10 Sessions", sub: "Pack of 10", price: 169, features: ["Great value", "1-Year expiry"], cta: "Get 10-Pack" },
+    { name: "20 Sessions", sub: "Pack of 20", price: 299, features: ["More Savings", "1-Year expiry"], cta: "Get 20-Pack" },
+    { name: "30 Sessions", sub: "Pack of 30", price: 399, features: ["Best Per Class Price", "1-Year expiry"], cta: "Get 30-Pack" },
   ];
 
   return (
@@ -82,9 +82,9 @@ function PricingPage() {
 function HomePage() {
   const features = [
     { icon: <Dumbbell className="w-6 h-6" />, title: "4 Studios, 1 Membership", desc: "Strength, Conditioning, VersaClimber, and a Boxing class—mix & match your week." },
-    { icon: <Users className="w-6 h-6" />, title: "Pod Training", desc: "Small groups with personal attention in every session." },
-    { icon: <Clock className="w-6 h-6" />, title: "60+ Classes/Week", desc: "Early mornings, lunch hours, and evenings to fit any schedule." },
-    { icon: <Star className="w-6 h-6" />, title: "Degreed Coaches", desc: "Certified trainers who program for progress, not burnout." },
+    { icon: <Users className="w-6 h-6" />, title: "Small Group Training", desc: "Small groups with personal attention in every session." },
+    { icon: <Clock className="w-6 h-6" />, title: "60+ Classes/Week", desc: "Early mornings, evenings, and weekends to fit any schedule." },
+    { icon: <Star className="w-6 h-6" />, title: "Expert Coaches", desc: "Certified trainers who program for progress, not burnout." },
   ];
 
   const trainers = [
@@ -210,9 +210,10 @@ function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold">60+ Classes Every Week</h2>
               <p className="mt-3 text-gray-600">Early mornings, lunch, evenings, and weekends—pick your perfect time. Book on the go with our app.</p>
               <ul className="mt-6 space-y-3 text-gray-700">
-                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> Strength & Conditioning blocks</li>
-                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> VersaClimber intervals</li>
-                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> Boxing class option</li>
+                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> Strength </li>
+                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> Conditioning Interval Training</li>
+                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> VersaClimber </li>
+                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> Boxing </li>
               </ul>
               <div className="mt-6 flex gap-3">
                 <a href="#trial" className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">Start Free Week</a>
