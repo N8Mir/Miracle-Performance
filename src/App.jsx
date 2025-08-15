@@ -251,10 +251,16 @@ function HomePage() {
       </section>
 
       {/* Schedule (Widget only) */}
-      <section id="schedule" className="py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border overflow-hidden p-4 bg-white">
-            <ScheduleWidget />
+     {/* Schedule */}
+<section id="schedule" className="py-16 md:py-20">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl md:text-4xl font-bold">Schedule</h2>
+    <p className="mt-3 text-gray-600 max-w-2xl">
+      View our live class schedule and reserve your spot instantly.
+    </p>
+    <div className="mt-8 rounded-2xl border overflow-hidden p-4 bg-white">
+      <ScheduleWidget />
+
 
             {/* Optional: direct link fallback */}
             <div className="mt-4 text-sm">
@@ -427,6 +433,7 @@ export default function MiraclePerformanceApp() {
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <a href="/#studios" className="hover:text-black">Studios</a>
               <a href="/#trainers" className="hover:text-black">Trainers</a>
+              <a href="/#schedule" className="hover:text-black">Schedule</a>
               <a href="/#pricing" className="hover:text-black">Pricing</a>
               <a href="/#map" className="hover:text-black">Find Us</a>
               <a href="https://www.wellnessliving.com/login/miracleperformance" className="inline-flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-gray-50">
