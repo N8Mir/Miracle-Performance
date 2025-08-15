@@ -165,7 +165,7 @@ function HomePage() {
                 <div className="h-44 bg-cover bg-center" style={{backgroundImage: `url(https://source.unsplash.com/collection/483251/${i})`}} />
                 <div className="p-5">
                   <h3 className="font-semibold text-lg">{s}</h3>
-                  <p className="text-sm text-gray-600 mt-2">Programmed sessions that scale to your level, coached in pods for focused feedback.</p>
+                  <p className="text-sm text-gray-600 mt-2">Programmed sessions that scale to your level, coached in small groups for focused feedback.</p>
                 </div>
               </div>
             ))}
@@ -301,7 +301,7 @@ function HomePage() {
               <div className="mt-4 grid sm:grid-cols-3 gap-4">
                 <a href="https://www.google.com/search?q=miracle+performance+google+reviews" target="_blank" rel="noreferrer" className="p-5 rounded-2xl border bg-white hover:shadow">
                   <div className="font-semibold">Google Reviews</div>
-                  <div className="text-sm text-gray-600 mt-1">Average: <span className="font-semibold">{REVIEW_SCORES.google}</span></div>
+                  <div className="text-sm text-gray-600 mt-1">Average: 5.0 <span className="font-semibold">{REVIEW_SCORES.google}</span></div>
                   <p className="text-xs text-gray-500 mt-2">Opens Google Business listing.</p>
                 </a>
                 <a href="https://classpass.com/studios/miracle-performance-beachwood" target="_blank" rel="noreferrer" className="p-5 rounded-2xl border bg-white hover:shadow">
@@ -311,7 +311,7 @@ function HomePage() {
                 </a>
                 <a href="https://www.wellnessliving.com/rs/review-list.html?k_business=136685&k_skin=26608" target="_blank" rel="noreferrer" className="p-5 rounded-2xl border bg-white hover:shadow">
                   <div className="font-semibold">WellnessLiving Reviews</div>
-                  <div className="text-sm text-gray-600 mt-1">Average: <span className="font-semibold">{REVIEW_SCORES.wellness}</span></div>
+                  <div className="text-sm text-gray-600 mt-1">Average: 5.0 <span className="font-semibold">{REVIEW_SCORES.wellness}</span></div>
                   <p className="text-xs text-gray-500 mt-2">Verified clients on WellnessLiving.</p>
                 </a>
               </div>
@@ -366,7 +366,7 @@ export default function MiraclePerformanceApp() {
                 </div>
                 <span className="font-semibold text-gray-900">Miracle Performance</span>
               </div>
-              <p className="mt-3 max-w-sm">Boutique group training: strength, conditioning, VersaClimber—and a boxing class—coached in small pods for real progress.</p>
+              <p className="mt-3 max-w-sm">Boutique group training: strength, conditioning, VersaClimber, boxing classes —coached in small groups for real progress.</p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-auto">
               <div>
