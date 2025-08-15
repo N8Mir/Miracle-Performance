@@ -180,9 +180,9 @@ function HomePage() {
       </section>
 
       {/* Studios */}
-      <section id="studios" className="py-16 md:py-20 bg-gray-50">
+      <section id="classes" className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Four Studios. Endless Variety.</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Four Classes. Endless Results.</h2>
           <p className="mt-3 text-gray-600 max-w-2xl">
             Mix modalities across your week to build strength, stamina, and mobility without plateaus.
           </p>
@@ -431,7 +431,7 @@ export default function MiraclePerformanceApp() {
               <span className="font-semibold">Miracle Performance</span>
             </Link>
             <nav className="hidden md:flex items-center gap-6 text-sm">
-              <a href="/#studios" className="hover:text-black">Studios</a>
+              <a href="/#classes" className="hover:text-black">Classes</a>
               <a href="/#trainers" className="hover:text-black">Trainers</a>
               <a href="/#schedule" className="hover:text-black">Schedule</a>
               <a href="/#pricing" className="hover:text-black">Pricing</a>
