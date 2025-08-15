@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import { Check, MapPin, Phone, Mail, Dumbbell, Clock, Users, Star, LogIn, Image as ImageIcon, ExternalLink } from "lucide-react";
 
 // --- Review scores (edit here when ratings change) ---
-// ClassPass rating verified on their listing. Google & WellnessLiving can be updated anytime.
 const REVIEW_SCORES = {
-  google: "—", // TODO: update when you have the latest average
-  classpass: "4.9 (2500+)", // verified on ClassPass
-  wellness: "—" // TODO: add your WellnessLiving average if available
+  google: "—", // e.g. "4.8 (120+)"
+  classpass: "4.9 (2500+)",
+  wellness: "—"
 };
 
 function PricingPage() {
@@ -155,7 +154,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Studios (alignment fixed) */}
+      {/* Studios */}
       <section id="studios" className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold">Four Studios. Endless Variety.</h2>
@@ -174,13 +173,22 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Trainers (circle avatars, up to 8) */}
+      {/* Trainers */}
       <section id="trainers" className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold">Meet Our Trainers</h2>
           <p className="mt-3 text-gray-600 max-w-2xl">A coaching team focused on safe progress, great form, and fun sessions.</p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {trainers.map((t, i) => (
+            {[
+              { name: "Nate M.", role: "Head Coach", img: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=400&auto=format&fit=crop", blurb: "Strength & conditioning specialist. Loves building smart, sustainable progress." },
+              { name: "Alex P.", role: "Performance Coach", img: "https://images.unsplash.com/photo-1526401485004-2fda9f4c1589?q=80&w=400&auto=format&fit=crop", blurb: "VersaClimber & conditioning focus. High-energy, form-first." },
+              { name: "Jordan K.", role: "Coach", img: "https://images.unsplash.com/photo-1581009137042-c552e4856971?q=80&w=400&auto=format&fit=crop", blurb: "Technique-driven coaching for all levels." },
+              { name: "Coach 4", role: "Coach", img: "https://images.unsplash.com/photo-1554344728-77cf90d9ed26?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
+              { name: "Coach 5", role: "Coach", img: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
+              { name: "Coach 6", role: "Coach", img: "https://images.unsplash.com/photo-1551292831-023188e78222?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
+              { name: "Coach 7", role: "Coach", img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
+              { name: "Coach 8", role: "Coach", img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
+            ].slice(0,8).map((t, i) => (
               <div key={i} className="rounded-2xl border bg-white p-5 text-center">
                 <div className="mx-auto h-28 w-28 rounded-full overflow-hidden bg-gray-100">
                   <img src={t.img} alt={t.name} className="h-full w-full object-cover" />
@@ -272,7 +280,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Map & Reviews (with scores) */}
+      {/* Map & Reviews */}
       <section id="map" className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8">
