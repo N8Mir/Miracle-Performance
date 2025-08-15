@@ -144,12 +144,17 @@ function HomePage() {
           <p className="mt-3 text-gray-600 max-w-2xl">We design smart training for busy people. Get the support of a coach and the energy of a class without the chaos.</p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((f, i) => (
-              <div key={i} className="p-6 rounded-2xl border shadow-sm bg-white">
-                <div className="w-11 h-11 rounded-xl bg-gray-100 flex items-center justify-center mb-4">{f.icon}</div>
-                <h3 className="font-semibold text-lg">{f.title}</h3>
-                <p className="text-gray-600 mt-2 text-sm">{f.desc}</p>
-              </div>
-            ))}
+  <div
+    key={i}
+    className="p-6 rounded-2xl border shadow-sm bg-[#0B5ED7] text-white"
+  >
+    <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center mb-4 text-[#0B5ED7]">
+      {f.icon}
+    </div>
+    <h3 className="font-semibold text-lg">{f.title}</h3>
+    <p className="mt-2 text-sm">{f.desc}</p>
+  </div>
+))}
           </div>
         </div>
       </section>
