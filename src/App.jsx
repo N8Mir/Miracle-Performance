@@ -1,7 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Check, MapPin, Phone, Mail, Dumbbell, Clock, Users, Star, LogIn, Image as ImageIcon, ExternalLink } from "lucide-react";
+import {
+  Check, MapPin, Phone, Mail, Dumbbell, Clock, Users, Star, LogIn,
+  Image as ImageIcon, ExternalLink
+} from "lucide-react";
+import ScheduleWidget from "./components/ScheduleWidget";
 
 // --- Review scores (edit here when ratings change) ---
 const REVIEW_SCORES = {
@@ -30,7 +34,9 @@ function PricingPage() {
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-4xl font-bold">Pricing</h1>
-          <p className="mt-3 text-gray-600">Update these plan names, prices, and bullets anytime. The big black button text can also be edited per plan.</p>
+          <p className="mt-3 text-gray-600">
+            Update these plan names, prices, and bullets anytime. The big black button text can also be edited per plan.
+          </p>
 
           {/* Memberships */}
           <h2 className="mt-10 text-2xl font-bold">Memberships</h2>
@@ -41,13 +47,19 @@ function PricingPage() {
                   <h3 className="font-semibold text-lg">{p.name}</h3>
                   <span className="text-xs text-gray-500">{p.sub}</span>
                 </div>
-                <p className="text-4xl font-extrabold mt-2">${p.price}<span className="text-base font-medium text-gray-500">/mo</span></p>
+                <p className="text-4xl font-extrabold mt-2">
+                  ${p.price}<span className="text-base font-medium text-gray-500">/mo</span>
+                </p>
                 <ul className="mt-4 space-y-2 text-sm text-gray-700">
                   {p.features.map((f, idx) => (
-                    <li key={idx} className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5"/> {f}</li>
+                    <li key={idx} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 mt-0.5" /> {f}
+                    </li>
                   ))}
                 </ul>
-                <a href="#trial" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">{p.cta}</a>
+                <a href="#trial" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">
+                  {p.cta}
+                </a>
               </div>
             ))}
           </div>
@@ -64,15 +76,21 @@ function PricingPage() {
                 <p className="text-4xl font-extrabold mt-2">${p.price}</p>
                 <ul className="mt-4 space-y-2 text-sm text-gray-700">
                   {p.features.map((f, idx) => (
-                    <li key={idx} className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5"/> {f}</li>
+                    <li key={idx} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 mt-0.5" /> {f}
+                    </li>
                   ))}
                 </ul>
-                <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">{p.cta}</a>
+                <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">
+                  {p.cta}
+                </a>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 text-sm text-gray-500">*These are placeholder prices. Replace with your real rates and add any discounts or annual options.</div>
+          <div className="mt-8 text-sm text-gray-500">
+            *These are placeholder prices. Replace with your real rates and add any discounts or annual options.
+          </div>
         </div>
       </section>
     </main>
@@ -102,7 +120,7 @@ function HomePage() {
     { name: "4 sessions / mo", sub: "Budget-friendly", price: 69, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
     { name: "8 sessions / mo", sub: "Most popular", price: 119, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
     { name: "12 sessions / mo", sub: "Train 3x/week", price: 149, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
-    { name: "Unlimited / mo", sub: "Best results", price: 199, features: ["Unlimited classes",  "App booking", "Coach feedback"], cta: "Start Free Week" },
+    { name: "Unlimited / mo", sub: "Best results", price: 199, features: ["Unlimited classes", "App booking", "Coach feedback"], cta: "Start Free Week" },
   ];
   const packages = [
     { name: "Drop-In", sub: "Single class", price: 22, features: ["Any studio", "Coach guidance"], cta: "Book a Class" },
@@ -124,7 +142,12 @@ function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" />
         <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <motion.h1 initial={{opacity:0, y:10}} animate={{opacity:1, y:0}} transition={{duration:0.5}} className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl md:text-6xl font-extrabold text-white leading-tight"
+          >
             Miracle Performance — <span className="text-white/80">4 Studios, 1 Membership</span>
           </motion.h1>
           <p className="mt-4 md:mt-6 text-white/80 max-w-2xl">
@@ -144,65 +167,59 @@ function HomePage() {
           <p className="mt-3 text-gray-600 max-w-2xl">We design smart training for busy people. Get the support of a coach and the energy of a class without the chaos.</p>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((f, i) => (
-  <div
-    key={i}
-    className="p-6 rounded-2xl border shadow-sm bg-[#0B5ED7] text-white"
-  >
-    <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center mb-4 text-[#0B5ED7]">
-      {f.icon}
-    </div>
-    <h3 className="font-semibold text-lg">{f.title}</h3>
-    <p className="mt-2 text-sm">{f.desc}</p>
-  </div>
-))}
+              <div key={i} className="p-6 rounded-2xl border shadow-sm bg-[#0B5ED7] text-white">
+                <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center mb-4 text-[#0B5ED7]">
+                  {f.icon}
+                </div>
+                <h3 className="font-semibold text-lg">{f.title}</h3>
+                <p className="mt-2 text-sm">{f.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Studios */}
-<section id="studios" className="py-16 md:py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-3xl md:text-4xl font-bold">Four Studios. Endless Variety.</h2>
-    <p className="mt-3 text-gray-600 max-w-2xl">
-      Mix modalities across your week to build strength, stamina, and mobility without plateaus.
-    </p>
-    <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-      {[
-        {
-          name: "Strength",
-          image: "https://source.unsplash.com/collection/483251/0",
-          desc: "Build a stronger, leaner body with expert-led, full-body strength training. Our small group format ensures perfect form, progressive overload, and personalized coaching so you get stronger every week."
-        },
-        {
-          name: "Metabolic Conditioning",
-          image: "https://source.unsplash.com/collection/483251/1",
-          desc: "Boost metabolism, burn fat, and improve athletic performance with a powerful mix of strength and cardio circuits. Designed to push your limits and keep your body burning calories long after class ends."
-        },
-        {
-          name: "VersaClimber",
-          image: "https://source.unsplash.com/collection/483251/2",
-          desc: "Torch calories, skyrocket endurance, and challenge every muscle with the low-impact, high-intensity VersaClimber. This vertical climbing workout delivers unmatched cardio and strength benefits in just 30 minutes."
-        },
-        {
-          name: "Boxing",
-          image: "https://source.unsplash.com/collection/483251/3",
-          desc: "Release stress, improve coordination, and build serious conditioning in a fun, high-energy boxing workout. Learn real technique while hitting pads, bags, and footwork drills — no experience needed."
-        }
-      ].map((studio, i) => (
-        <div key={i} className="rounded-2xl overflow-hidden border bg-white">
-          <div
-            className="h-44 bg-cover bg-center"
-            style={{ backgroundImage: `url(${studio.image})` }}
-          />
-          <div className="p-5">
-            <h3 className="font-semibold text-lg">{studio.name}</h3>
-            <p className="text-sm text-gray-600 mt-2">{studio.desc}</p>
+      <section id="studios" className="py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold">Four Studios. Endless Variety.</h2>
+          <p className="mt-3 text-gray-600 max-w-2xl">
+            Mix modalities across your week to build strength, stamina, and mobility without plateaus.
+          </p>
+          <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {[
+              {
+                name: "Strength",
+                image: "https://source.unsplash.com/collection/483251/0",
+                desc: "Build a stronger, leaner body with expert-led, full-body strength training. Our small group format ensures perfect form, progressive overload, and personalized coaching so you get stronger every week."
+              },
+              {
+                name: "Metabolic Conditioning",
+                image: "https://source.unsplash.com/collection/483251/1",
+                desc: "Boost metabolism, burn fat, and improve athletic performance with a powerful mix of strength and cardio circuits. Designed to push your limits and keep your body burning calories long after class ends."
+              },
+              {
+                name: "VersaClimber",
+                image: "https://source.unsplash.com/collection/483251/2",
+                desc: "Torch calories, skyrocket endurance, and challenge every muscle with the low-impact, high-intensity VersaClimber. This vertical climbing workout delivers unmatched cardio and strength benefits in just 30 minutes."
+              },
+              {
+                name: "Boxing",
+                image: "https://source.unsplash.com/collection/483251/3",
+                desc: "Release stress, improve coordination, and build serious conditioning in a fun, high-energy boxing workout. Learn real technique while hitting pads, bags, and footwork drills — no experience needed."
+              }
+            ].map((studio, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden border bg-white">
+                <div className="h-44 bg-cover bg-center" style={{ backgroundImage: `url(${studio.image})` }} />
+                <div className="p-5">
+                  <h3 className="font-semibold text-lg">{studio.name}</h3>
+                  <p className="text-sm text-gray-600 mt-2">{studio.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Trainers */}
       <section id="trainers" className="py-16 md:py-20">
@@ -219,7 +236,7 @@ function HomePage() {
               { name: "Coach 6", role: "Coach", img: "https://images.unsplash.com/photo-1551292831-023188e78222?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
               { name: "Coach 7", role: "Coach", img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
               { name: "Coach 8", role: "Coach", img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-            ].slice(0,8).map((t, i) => (
+            ].slice(0, 8).map((t, i) => (
               <div key={i} className="rounded-2xl border bg-white p-5 text-center">
                 <div className="mx-auto h-28 w-28 rounded-full overflow-hidden bg-gray-100">
                   <img src={t.img} alt={t.name} className="h-full w-full object-cover" />
@@ -233,45 +250,42 @@ function HomePage() {
         </div>
       </section>
 
-    import ScheduleWidget from './components/ScheduleWidget'; // add at top with other imports
+      {/* Schedule (Widget only) */}
+      <section id="schedule" className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border overflow-hidden p-4 bg-white">
+            <ScheduleWidget />
 
-{/* Schedule */}
-<section id="schedule" className="py-16 md:py-20">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="rounded-2xl border overflow-hidden p-4 bg-white">
-      <ScheduleWidget />
+            {/* Optional: direct link fallback */}
+            <div className="mt-4 text-sm">
+              <a
+                href="https://www.wellnessliving.com/schedule/miracleperformance"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-700 hover:underline"
+              >
+                View full schedule
+              </a>
+            </div>
 
-      {/* Optional: direct link fallback if someone blocks scripts */}
-      <div className="mt-4 text-sm">
-        <a
-          href="https://www.wellnessliving.com/schedule/miracleperformance"
-          target="_blank"
-          rel="noreferrer"
-          className="text-blue-700 hover:underline"
-        >
-          View full schedule
-        </a>
-      </div>
-
-      {/* (Optional) their attribution image, if you want to keep it */}
-      <a
-        href="https://www.wellnessliving.com/fitness/software/"
-        rel="nofollow"
-        style={{ display: 'block', float: 'right', margin: '16px 16px 0 0' }}
-      >
-        <img
-          src="https://d1v4s90m0bk5bo.cloudfront.net/E/S.png"
-          alt="Fitness management software"
-          height="39"
-          width="267"
-          style={{ height: 39, width: 267 }}
-        />
-      </a>
-      <div style={{ clear: 'both' }} />
-    </div>
-  </div>
-</section>
-
+            {/* Optional attribution */}
+            <a
+              href="https://www.wellnessliving.com/fitness/software/"
+              rel="nofollow"
+              style={{ display: 'block', float: 'right', margin: '16px 16px 0 0' }}
+            >
+              <img
+                src="https://d1v4s90m0bk5bo.cloudfront.net/E/S.png"
+                alt="Fitness management software"
+                height="39"
+                width="267"
+                style={{ height: 39, width: 267 }}
+              />
+            </a>
+            <div style={{ clear: 'both' }} />
+          </div>
+        </div>
+      </section>
 
       {/* Pricing on Homepage */}
       <section id="pricing" className="py-16 md:py-20 bg-gray-50">
@@ -287,10 +301,14 @@ function HomePage() {
                   <div className="font-semibold text-lg">{p.name}</div>
                   <span className="text-xs text-gray-500">{p.sub}</span>
                 </div>
-                <p className="text-4xl font-extrabold mt-2">${p.price}<span className="text-base font-medium text-gray-500">/mo</span></p>
+                <p className="text-4xl font-extrabold mt-2">
+                  ${p.price}<span className="text-base font-medium text-gray-500">/mo</span>
+                </p>
                 <ul className="mt-4 space-y-2 text-sm text-gray-700">
                   {p.features.map((f, idx) => (
-                    <li key={idx} className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5"/> {f}</li>
+                    <li key={idx} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 mt-0.5" /> {f}
+                    </li>
                   ))}
                 </ul>
                 <a href="#trial" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">{p.cta}</a>
@@ -309,15 +327,21 @@ function HomePage() {
                 <p className="text-4xl font-extrabold mt-2">${p.price}</p>
                 <ul className="mt-4 space-y-2 text-sm text-gray-700">
                   {p.features.map((f, idx) => (
-                    <li key={idx} className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5"/> {f}</li>
+                    <li key={idx} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 mt-0.5" /> {f}
+                    </li>
                   ))}
                 </ul>
-                <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">{p.cta}</a>
+                <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">
+                  {p.cta}
+                </a>
               </div>
             ))}
           </div>
 
-          <p className="text-xs text-gray-500 mt-4">*Prices are placeholders—replace with your actual rates and discounts.</p>
+          <p className="text-xs text-gray-500 mt-4">
+            *Prices are placeholders—replace with your actual rates and discounts.
+          </p>
         </div>
       </section>
 
@@ -326,22 +350,41 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold">Find Us</h2>
-              <p className="mt-2 text-gray-600 flex items-center gap-2"><MapPin className="w-4 h-4"/>23400 Mercantile Rd, Suite 5, Beachwood, OH 44122</p>
+              <h2 className="text-2xl md:3xl font-bold">Find Us</h2>
+              <p className="mt-2 text-gray-600 flex items-center gap-2">
+                <MapPin className="w-4 h-4" />23400 Mercantile Rd, Suite 5, Beachwood, OH 44122
+              </p>
               <div className="mt-4 rounded-2xl overflow-hidden border">
-                <iframe title="Miracle Performance Map" src="https://www.google.com/maps?q=23400%20Mercantile%20Rd%20Suite%205%20Beachwood%20OH%2044122&output=embed" width="100%" height="320" loading="lazy" style={{border:0}} allowFullScreen />
+                <iframe
+                  title="Miracle Performance Map"
+                  src="https://www.google.com/maps?q=23400%20Mercantile%20Rd%20Suite%205%20Beachwood%20OH%2044122&output=embed"
+                  width="100%"
+                  height="320"
+                  loading="lazy"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                />
               </div>
               <div className="mt-3 text-sm">
-                <a className="inline-flex items-center gap-1 text-blue-700 hover:underline" href="https://www.google.com/maps/search/?api=1&query=Miracle+Performance+Beachwood+OH" target="_blank" rel="noreferrer">View on Google Maps <ExternalLink className="w-4 h-4"/></a>
+                <a
+                  className="inline-flex items-center gap-1 text-blue-700 hover:underline"
+                  href="https://www.google.com/maps/search/?api=1&query=Miracle+Performance+Beachwood+OH"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on Google Maps <ExternalLink className="w-4 h-4" />
+                </a>
               </div>
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold">What Members Say</h2>
+              <h2 className="text-2xl md:3xl font-bold">What Members Say</h2>
               <p className="mt-2 text-gray-600">Read verified reviews and see recent ratings.</p>
               <div className="mt-4 grid sm:grid-cols-3 gap-4">
                 <a href="https://www.google.com/search?q=miracle+performance+google+reviews" target="_blank" rel="noreferrer" className="p-5 rounded-2xl border bg-white hover:shadow">
                   <div className="font-semibold">Google Reviews</div>
-                  <div className="text-sm text-gray-600 mt-1">Average: 5.0 <span className="font-semibold">{REVIEW_SCORES.google}</span></div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    Average: 5.0 <span className="font-semibold">{REVIEW_SCORES.google}</span>
+                  </div>
                   <p className="text-xs text-gray-500 mt-2">Opens Google Business listing.</p>
                 </a>
                 <a href="https://classpass.com/studios/miracle-performance-beachwood" target="_blank" rel="noreferrer" className="p-5 rounded-2xl border bg-white hover:shadow">
@@ -351,11 +394,15 @@ function HomePage() {
                 </a>
                 <a href="https://www.wellnessliving.com/rs/review-list.html?k_business=136685&k_skin=26608" target="_blank" rel="noreferrer" className="p-5 rounded-2xl border bg-white hover:shadow">
                   <div className="font-semibold">WellnessLiving Reviews</div>
-                  <div className="text-sm text-gray-600 mt-1">Average: 5.0 <span className="font-semibold">{REVIEW_SCORES.wellness}</span></div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    Average: 5.0 <span className="font-semibold">{REVIEW_SCORES.wellness}</span>
+                  </div>
                   <p className="text-xs text-gray-500 mt-2">Verified clients on WellnessLiving.</p>
                 </a>
               </div>
-              <p className="text-xs text-gray-500 mt-3">(Embedding third-party reviews directly is often restricted; linking avoids cross-site limitations and keeps pages fast.)</p>
+              <p className="text-xs text-gray-500 mt-3">
+                (Embedding third-party reviews directly is often restricted; linking avoids cross-site limitations and keeps pages fast.)
+              </p>
             </div>
           </div>
         </div>
@@ -382,7 +429,9 @@ export default function MiraclePerformanceApp() {
               <a href="/#trainers" className="hover:text-black">Trainers</a>
               <a href="/#pricing" className="hover:text-black">Pricing</a>
               <a href="/#map" className="hover:text-black">Find Us</a>
-              <a href="https://www.wellnessliving.com/login/miracleperformance" className="inline-flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-gray-50"><LogIn className="w-4 h-4"/>Member Login</a>
+              <a href="https://www.wellnessliving.com/login/miracleperformance" className="inline-flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-gray-50">
+                <LogIn className="w-4 h-4" />Member Login
+              </a>
             </nav>
             <div className="flex items-center gap-2">
               <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="px-3 py-2 rounded-xl bg-blue-700 text-white hover:bg-blue-800">Book Now</a>
@@ -406,7 +455,9 @@ export default function MiraclePerformanceApp() {
                 </div>
                 <span className="font-semibold text-gray-900">Miracle Performance</span>
               </div>
-              <p className="mt-3 max-w-sm">Boutique group training: strength, conditioning, VersaClimber, boxing classes —coached in small groups for real progress.</p>
+              <p className="mt-3 max-w-sm">
+                Boutique group training: strength, conditioning, VersaClimber, boxing classes —coached in small groups for real progress.
+              </p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-auto">
               <div>
@@ -427,9 +478,9 @@ export default function MiraclePerformanceApp() {
               <div>
                 <p className="font-semibold text-gray-900">Contact</p>
                 <ul className="mt-3 space-y-2">
-                  <li className="flex items-center gap-2"><MapPin className="w-4 h-4"/>23400 Mercantile Rd, Suite 5, Beachwood, OH 44122</li>
-                  <li className="flex items-center gap-2"><Phone className="w-4 h-4"/>216-832-9212</li>
-                  <li className="flex items-center gap-2"><Mail className="w-4 h-4"/>Nate@Mpcle.com</li>
+                  <li className="flex items-center gap-2"><MapPin className="w-4 h-4" />23400 Mercantile Rd, Suite 5, Beachwood, OH 44122</li>
+                  <li className="flex items-center gap-2"><Phone className="w-4 h-4" />216-832-9212</li>
+                  <li className="flex items-center gap-2"><Mail className="w-4 h-4" />Nate@Mpcle.com</li>
                 </ul>
               </div>
             </div>
