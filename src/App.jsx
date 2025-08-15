@@ -521,13 +521,55 @@ export default function MiraclePerformanceApp() {
   </ul>
 </div>
               <div>
-                <p className="font-semibold text-gray-900">Contact</p>
-                <ul className="mt-3 space-y-2">
-                  <li className="flex items-center gap-2"><MapPin className="w-4 h-4" />23400 Mercantile Rd, Suite 5, Beachwood, OH 44122</li>
-                  <li className="flex items-center gap-2"><Phone className="w-4 h-4" />216-832-9212</li>
-                  <li className="flex items-center gap-2"><Mail className="w-4 h-4" />Nate@Mpcle.com</li>
-                </ul>
-              </div>
+  <p className="font-semibold text-gray-900">Contact</p>
+  <ul className="mt-3 space-y-2">
+    <li className="flex items-center gap-2">
+      <MapPin className="w-4 h-4" />23400 Mercantile Rd, Suite 5, Beachwood, OH 44122
+    </li>
+    <li className="flex items-center gap-2">
+      <Phone className="w-4 h-4" />216-832-9212
+    </li>
+    <li className="flex items-center gap-2">
+      <Mail className="w-4 h-4" />Nate@Mpcle.com
+    </li>
+  </ul>
+
+  {/* Social Links */}
+  <p className="font-semibold text-gray-900 mt-6">Follow Us</p>
+  <ul className="mt-3 space-y-2">
+    <li className="flex items-center gap-2">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+        alt="Instagram"
+        className="w-5 h-5"
+      />
+      <a
+        href="https://www.instagram.com/miracle_performance/"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-black"
+      >
+        Instagram
+      </a>
+    </li>
+    <li className="flex items-center gap-2">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+        alt="Facebook"
+        className="w-5 h-5"
+      />
+      <a
+        href="https://www.facebook.com/MiraclePerformance/"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-black"
+      >
+        Facebook
+      </a>
+    </li>
+  </ul>
+</div>
+
             </div>
           </div>
         </footer>
