@@ -233,28 +233,15 @@ function HomePage() {
         </div>
       </section>
 
-     {/* Schedule */}
+    import ScheduleWidget from './components/ScheduleWidget'; // add at top with other imports
+
+{/* Schedule */}
 <section id="schedule" className="py-16 md:py-20">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="rounded-2xl border overflow-hidden p-4 bg-white">
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
-<!-- BEGIN WELLNESSLIVING CODE -->
-<div class="wl-widget" data="k_skin=28591&amp;k_business=136685"></div><!-- html check -->
-<script src="https://www.wellnessliving.com/rs/skin-widget-static.js" type="text/javascript"></script>
+      <ScheduleWidget />
 
-<a href="https://www.wellnessliving.com/fitness/software/" rel="nofollow" style="display: block; float: right; margin: 16px 16px 0 0;">
-  <img src="https://d1v4s90m0bk5bo.cloudfront.net/E/S.png" alt="Fitness management software" height="39" width="267" style="height:39px; width:267px;" />
-</a>
-
-<br clear="both" />
-<!-- html check -->
-<!-- END WELLNESSLIVING CODE -->
-          `,
-        }}
-      />
-      {/* Optional: direct link fallback */}
+      {/* Optional: direct link fallback if someone blocks scripts */}
       <div className="mt-4 text-sm">
         <a
           href="https://www.wellnessliving.com/schedule/miracleperformance"
@@ -265,9 +252,26 @@ function HomePage() {
           View full schedule
         </a>
       </div>
+
+      {/* (Optional) their attribution image, if you want to keep it */}
+      <a
+        href="https://www.wellnessliving.com/fitness/software/"
+        rel="nofollow"
+        style={{ display: 'block', float: 'right', margin: '16px 16px 0 0' }}
+      >
+        <img
+          src="https://d1v4s90m0bk5bo.cloudfront.net/E/S.png"
+          alt="Fitness management software"
+          height="39"
+          width="267"
+          style={{ height: 39, width: 267 }}
+        />
+      </a>
+      <div style={{ clear: 'both' }} />
     </div>
   </div>
 </section>
+
 
       {/* Pricing on Homepage */}
       <section id="pricing" className="py-16 md:py-20 bg-gray-50">
