@@ -128,7 +128,7 @@ function HomePage() {
             Miracle Performance — <span className="text-white/80">4 Studios, 1 Membership</span>
           </motion.h1>
           <p className="mt-4 md:mt-6 text-white/80 max-w-2xl">
-            Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class. Zero intimidation with fun, supportive environment!
+            Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class - Zero intimidation with a fun, supportive environment!
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#trial" className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90">Start Free Week</a>
