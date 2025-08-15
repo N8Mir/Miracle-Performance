@@ -476,12 +476,50 @@ export default function MiraclePerformanceApp() {
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-gray-900">Members</p>
-                <ul className="mt-3 space-y-2">
-                  <li><a href="https://www.wellnessliving.com/schedule/miracleperformance" className="hover:text-black">Book Class</a></li>
-                  <li><a href="https://www.wellnessliving.com/login/miracleperformance" className="hover:text-black">Login</a></li>
-                </ul>
-              </div>
+  <p className="font-semibold text-gray-900">Members</p>
+  <ul className="mt-3 space-y-2">
+    <li>
+      <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="hover:text-black">
+        Book Class
+      </a>
+    </li>
+    <li>
+      <a href="https://www.wellnessliving.com/login/miracleperformance" className="hover:text-black">
+        Login
+      </a>
+    </li>
+    <li className="flex items-center gap-2">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+        alt="iPhone"
+        className="w-4 h-4"
+      />
+      <a
+        href="https://apps.apple.com/us/app/wellnessliving-achieve/id1135932782"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-black"
+      >
+        Download iPhone App
+      </a>
+    </li>
+    <li className="flex items-center gap-2">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
+        alt="Android"
+        className="w-4 h-4"
+      />
+      <a
+        href="https://play.google.com/store/apps/details?id=com.wellnessliving.achieve"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-black"
+      >
+        Download Android App
+      </a>
+    </li>
+  </ul>
+</div>
               <div>
                 <p className="font-semibold text-gray-900">Contact</p>
                 <ul className="mt-3 space-y-2">
