@@ -160,23 +160,49 @@ function HomePage() {
       </section>
 
       {/* Studios */}
-      <section id="studios" className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Four Studios. Endless Variety.</h2>
-          <p className="mt-3 text-gray-600 max-w-2xl">Mix modalities across your week to build strength, stamina, and mobility without plateaus.</p>
-          <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-            {["Strength","Conditioning","VersaClimber","Boxing Class"].map((s, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden border bg-white">
-                <div className="h-44 bg-cover bg-center" style={{backgroundImage: `url(https://source.unsplash.com/collection/483251/${i})`}} />
-                <div className="p-5">
-                  <h3 className="font-semibold text-lg">{s}</h3>
-                  <p className="text-sm text-gray-600 mt-2">Programmed sessions that scale to your level, coached in small groups for focused feedback.</p>
-                </div>
-              </div>
-            ))}
+<section id="studios" className="py-16 md:py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl md:text-4xl font-bold">Four Studios. Endless Variety.</h2>
+    <p className="mt-3 text-gray-600 max-w-2xl">
+      Mix modalities across your week to build strength, stamina, and mobility without plateaus.
+    </p>
+    <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+      {[
+        {
+          name: "Strength",
+          image: "https://source.unsplash.com/collection/483251/0",
+          desc: "Build a stronger, leaner body with expert-led, full-body strength training. Our small group format ensures perfect form, progressive overload, and personalized coaching so you get stronger every week."
+        },
+        {
+          name: "Metabolic Conditioning",
+          image: "https://source.unsplash.com/collection/483251/1",
+          desc: "Boost metabolism, burn fat, and improve athletic performance with a powerful mix of strength and cardio circuits. Designed to push your limits and keep your body burning calories long after class ends."
+        },
+        {
+          name: "VersaClimber",
+          image: "https://source.unsplash.com/collection/483251/2",
+          desc: "Torch calories, skyrocket endurance, and challenge every muscle with the low-impact, high-intensity VersaClimber. This vertical climbing workout delivers unmatched cardio and strength benefits in just 30 minutes."
+        },
+        {
+          name: "Boxing",
+          image: "https://source.unsplash.com/collection/483251/3",
+          desc: "Release stress, improve coordination, and build serious conditioning in a fun, high-energy boxing workout. Learn real technique while hitting pads, bags, and footwork drills — no experience needed."
+        }
+      ].map((studio, i) => (
+        <div key={i} className="rounded-2xl overflow-hidden border bg-white">
+          <div
+            className="h-44 bg-cover bg-center"
+            style={{ backgroundImage: `url(${studio.image})` }}
+          />
+          <div className="p-5">
+            <h3 className="font-semibold text-lg">{studio.name}</h3>
+            <p className="text-sm text-gray-600 mt-2">{studio.desc}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Trainers */}
       <section id="trainers" className="py-16 md:py-20">
@@ -241,7 +267,7 @@ function HomePage() {
       {/* Pricing on Homepage */}
       <section id="pricing" className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Simple, Transparent Pricing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Simple, Transparent Pricing. No Contracts.</h2>
           <p className="mt-3 text-gray-600">Memberships or class packs—choose what fits your routine.</p>
 
           <h3 className="mt-8 text-xl font-semibold">Memberships</h3>
