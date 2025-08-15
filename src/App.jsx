@@ -233,36 +233,41 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Schedule */}
-      <section id="schedule" className="py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold">60+ Classes Every Week</h2>
-              <p className="mt-3 text-gray-600">Early mornings, lunch, evenings, and weekends—pick your perfect time. Book on the go with our app.</p>
-              <ul className="mt-6 space-y-3 text-gray-700">
-                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> Strength </li>
-                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> Conditioning Interval Training</li>
-                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> VersaClimber </li>
-                <li className="flex items-start gap-3"><Check className="mt-0.5 w-5 h-5"/> Boxing </li>
-              </ul>
-              <div className="mt-6 flex gap-3">
-                <a href="#trial" className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">Start Free Week</a>
-                <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="px-5 py-3 rounded-2xl bg-blue-700 text-white hover:bg-blue-800">Book Class</a>
-              </div>
-            </div>
-            <div className="rounded-2xl border overflow-hidden p-4 bg-white">
-              <div dangerouslySetInnerHTML={{ __html: `
-                <div class="wl-widget" data="k_skin=28591&amp;k_business=136685"></div>
-                <script src="https://www.wellnessliving.com/rs/skin-widget-static.js" type="text/javascript"></script>
-                <a href="https://www.wellnessliving.com/fitness/software/" rel="nofollow" style="display: block; float: right; margin: 16px 16px 0 0;">
-                  <img src="https://d1v4s90m0bk5bo.cloudfront.net/E/S.png" alt="Fitness management software" height="39" width="267" style="height:39px; width:267px;" />
-                </a>
-              `}} />
-            </div>
-          </div>
-        </div>
-      </section>
+     {/* Schedule */}
+<section id="schedule" className="py-16 md:py-20">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="rounded-2xl border overflow-hidden p-4 bg-white">
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+<!-- BEGIN WELLNESSLIVING CODE -->
+<div class="wl-widget" data="k_skin=28591&amp;k_business=136685"></div><!-- html check -->
+<script src="https://www.wellnessliving.com/rs/skin-widget-static.js" type="text/javascript"></script>
+
+<a href="https://www.wellnessliving.com/fitness/software/" rel="nofollow" style="display: block; float: right; margin: 16px 16px 0 0;">
+  <img src="https://d1v4s90m0bk5bo.cloudfront.net/E/S.png" alt="Fitness management software" height="39" width="267" style="height:39px; width:267px;" />
+</a>
+
+<br clear="both" />
+<!-- html check -->
+<!-- END WELLNESSLIVING CODE -->
+          `,
+        }}
+      />
+      {/* Optional: direct link fallback */}
+      <div className="mt-4 text-sm">
+        <a
+          href="https://www.wellnessliving.com/schedule/miracleperformance"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-700 hover:underline"
+        >
+          View full schedule
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Pricing on Homepage */}
       <section id="pricing" className="py-16 md:py-20 bg-gray-50">
