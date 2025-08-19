@@ -219,7 +219,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Classes Section */}
+{/* Classes Section */}
 <section id="classes" className="py-16 md:py-20 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 className="text-3xl md:text-4xl font-bold">Four Classes. Endless Results.</h2>
@@ -228,14 +228,14 @@ function HomePage() {
     </p>
     <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
       {/* Strength */}
-      <div className="rounded-2xl overflow-hidden border bg-white">
+      <div className="rounded-2xl overflow-hidden border bg-black text-white">
         <div
           className="h-44 bg-cover bg-center"
           style={{ backgroundImage: "url('/strength.webp')" }}
         />
         <div className="p-5">
-          <h3 className="font-semibold text-lg">Strength</h3>
-          <p className="text-sm text-gray-600 mt-2">
+          <h3 className="font-semibold text-lg text-blue-500">Strength</h3>
+          <p className="text-sm mt-2">
             Progressive resistance training in a supportive group setting, designed to build lean
             muscle and long-term durability.
           </p>
@@ -243,14 +243,14 @@ function HomePage() {
       </div>
 
       {/* Conditioning */}
-      <div className="rounded-2xl overflow-hidden border bg-white">
+      <div className="rounded-2xl overflow-hidden border bg-black text-white">
         <div
           className="h-44 bg-cover bg-center"
           style={{ backgroundImage: "url('/conditioning.webp')" }}
         />
         <div className="p-5">
-          <h3 className="font-semibold text-lg">Metabolic Conditioning</h3>
-          <p className="text-sm text-gray-600 mt-2">
+          <h3 className="font-semibold text-lg text-blue-500">Metabolic Conditioning</h3>
+          <p className="text-sm mt-2">
             High-energy sessions combining cardio and strength intervals to maximize calorie burn
             and endurance.
           </p>
@@ -258,14 +258,14 @@ function HomePage() {
       </div>
 
       {/* VersaClimber */}
-      <div className="rounded-2xl overflow-hidden border bg-white">
+      <div className="rounded-2xl overflow-hidden border bg-black text-white">
         <div
           className="h-44 bg-cover bg-center"
           style={{ backgroundImage: "url('/versaclimber.webp')" }}
         />
         <div className="p-5">
-          <h3 className="font-semibold text-lg">VersaClimber</h3>
-          <p className="text-sm text-gray-600 mt-2">
+          <h3 className="font-semibold text-lg text-blue-500">VersaClimber</h3>
+          <p className="text-sm mt-2">
             Low-impact, total-body cardio on the VersaClimber that skyrockets endurance and torches
             calories in record time.
           </p>
@@ -273,14 +273,14 @@ function HomePage() {
       </div>
 
       {/* Boxing */}
-      <div className="rounded-2xl overflow-hidden border bg-white">
+      <div className="rounded-2xl overflow-hidden border bg-black text-white">
         <div
           className="h-44 bg-cover bg-center"
           style={{ backgroundImage: "url('/boxing.webp')" }}
         />
         <div className="p-5">
-          <h3 className="font-semibold text-lg">Boxing</h3>
-          <p className="text-sm text-gray-600 mt-2">
+          <h3 className="font-semibold text-lg text-blue-500">Boxing</h3>
+          <p className="text-sm mt-2">
             Technique-driven boxing workouts that sharpen skills, improve agility, and build serious
             stamina — no experience needed.
           </p>
@@ -289,6 +289,7 @@ function HomePage() {
     </div>
   </div>
 </section>
+
 
 
       {/* Personal Training */}
