@@ -243,7 +243,7 @@ function HomePage() {
         </ul>
         <div className="mt-6 flex flex-wrap gap-3">
           <a href="mailto:Nate@Mpcle.com?subject=1:1%20Training%20Inquiry" className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">Email Us</a>
-          <a href="tel:12168329212" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">Call 216-832-9212</a>
+          <a href="sms:12168329212" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">Text 216-832-9212</a>
         </div>
       </div>
 
@@ -254,13 +254,13 @@ function HomePage() {
           Train with friends or teammates and get individualized coaching in a small group. Same quality as 1:1 with more energy—and shared cost.
         </p>
         <ul className="mt-4 space-y-2 text-sm text-gray-700">
-          <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> 1–4 clients per coach</li>
+          <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> 1–4 clients per coach, more affordable than 1:1</li>
           <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> Personalized cues and scaling</li>
           <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> Contact for pricing & availability</li>
         </ul>
         <div className="mt-6 flex flex-wrap gap-3">
           <a href="mailto:Nate@Mpcle.com?subject=Semi-Private%20Training%20Inquiry" className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">Contact for Pricing</a>
-          <a href="tel:12168329212" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">Call 216-832-9212</a>
+          <a href="sms:12168329212" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">Text 216-832-9212</a>
         </div>
       </div>
     </div>
