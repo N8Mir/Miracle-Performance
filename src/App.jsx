@@ -641,9 +641,33 @@ function HomePage() {
           </div>
 
           <h3 className="mt-10 text-xl font-semibold">Class Packages</h3>
-          <div className="mt-4 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {/* ...packages map already handled in PricingPage; you can add a smaller promo here if you like */}
-          </div>
+<div className="mt-4 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+  {packages.map((p, i) => (
+    <div key={i} className="p-6 rounded-2xl border bg-white flex flex-col">
+      <div className="flex items-baseline justify-between">
+        <div className="font-semibold text-lg">{p.name}</div>
+        <span className="text-xs text-gray-500">{p.sub}</span>
+      </div>
+      <p className="text-4xl font-extrabold mt-2">${p.price}</p>
+      <ul className="mt-4 space-y-2 text-sm text-gray-700">
+        {p.features.map((f, idx) => (
+          <li key={idx} className="flex items-start gap-2">
+            <Check className="w-5 h-5 mt-0.5" /> {f}
+          </li>
+        ))}
+      </ul>
+      <a
+        href={p.link}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90"
+      >
+        {p.cta}
+      </a>
+    </div>
+  ))}
+</div>
+
 
           <p className="text-xs text-gray-500 mt-4">
             *Prices are placeholders—replace with your actual rates and discounts.
