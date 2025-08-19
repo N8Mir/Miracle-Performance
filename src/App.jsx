@@ -137,15 +137,15 @@ function HomePage() {
         <strong>First Week Free — No Obligation.</strong> Try us out and feel the difference.
       </div>
 
-     {/* Hero */}
+   {/* Hero */}
 <section id="top" className="relative overflow-hidden">
   {/* Background gradient + image overlay */}
   <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" />
   <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
 
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-    {/* Two-column layout (stacks on mobile) */}
     <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+      
       {/* LEFT: headline + copy + CTAs */}
       <div className="flex-1 text-white">
         <motion.h1
@@ -177,16 +177,15 @@ function HomePage() {
         </div>
       </div>
 
-      {/* RIGHT: video (visible on mobile, sits below text on small screens) */}
-      <div className="flex-1 w-full">
+      {/* RIGHT: video smaller */}
+      <div className="w-full md:w-1/3">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full max-w-md md:max-w-none rounded-xl shadow-lg mx-auto md:mx-0"
+          className="w-full rounded-xl shadow-lg mx-auto"
         >
-          {/* Your file is in /public as mp_video.mp4 */}
           <source src="/mp_video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -194,6 +193,7 @@ function HomePage() {
     </div>
   </div>
 </section>
+
 
 
       {/* Why */}
