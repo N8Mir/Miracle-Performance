@@ -106,14 +106,14 @@ function HomePage() {
   ];
 
   const trainers = [
-    { name: "Nate M.", role: "Head Coach", img: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=400&auto=format&fit=crop", blurb: "Strength & conditioning specialist. Loves building smart, sustainable progress." },
-    { name: "Alex P.", role: "Performance Coach", img: "https://images.unsplash.com/photo-1526401485004-2fda9f4c1589?q=80&w=400&auto=format&fit=crop", blurb: "VersaClimber & conditioning focus. Keeps classes high-energy and form-first." },
-    { name: "Jordan K.", role: "Coach", img: "https://images.unsplash.com/photo-1581009137042-c552e4856971?q=80&w=400&auto=format&fit=crop", blurb: "Technique-driven coaching with a knack for motivating beginners and vets alike." },
-    { name: "Coach 4", role: "Coach", img: "https://images.unsplash.com/photo-1554344728-77cf90d9ed26?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-    { name: "Coach 5", role: "Coach", img: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-    { name: "Coach 6", role: "Coach", img: "https://images.unsplash.com/photo-1551292831-023188e78222?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-    { name: "Coach 7", role: "Coach", img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-    { name: "Coach 8", role: "Coach", img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
+    { name: "Nate M.", role: "Owner", img: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=400&auto=format&fit=crop", blurb: "Semi-Private Training" },
+    { name: "Eric D.", role: "Head Coach", img: "https://images.unsplash.com/photo-1526401485004-2fda9f4c1589?q=80&w=400&auto=format&fit=crop", blurb: "Strength & conditioning specialist. Loves building smart, sustainable progress." },
+    { name: "Matt V.", role: "Coach", img: "https://images.unsplash.com/photo-1581009137042-c552e4856971?q=80&w=400&auto=format&fit=crop", blurb: "Boxing Coach. Strength & Conditioning" },
+    { name: "Jamie C.", role: "Coach", img: "https://images.unsplash.com/photo-1554344728-77cf90d9ed26?q=80&w=400&auto=format&fit=crop", blurb: "VersaClimber Coach" },
+    { name: "Jamie M.", role: "Coach", img: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?q=80&w=400&auto=format&fit=crop", blurb: "VersaClimber Coach" },
+    { name: "Courtney B.", role: "Coach", img: "https://images.unsplash.com/photo-1551292831-023188e78222?q=80&w=400&auto=format&fit=crop", blurb: "VersaClimber Coach" },
+    { name: "Emily M.", role: "Coach", img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=400&auto=format&fit=crop", blurb: "VersaClimber Coach" },
+    { name: "Erin W.", role: "Coach", img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=400&auto=format&fit=crop", blurb: "VersaClimber Coach" },
   ];
 
   const memberships = [
