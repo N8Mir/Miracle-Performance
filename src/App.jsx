@@ -314,12 +314,56 @@ function HomePage() {
     { icon: <Star className="w-6 h-6" />, title: "Expert Coaches", desc: "Certified trainers who program for progress, not burnout." },
   ];
 
-  // Keep only ONE memberships array in this component (with links)
+  // memberships WITH internal links to /free-week
   const memberships = [
     { name: "4 sessions / mo", sub: "Budget-friendly", price: 69, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week", link: "/free-week" },
     { name: "8 sessions / mo", sub: "Most popular", price: 119, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week", link: "/free-week" },
     { name: "12 sessions / mo", sub: "Train 3x/week", price: 149, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week", link: "/free-week" },
     { name: "Unlimited / mo", sub: "Best results", price: 199, features: ["Unlimited classes", "App booking", "Coach feedback"], cta: "Start Free Week", link: "/free-week" },
+  ];
+
+  // ADD THIS: packages for the homepage pricing grid
+  const packages = [
+    { 
+      name: "Drop-In", 
+      sub: "Single class", 
+      price: 22, 
+      features: ["Any studio", "Coach guidance"], 
+      cta: "Book a Class",
+      link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233847"
+    },
+    { 
+      name: "5 Sessions", 
+      sub: "$19.80/session", 
+      price: 99, 
+      features: ["Flexible", "3-month expiry"], 
+      cta: "Get 5-Pack",
+      link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233849"
+    },
+    { 
+      name: "10 Sessions", 
+      sub: "$16.90/session", 
+      price: 169, 
+      features: ["Great value", "1-year expiry"], 
+      cta: "Get 10-Pack",
+      link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233855"
+    },
+    { 
+      name: "20 Sessions", 
+      sub: "$14.95/session", 
+      price: 299, 
+      features: ["Great Savings", "1-year expiry"], 
+      cta: "Get 20-Pack",
+      link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233862"
+    },
+    { 
+      name: "30 Sessions", 
+      sub: "$13.30/session", 
+      price: 399, 
+      features: ["Best per-class price", "1-year expiry"], 
+      cta: "Get 30-Pack",
+      link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233865"
+    },
   ];
 
   return (
@@ -331,14 +375,12 @@ function HomePage() {
 
       {/* Hero */}
       <section id="top" className="relative overflow-hidden">
-        {/* Background gradient + image overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" />
         <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          {/* Stacks on mobile, side-by-side on md+ */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-            {/* LEFT: headline + copy + CTAs */}
+            {/* LEFT */}
             <div className="flex-1 text-white text-center md:text-left">
               <motion.h1
                 initial={{ opacity: 0, y: 10 }}
@@ -417,153 +459,50 @@ function HomePage() {
           <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
             {/* Strength */}
             <div className="rounded-2xl overflow-hidden border bg-black text-white">
-              <div
-                className="h-44 bg-cover bg-center"
-                style={{ backgroundImage: "url('/strength.webp')" }}
-              />
+              <div className="h-44 bg-cover bg-center" style={{ backgroundImage: "url('/strength.webp')" }} />
               <div className="p-5">
                 <h3 className="font-semibold text-lg text-blue-500">Strength</h3>
-                <p className="text-sm mt-2">
-                  Progressive resistance training in a supportive group setting, designed to build lean
-                  muscle and long-term durability.
-                </p>
+                <p className="text-sm mt-2">Progressive resistance training in a supportive group setting, designed to build lean muscle and long-term durability.</p>
               </div>
             </div>
 
             {/* Conditioning */}
             <div className="rounded-2xl overflow-hidden border bg-black text-white">
-              <div
-                className="h-44 bg-cover bg-center"
-                style={{ backgroundImage: "url('/conditioning.webp')" }}
-              />
+              <div className="h-44 bg-cover bg-center" style={{ backgroundImage: "url('/conditioning.webp')" }} />
               <div className="p-5">
                 <h3 className="font-semibold text-lg text-blue-500">Metabolic Conditioning</h3>
-                <p className="text-sm mt-2">
-                  High-energy sessions combining cardio and strength intervals to maximize calorie burn
-                  and endurance.
-                </p>
+                <p className="text-sm mt-2">High-energy sessions combining cardio and strength intervals to maximize calorie burn and endurance.</p>
               </div>
             </div>
 
             {/* VersaClimber */}
             <div className="rounded-2xl overflow-hidden border bg-black text-white">
-              <div
-                className="h-44 bg-cover bg-center"
-                style={{ backgroundImage: "url('/versaclimber.webp')" }}
-              />
+              <div className="h-44 bg-cover bg-center" style={{ backgroundImage: "url('/versaclimber.webp')" }} />
               <div className="p-5">
                 <h3 className="font-semibold text-lg text-blue-500">VersaClimber</h3>
-                <p className="text-sm mt-2">
-                  Low-impact, total-body cardio on the VersaClimber that skyrockets endurance and torches
-                  calories in record time.
-                </p>
+                <p className="text-sm mt-2">Low-impact, total-body cardio on the VersaClimber that skyrockets endurance and torches calories in record time.</p>
               </div>
             </div>
 
             {/* Boxing */}
             <div className="rounded-2xl overflow-hidden border bg-black text-white">
-              <div
-                className="h-44 bg-cover bg-center"
-                style={{ backgroundImage: "url('/boxing.webp')" }}
-              />
+              <div className="h-44 bg-cover bg-center" style={{ backgroundImage: "url('/boxing.webp')" }} />
               <div className="p-5">
                 <h3 className="font-semibold text-lg text-blue-500">Boxing</h3>
-                <p className="text-sm mt-2">
-                  Technique-driven boxing workouts that sharpen skills, improve agility, and build serious
-                  stamina — no experience needed.
-                </p>
+                <p className="text-sm mt-2">Technique-driven boxing workouts that sharpen skills, improve agility, and build serious stamina — no experience needed.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Personal Training */}
-      <section id="training" className="py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Personal Training</h2>
-          <p className="mt-3 text-gray-600 max-w-2xl">
-            Customized coaching for faster results and focused accountability. Choose one-on-one or train with a small group.
-          </p>
-
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
-            {/* 1:1 Training */}
-            <div className="rounded-2xl border bg-white p-6">
-              <h3 className="text-xl font-semibold">One-on-One Training</h3>
-              <p className="text-gray-600 mt-2">
-                Fully personalized programming tailored to your goals, schedule, and training history. Perfect for maximizing progress with direct coach attention.
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> Customized plan and progress tracking</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> Technique coaching every session</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> Flexible scheduling</li>
-              </ul>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href="mailto:Nate@Mpcle.com?subject=1:1%20Training%20Inquiry" className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">Email Us</a>
-                <a href="sms:12168329212" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">Text 216-832-9212</a>
-              </div>
-            </div>
-
-            {/* Semi-Private Training */}
-            <div className="rounded-2xl border bg-white p-6">
-              <h3 className="text-xl font-semibold">Semi-Private Training (1–4 People)</h3>
-              <p className="text-gray-600 mt-2">
-                Train with friends or teammates and get individualized coaching in a small group. Same quality as 1:1 with more energy—and shared cost.
-              </p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-700">
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> 1–4 clients per coach, more affordable than 1:1</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> Personalized cues and scaling</li>
-                <li className="flex items-start gap-2"><Check className="w-5 h-5 mt-0.5" /> Contact for pricing & availability</li>
-              </ul>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href="mailto:Nate@Mpcle.com?subject=Semi-Private%20Training%20Inquiry" className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">Contact for Pricing</a>
-                <a href="sms:12168329212" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">Text 216-832-9212</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trainers */}
-      <section id="trainers" className="py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Meet Our Trainers</h2>
-          <p className="mt-3 text-gray-600 max-w-2xl">A coaching team focused on safe progress, great form, and fun sessions.</p>
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: "Nate M.", role: "Head Coach", img: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=400&auto=format&fit=crop", blurb: "Strength & conditioning specialist. Loves building smart, sustainable progress." },
-              { name: "Alex P.", role: "Performance Coach", img: "https://images.unsplash.com/photo-1526401485004-2fda9f4c1589?q=80&w=400&auto=format&fit=crop", blurb: "VersaClimber & conditioning focus. High-energy, form-first." },
-              { name: "Jordan K.", role: "Coach", img: "https://images.unsplash.com/photo-1581009137042-c552e4856971?q=80&w=400&auto=format&fit=crop", blurb: "Technique-driven coaching for all levels." },
-              { name: "Coach 4", role: "Coach", img: "https://images.unsplash.com/photo-1554344728-77cf90d9ed26?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-              { name: "Coach 5", role: "Coach", img: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-              { name: "Coach 6", role: "Coach", img: "https://images.unsplash.com/photo-1551292831-023188e78222?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-              { name: "Coach 7", role: "Coach", img: "https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-              { name: "Coach 8", role: "Coach", img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=400&auto=format&fit=crop", blurb: "Short bio here." },
-            ].slice(0, 8).map((t, i) => (
-              <div key={i} className="rounded-2xl border bg-white p-5 text-center">
-                <div className="mx-auto h-28 w-28 rounded-full overflow-hidden bg-gray-100">
-                  <img src={t.img} alt={t.name} className="h-full w-full object-cover" />
-                </div>
-                <div className="mt-3 font-semibold">{t.name}</div>
-                <div className="text-sm text-gray-500">{t.role}</div>
-                <p className="text-sm text-gray-600 mt-2">{t.blurb}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Schedule (Widget only) */}
+      {/* Schedule */}
       <section id="schedule" className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold">Schedule</h2>
-          <p className="mt-3 text-gray-600 max-w-2xl">
-            View our live class schedule and reserve your spot instantly.
-          </p>
+          <p className="mt-3 text-gray-600 max-w-2xl">View our live class schedule and reserve your spot instantly.</p>
           <div className="mt-8 rounded-2xl border overflow-hidden p-4 bg-white">
             <ScheduleWidget />
-
-            {/* Optional: direct link fallback */}
             <div className="mt-4 text-sm">
               <a
                 href="https://www.wellnessliving.com/schedule/miracleperformance"
@@ -574,8 +513,6 @@ function HomePage() {
                 View full schedule
               </a>
             </div>
-
-            {/* Optional attribution */}
             <a
               href="https://www.wellnessliving.com/fitness/software/"
               rel="nofollow"
@@ -641,33 +578,32 @@ function HomePage() {
           </div>
 
           <h3 className="mt-10 text-xl font-semibold">Class Packages</h3>
-<div className="mt-4 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-  {packages.map((p, i) => (
-    <div key={i} className="p-6 rounded-2xl border bg-white flex flex-col">
-      <div className="flex items-baseline justify-between">
-        <div className="font-semibold text-lg">{p.name}</div>
-        <span className="text-xs text-gray-500">{p.sub}</span>
-      </div>
-      <p className="text-4xl font-extrabold mt-2">${p.price}</p>
-      <ul className="mt-4 space-y-2 text-sm text-gray-700">
-        {p.features.map((f, idx) => (
-          <li key={idx} className="flex items-start gap-2">
-            <Check className="w-5 h-5 mt-0.5" /> {f}
-          </li>
-        ))}
-      </ul>
-      <a
-        href={p.link}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90"
-      >
-        {p.cta}
-      </a>
-    </div>
-  ))}
-</div>
-
+          <div className="mt-4 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {packages.map((p, i) => (
+              <div key={i} className="p-6 rounded-2xl border bg-white flex flex-col">
+                <div className="flex items-baseline justify-between">
+                  <div className="font-semibold text-lg">{p.name}</div>
+                  <span className="text-xs text-gray-500">{p.sub}</span>
+                </div>
+                <p className="text-4xl font-extrabold mt-2">${p.price}</p>
+                <ul className="mt-4 space-y-2 text-sm text-gray-700">
+                  {p.features.map((f, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 mt-0.5" /> {f}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90"
+                >
+                  {p.cta}
+                </a>
+              </div>
+            ))}
+          </div>
 
           <p className="text-xs text-gray-500 mt-4">
             *Prices are placeholders—replace with your actual rates and discounts.
@@ -740,6 +676,7 @@ function HomePage() {
     </>
   );
 }
+
 
 export default function MiraclePerformanceApp() {
   return (
