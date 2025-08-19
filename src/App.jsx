@@ -219,47 +219,77 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Studios */}
-      <section id="classes" className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Four Classes. Endless Results.</h2>
-          <p className="mt-3 text-gray-600 max-w-2xl">
-            Mix modalities across your week to build strength, stamina, and mobility without plateaus.
+      {/* Classes Section */}
+<section id="classes" className="py-16 md:py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl md:text-4xl font-bold">Four Classes. Endless Results.</h2>
+    <p className="mt-3 text-gray-600 max-w-2xl">
+      Mix modalities across your week to build strength, stamina, and mobility without plateaus.
+    </p>
+    <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+      {/* Strength */}
+      <div className="rounded-2xl overflow-hidden border bg-white">
+        <div
+          className="h-44 bg-cover bg-center"
+          style={{ backgroundImage: "url('/strength.jpg')" }}
+        />
+        <div className="p-5">
+          <h3 className="font-semibold text-lg">Strength</h3>
+          <p className="text-sm text-gray-600 mt-2">
+            Progressive resistance training in a supportive group setting, designed to build lean
+            muscle and long-term durability.
           </p>
-          <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-            {[
-              {
-                name: "Strength",
-                image: "https://source.unsplash.com/collection/483251/0",
-                desc: "Build a stronger, leaner body with expert-led, full-body strength training. Our small group format ensures perfect form, progressive overload, and personalized coaching so you get stronger every week."
-              },
-              {
-                name: "Metabolic Conditioning",
-                image: "https://source.unsplash.com/collection/483251/1",
-                desc: "Boost metabolism, burn fat, and improve athletic performance with a powerful mix of strength and cardio circuits. Designed to push your limits and keep your body burning calories long after class ends."
-              },
-              {
-                name: "VersaClimber",
-                image: "https://source.unsplash.com/collection/483251/2",
-                desc: "Torch calories, skyrocket endurance, and challenge every muscle with the low-impact, high-intensity VersaClimber. This vertical climbing workout delivers unmatched cardio and strength benefits in just 30 minutes."
-              },
-              {
-                name: "Boxing",
-                image: "https://source.unsplash.com/collection/483251/3",
-                desc: "Release stress, improve coordination, and build serious conditioning in a fun, high-energy boxing workout. Learn real technique while hitting pads, bags, and footwork drills — no experience needed."
-              }
-            ].map((studio, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden border bg-white">
-                <div className="h-44 bg-cover bg-center" style={{ backgroundImage: `url(${studio.image})` }} />
-                <div className="p-5">
-                  <h3 className="font-semibold text-lg">{studio.name}</h3>
-                  <p className="text-sm text-gray-600 mt-2">{studio.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
-      </section>
+      </div>
+
+      {/* Conditioning */}
+      <div className="rounded-2xl overflow-hidden border bg-white">
+        <div
+          className="h-44 bg-cover bg-center"
+          style={{ backgroundImage: "url('/conditioning.jpg')" }}
+        />
+        <div className="p-5">
+          <h3 className="font-semibold text-lg">Metabolic Conditioning</h3>
+          <p className="text-sm text-gray-600 mt-2">
+            High-energy sessions combining cardio and strength intervals to maximize calorie burn
+            and endurance.
+          </p>
+        </div>
+      </div>
+
+      {/* VersaClimber */}
+      <div className="rounded-2xl overflow-hidden border bg-white">
+        <div
+          className="h-44 bg-cover bg-center"
+          style={{ backgroundImage: "url('/versaclimber.jpg')" }}
+        />
+        <div className="p-5">
+          <h3 className="font-semibold text-lg">VersaClimber</h3>
+          <p className="text-sm text-gray-600 mt-2">
+            Low-impact, total-body cardio on the VersaClimber that skyrockets endurance and torches
+            calories in record time.
+          </p>
+        </div>
+      </div>
+
+      {/* Boxing */}
+      <div className="rounded-2xl overflow-hidden border bg-white">
+        <div
+          className="h-44 bg-cover bg-center"
+          style={{ backgroundImage: "url('/boxing.jpg')" }}
+        />
+        <div className="p-5">
+          <h3 className="font-semibold text-lg">Boxing</h3>
+          <p className="text-sm text-gray-600 mt-2">
+            Technique-driven boxing workouts that sharpen skills, improve agility, and build serious
+            stamina — no experience needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Personal Training */}
 <section id="training" className="py-16 md:py-20">
