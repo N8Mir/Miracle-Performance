@@ -57,39 +57,39 @@ const packages = [
     price: 22, 
     features: ["Any studio", "Coach guidance"], 
     cta: "Book a Class",
-    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=dropin"
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233847"
   },
   { 
     name: "5 Sessions", 
-    sub: "Pack of 5", 
+    sub: "$19.80/session", 
     price: 99, 
     features: ["Flexible", "3-month expiry"], 
     cta: "Get 5-Pack",
-    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=5pack"
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233849"
   },
   { 
     name: "10 Sessions", 
-    sub: "Pack of 10", 
+    sub: "$16.90/session", 
     price: 169, 
     features: ["Great value", "1-year expiry"], 
     cta: "Get 10-Pack",
-    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=10pack"
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233855"
   },
   { 
     name: "20 Sessions", 
-    sub: "Pack of 20", 
+    sub: "$14.95/session", 
     price: 299, 
     features: ["Great Savings", "1-year expiry"], 
     cta: "Get 20-Pack",
-    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=20pack"
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233862"
   },
   { 
     name: "30 Sessions", 
-    sub: "Pack of 30", 
+    sub: "$13.30/session", 
     price: 399, 
     features: ["Best per-class price", "1-year expiry"], 
     cta: "Get 30-Pack",
-    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=30pack"
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233865"
   },
 ];
 
