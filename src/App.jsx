@@ -231,7 +231,7 @@ function HomePage() {
       <div className="rounded-2xl overflow-hidden border bg-white">
         <div
           className="h-44 bg-cover bg-center"
-          style={{ backgroundImage: "url('/strength.jpg')" }}
+          style={{ backgroundImage: "url('/strength.webp')" }}
         />
         <div className="p-5">
           <h3 className="font-semibold text-lg">Strength</h3>
@@ -246,7 +246,7 @@ function HomePage() {
       <div className="rounded-2xl overflow-hidden border bg-white">
         <div
           className="h-44 bg-cover bg-center"
-          style={{ backgroundImage: "url('/conditioning.jpg')" }}
+          style={{ backgroundImage: "url('/conditioning.webp')" }}
         />
         <div className="p-5">
           <h3 className="font-semibold text-lg">Metabolic Conditioning</h3>
@@ -261,7 +261,7 @@ function HomePage() {
       <div className="rounded-2xl overflow-hidden border bg-white">
         <div
           className="h-44 bg-cover bg-center"
-          style={{ backgroundImage: "url('/versaclimber.jpg')" }}
+          style={{ backgroundImage: "url('/versaclimber.webp')" }}
         />
         <div className="p-5">
           <h3 className="font-semibold text-lg">VersaClimber</h3>
@@ -276,7 +276,7 @@ function HomePage() {
       <div className="rounded-2xl overflow-hidden border bg-white">
         <div
           className="h-44 bg-cover bg-center"
-          style={{ backgroundImage: "url('/boxing.jpg')" }}
+          style={{ backgroundImage: "url('/boxing.webp')" }}
         />
         <div className="p-5">
           <h3 className="font-semibold text-lg">Boxing</h3>
