@@ -16,18 +16,83 @@ const REVIEW_SCORES = {
 
 function PricingPage() {
   const memberships = [
-    { name: "4 sessions / mo", sub: "Budget-friendly", price: 69, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
-    { name: "8 sessions / mo", sub: "Better Resukts", price: 119, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
-    { name: "12 sessions / mo", sub: "Train 3x/week", price: 149, features: ["All Class Access", "App booking", "Coach feedback"], cta: "Start Free Week" },
-    { name: "Unlimited / mo", sub: "Best results", price: 199, features: ["Unlimited classes", "App booking", "Coach feedback"], cta: "Start Free Week" },
-  ];
-  const packages = [
-    { name: "Drop-In", sub: "Single class", price: 22, features: ["Any studio", "Coach guidance"], cta: "Book a Class" },
-    { name: "5 Sessions", sub: "Pack of 5", price: 99, features: ["Flexible", "1-Year expiry"], cta: "Get 5-Pack" },
-    { name: "10 Sessions", sub: "Pack of 10", price: 169, features: ["Great value", "1-Year expiry"], cta: "Get 10-Pack" },
-    { name: "20 Sessions", sub: "Pack of 20", price: 299, features: ["More Savings", "1-Year expiry"], cta: "Get 20-Pack" },
-    { name: "30 Sessions", sub: "Pack of 30", price: 399, features: ["Best Per Class Price", "1-Year expiry"], cta: "Get 30-Pack" },
-  ];
+  { 
+    name: "4 sessions / mo", 
+    sub: "Budget-friendly", 
+    price: 69, 
+    features: ["All Class Access", "App booking", "Coach feedback"], 
+    cta: "Start Free Week",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&membership=4sessions" 
+  },
+  { 
+    name: "8 sessions / mo", 
+    sub: "Most popular", 
+    price: 119, 
+    features: ["All Class Access", "App booking", "Coach feedback"], 
+    cta: "Start Free Week",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&membership=8sessions"
+  },
+  { 
+    name: "12 sessions / mo", 
+    sub: "Train 3x/week", 
+    price: 149, 
+    features: ["All Class Access", "App booking", "Coach feedback"], 
+    cta: "Start Free Week",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&membership=12sessions"
+  },
+  { 
+    name: "Unlimited / mo", 
+    sub: "Best results", 
+    price: 199, 
+    features: ["Unlimited classes", "App booking", "Coach feedback"], 
+    cta: "Start Free Week",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&membership=unlimited"
+  },
+];
+
+const packages = [
+  { 
+    name: "Drop-In", 
+    sub: "Single class", 
+    price: 22, 
+    features: ["Any studio", "Coach guidance"], 
+    cta: "Book a Class",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=dropin"
+  },
+  { 
+    name: "5 Sessions", 
+    sub: "Pack of 5", 
+    price: 99, 
+    features: ["Flexible", "3-month expiry"], 
+    cta: "Get 5-Pack",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=5pack"
+  },
+  { 
+    name: "10 Sessions", 
+    sub: "Pack of 10", 
+    price: 169, 
+    features: ["Great value", "1-year expiry"], 
+    cta: "Get 10-Pack",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=10pack"
+  },
+  { 
+    name: "20 Sessions", 
+    sub: "Pack of 20", 
+    price: 299, 
+    features: ["Great Savings", "1-year expiry"], 
+    cta: "Get 20-Pack",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=20pack"
+  },
+  { 
+    name: "30 Sessions", 
+    sub: "Pack of 30", 
+    price: 399, 
+    features: ["Best per-class price", "1-year expiry"], 
+    cta: "Get 30-Pack",
+    link: "https://www.wellnessliving.com/rs/catalog/miracleperformance?id=136685&package=30pack"
+  },
+];
+
 
   return (
     <main className="min-h-screen">
