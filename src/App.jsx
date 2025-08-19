@@ -144,24 +144,27 @@ function HomePage() {
   <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
 
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    {/* Stacks on mobile, side-by-side on md+ */}
     <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
       
       {/* LEFT: headline + copy + CTAs */}
-      <div className="flex-1 text-white">
+      <div className="flex-1 text-white text-center md:text-left">
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-4xl md:text-6xl font-extrabold leading-tight"
         >
-          Miracle Performance — <span className="text-white/80">4 Studios, 1 Membership</span>
+          Miracle Performance
+          <br />
+          <span className="text-white/80">4 Classes – 1 Membership</span>
         </motion.h1>
 
-        <p className="mt-4 md:mt-6 text-white/80 max-w-2xl">
-          Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class - Zero intimidation with a fun, supportive environment!
+        <p className="mt-4 md:mt-6 text-white/80 max-w-2xl mx-auto md:mx-0">
+          Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class — zero intimidation with a fun, supportive environment!
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
           <a
             href="#trial"
             className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90"
@@ -177,14 +180,14 @@ function HomePage() {
         </div>
       </div>
 
-      {/* RIGHT: video smaller */}
-      <div className="w-full md:w-1/3">
+      {/* RIGHT: video (under text on mobile, right side on desktop) */}
+      <div className="w-full md:w-1/3 flex justify-center">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full rounded-xl shadow-lg mx-auto"
+          className="w-full max-h-[180px] sm:max-h-[220px] md:max-h-[300px] rounded-xl shadow-lg object-cover"
         >
           <source src="/mp_video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -193,6 +196,7 @@ function HomePage() {
     </div>
   </div>
 </section>
+
 
 
 
