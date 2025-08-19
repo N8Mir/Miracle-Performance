@@ -379,9 +379,7 @@ function HomePage() {
 
         <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
           <a
-            href="#trial"
-            className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90"
-          >
+            <a href="/free-week" className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90">
             Start Free Week
           </a>
           <a
@@ -647,7 +645,7 @@ function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <a href="#trial" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">{p.cta}</a>
+                <a href="/free-week" className="mt-6 inline-flex px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90">{p.cta}</a>
               </div>
             ))}
           </div>
