@@ -137,28 +137,64 @@ function HomePage() {
         <strong>First Week Free — No Obligation.</strong> Try us out and feel the difference.
       </div>
 
-      {/* Hero */}
-      <section id="top" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" />
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-extrabold text-white leading-tight"
+     {/* Hero */}
+<section id="top" className="relative overflow-hidden">
+  {/* Background gradient + image overlay */}
+  <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" />
+  <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    {/* Two-column layout (stacks on mobile) */}
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+      {/* LEFT: headline + copy + CTAs */}
+      <div className="flex-1 text-white">
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-6xl font-extrabold leading-tight"
+        >
+          Miracle Performance — <span className="text-white/80">4 Studios, 1 Membership</span>
+        </motion.h1>
+
+        <p className="mt-4 md:mt-6 text-white/80 max-w-2xl">
+          Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class - Zero intimidation with a fun, supportive environment!
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="#trial"
+            className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90"
           >
-            Miracle Performance — <span className="text-white/80">4 Studios, 1 Membership</span>
-          </motion.h1>
-          <p className="mt-4 md:mt-6 text-white/80 max-w-2xl">
-            Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class - Zero intimidation with a fun, supportive environment!
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#trial" className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90">Start Free Week</a>
-            <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="px-5 py-3 rounded-2xl bg-blue-700 text-white hover:bg-blue-800">Book Now</a>
-          </div>
+            Start Free Week
+          </a>
+          <a
+            href="https://www.wellnessliving.com/schedule/miracleperformance"
+            className="px-5 py-3 rounded-2xl bg-blue-700 text-white hover:bg-blue-800"
+          >
+            Book Now
+          </a>
         </div>
-      </section>
+      </div>
+
+      {/* RIGHT: video (visible on mobile, sits below text on small screens) */}
+      <div className="flex-1 w-full">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full max-w-md md:max-w-none rounded-xl shadow-lg mx-auto md:mx-0"
+        >
+          {/* Your file is in /public as mp_video.mp4 */}
+          <source src="/mp_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Why */}
       <section id="why" className="py-16 md:py-20">
