@@ -693,109 +693,76 @@ export default function MiraclePerformanceApp() {
         <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link to="/" className="flex items-center gap-3">
-  <img
-    src="/mp-small-logo.png"
-    alt="Miracle Performance logo"
-    className="h-10 w-auto"
-    loading="eager"
-  />
-  <span className="font-semibold hidden sm:inline">Miracle Performance</span>
-</Link>
+              <img
+                src="/mp-small-logo.png"
+                alt="Miracle Performance"
+                className="h-10 w-auto"
+                loading="eager"
+                decoding="async"
+              />
+              <span className="font-semibold hidden sm:inline">Miracle Performance</span>
+            </Link>
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <a href="/#classes" className="hover:text-black">Classes</a>
-              <a href="/#training" className="hover:text-black">Training</a> 
+              <a href="/#training" className="hover:text-black">Training</a>
               <a href="/#trainers" className="hover:text-black">Trainers</a>
               <a href="/#schedule" className="hover:text-black">Schedule</a>
               <a href="/#pricing" className="hover:text-black">Pricing</a>
               <a href="/#map" className="hover:text-black">Find Us</a>
-              <a href="https://www.wellnessliving.com/login/miracleperformance" className="inline-flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-gray-50">
+              <a
+                href="https://www.wellnessliving.com/login/miracleperformance"
+                className="inline-flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-gray-50"
+              >
                 <LogIn className="w-4 h-4" />Member Login
               </a>
             </nav>
             <div className="flex items-center gap-2">
-              <a href="https://www.wellnessliving.com/schedule/miracleperformance" className="px-3 py-2 rounded-xl bg-blue-700 text-white hover:bg-blue-800">Book Now</a>
-              <Link to="/free-week" className="inline-flex items-center px-4 py-3 rounded-2xl shadow-sm border bg-black text-white hover:opacity-90">Claim Free Week</Link>
+              <a
+                href="https://www.wellnessliving.com/schedule/miracleperformance"
+                className="px-3 py-2 rounded-xl bg-blue-700 text-white hover:bg-blue-800"
+              >
+                Book Now
+              </a>
+              <Link
+                to="/free-week"
+                className="inline-flex items-center px-4 py-3 rounded-2xl shadow-sm border bg-black text-white hover:opacity-90"
+              >
+                Claim Free Week
+              </Link>
             </div>
           </div>
         </header>
 
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/free-week" element={<FreeWeekPage />} />
         </Routes>
 
-     {/* Footer */}
-<footer className="border-t">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600">
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
-      {/* Left: brand blurb */}
-      <div>
-        <div className="flex items-center gap-2">
-          <div className="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center">
-            <ImageIcon className="w-5 h-5 text-gray-500" />
+        {/* Footer */}
+        <footer className="border-t">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+            <div>
+              <div className="flex items-center gap-2">
+                <img
+                  src="/mp-small-logo.png"
+                  alt="Miracle Performance"
+                  className="h-10 w-auto"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="font-semibold text-gray-900">Miracle Performance</span>
+              </div>
+              <p className="mt-3 max-w-sm">
+                Boutique group training: strength, conditioning, VersaClimber, boxing classes — coached in small groups for real progress.
+              </p>
+            </div>
+
+            {/* ...keep your three footer columns here exactly as you had them... */}
           </div>
-          <span className="font-semibold text-gray-900">Miracle Performance</span>
-        </div>
-        <p className="mt-3 max-w-sm">
-          Boutique group training: strength, conditioning, VersaClimber, boxing classes —coached in small groups for real progress.
-        </p>
+        </footer>
       </div>
-
-      {/* Middle: Explore + Members */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-auto">
-        <div>
-          <p className="font-semibold text-gray-900">Explore</p>
-          <ul className="mt-3 space-y-2">
-            <li><a href="/#classes" className="hover:text-black">Studios</a></li>
-            <li><a href="/#training" className="hover:text-black">Training</a></li>
-            <li><a href="/#trainers" className="hover:text-black">Trainers</a></li>
-            <li><a href="/#pricing" className="hover:text-black">Pricing</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <p className="font-semibold text-gray-900">Members</p>
-          <ul className="mt-3 space-y-2">
-            <li><a href="https://www.wellnessliving.com/schedule/miracleperformance" className="hover:text-black">Book Class</a></li>
-            <li><a href="https://www.wellnessliving.com/login/miracleperformance" className="hover:text-black">Login</a></li>
-            <li className="flex items-center gap-2">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iPhone" className="w-4 h-4" />
-              <a href="https://apps.apple.com/us/app/wellnessliving-achieve/id1135932782" target="_blank" rel="noreferrer" className="hover:text-black">Download iPhone App</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Android" className="w-4 h-4" />
-              <a href="https://play.google.com/store/apps/details?id=com.wellnessliving.achieve" target="_blank" rel="noreferrer" className="hover:text-black">Download Android App</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Right: Contact + Social */}
-        <div>
-          <p className="font-semibold text-gray-900">Contact</p>
-          <ul className="mt-3 space-y-2">
-            <li className="flex items-center gap-2"><MapPin className="w-4 h-4" />23400 Mercantile Rd, Suite 5, Beachwood, OH 44122</li>
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4" />216-832-9212</li>
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4" />Nate@Mpcle.com</li>
-          </ul>
-
-          <p className="font-semibold text-gray-900 mt-6">Follow Us</p>
-          <ul className="mt-3 space-y-2">
-            <li className="flex items-center gap-2">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" className="w-5 h-5" />
-              <a href="https://www.instagram.com/miracle_performance/" target="_blank" rel="noreferrer" className="hover:text-black">Instagram</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" className="w-5 h-5" />
-              <a href="https://www.facebook.com/MiraclePerformance/" target="_blank" rel="noreferrer" className="hover:text-black">Facebook</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-</footer>
-</div>        {/* closes the page wrapper */}
-</BrowserRouter>
-
+    </BrowserRouter>
   );
 }
