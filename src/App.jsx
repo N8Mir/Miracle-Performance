@@ -693,11 +693,14 @@ export default function MiraclePerformanceApp() {
         <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link to="/" className="flex items-center gap-3">
-              <div className="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center">
-                <span className="text-xs text-gray-600">Logo</span>
-              </div>
-              <span className="font-semibold">Miracle Performance</span>
-            </Link>
+  <img
+    src="/mp-small-logo.png"
+    alt="Miracle Performance logo"
+    className="h-10 w-auto"
+    loading="eager"
+  />
+  <span className="font-semibold hidden sm:inline">Miracle Performance</span>
+</Link>
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <a href="/#classes" className="hover:text-black">Classes</a>
               <a href="/#training" className="hover:text-black">Training</a> 
@@ -726,10 +729,14 @@ export default function MiraclePerformanceApp() {
         <footer className="border-t">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
             <div>
-              <div className="flex items-center gap-2">
-                <div className="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center">
-                  <ImageIcon className="w-5 h-5 text-gray-500" />
-                </div>
+             <div className="flex items-center gap-2">
+  <img
+    src="/mp-logo-small.png"
+    alt="Miracle Performance logo"
+    className="h-12 w-auto"
+  />
+</div>
+
                 <span className="font-semibold text-gray-900">Miracle Performance</span>
               </div>
               <p className="mt-3 max-w-sm">
