@@ -731,7 +731,7 @@ export default function MiraclePerformanceApp() {
             <div>
              <div className="flex items-center gap-2">
   <img
-    src="/mp-logo-small.png"
+    src="/mp-small-logo.png"
     alt="Miracle Performance logo"
     className="h-12 w-auto"
   />
