@@ -725,10 +725,11 @@ export default function MiraclePerformanceApp() {
           <Route path="/free-week" element={<FreeWeekPage />} />
         </Routes>
 
-       {/* Footer */}
+     {/* Footer */}
 <footer className="border-t">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600">
     <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+      {/* Left: brand blurb */}
       <div>
         <div className="flex items-center gap-2">
           <div className="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center">
@@ -741,8 +742,8 @@ export default function MiraclePerformanceApp() {
         </p>
       </div>
 
+      {/* Middle: Explore + Members */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-auto">
-        {/* Explore */}
         <div>
           <p className="font-semibold text-gray-900">Explore</p>
           <ul className="mt-3 space-y-2">
@@ -753,7 +754,6 @@ export default function MiraclePerformanceApp() {
           </ul>
         </div>
 
-        {/* Members */}
         <div>
           <p className="font-semibold text-gray-900">Members</p>
           <ul className="mt-3 space-y-2">
@@ -761,20 +761,16 @@ export default function MiraclePerformanceApp() {
             <li><a href="https://www.wellnessliving.com/login/miracleperformance" className="hover:text-black">Login</a></li>
             <li className="flex items-center gap-2">
               <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="iPhone" className="w-4 h-4" />
-              <a href="https://apps.apple.com/us/app/wellnessliving-achieve/id1135932782" target="_blank" rel="noreferrer" className="hover:text-black">
-                Download iPhone App
-              </a>
+              <a href="https://apps.apple.com/us/app/wellnessliving-achieve/id1135932782" target="_blank" rel="noreferrer" className="hover:text-black">Download iPhone App</a>
             </li>
             <li className="flex items-center gap-2">
               <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Android" className="w-4 h-4" />
-              <a href="https://play.google.com/store/apps/details?id=com.wellnessliving.achieve" target="_blank" rel="noreferrer" className="hover:text-black">
-                Download Android App
-              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.wellnessliving.achieve" target="_blank" rel="noreferrer" className="hover:text-black">Download Android App</a>
             </li>
           </ul>
         </div>
 
-        {/* Contact + Social */}
+        {/* Right: Contact + Social */}
         <div>
           <p className="font-semibold text-gray-900">Contact</p>
           <ul className="mt-3 space-y-2">
