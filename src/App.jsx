@@ -381,18 +381,19 @@ function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
             {/* LEFT */}
-            <div className="flex-1 text-white text-center md:text-left">
-              <motion.h1
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-4xl md:text-6xl font-extrabold leading-tight"
-              >
-                Miracle Performance
-                <br />
-                <span className="text-white/80">4 Classes – 1 Membership</span>
-              </motion.h1>
-
+            <div className="flex flex-col items-center md:items-start">
+  <motion.img
+    src="/mp hero logo.png"
+    alt="Miracle Performance"
+    className="h-20 md:h-28 w-auto"
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+  />
+  <p className="mt-4 md:mt-6 text-white/80 text-lg md:text-xl">
+    4 Classes – 1 Membership
+  </p>
+</div>
               <p className="mt-4 md:mt-6 text-white/80 max-w-2xl mx-auto md:mx-0">
                 Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class — zero intimidation with a fun, supportive environment!
               </p>
@@ -415,16 +416,17 @@ function HomePage() {
 
             {/* RIGHT: video */}
             <div className="w-full md:w-1/3 flex justify-center">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full max-h-[180px] sm:max-h-[220px] md:max-h-[300px] rounded-xl shadow-lg object-cover"
-              >
-                <source src="/mp_video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+             <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-full max-h-[400px] md:max-h-[500px] rounded-xl shadow-lg object-cover"
+>
+  <source src="/mp_video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
             </div>
           </div>
         </div>
