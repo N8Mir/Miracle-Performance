@@ -373,64 +373,64 @@ function HomePage() {
         <strong>First Week Free — No Obligation.</strong> Try us out and feel the difference.
       </div>
 
-      {/* Hero */}
-      <section id="top" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" />
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
+     {/* Hero */}
+<section id="top" className="relative overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" />
+  <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-            {/* LEFT */}
-            <div className="flex flex-col items-center md:items-start">
-  <motion.img
-    src="/mp hero logo.png"
-    alt="Miracle Performance"
-    className="h-20 md:h-28 w-auto"
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  />
-  <p className="mt-4 md:mt-6 text-white/80 text-lg md:text-xl">
-    4 Classes – 1 Membership
-  </p>
-</div>
-              <p className="mt-4 md:mt-6 text-white/80 max-w-2xl mx-auto md:mx-0">
-                Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class — zero intimidation with a fun, supportive environment!
-              </p>
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+      {/* LEFT: logo + tagline + copy + CTAs */}
+      <div className="flex-1 text-white text-center md:text-left">
+        <motion.img
+          src="/mp-hero-logo.png"  // rename the file or encode the space
+          alt="Miracle Performance"
+          className="h-20 md:h-28 w-auto mx-auto md:mx-0"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
+        <p className="mt-4 md:mt-6 text-white/80 text-lg md:text-xl">
+          4 Classes – 1 Membership
+        </p>
 
-              <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
-                <Link
-                  to="/free-week"
-                  className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90"
-                >
-                  Start Free Week
-                </Link>
-                <a
-                  href="https://www.wellnessliving.com/schedule/miracleperformance"
-                  className="px-5 py-3 rounded-2xl bg-blue-700 text-white hover:bg-blue-800"
-                >
-                  Book Now
-                </a>
-              </div>
-            </div>
+        <p className="mt-4 md:mt-6 text-white/80 max-w-2xl mx-auto md:mx-0">
+          Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class — zero intimidation with a fun, supportive environment!
+        </p>
 
-            {/* RIGHT: video */}
-            <div className="w-full md:w-1/3 flex justify-center">
-             <video
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="w-full max-h-[400px] md:max-h-[500px] rounded-xl shadow-lg object-cover"
->
-  <source src="/mp_video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-            </div>
-          </div>
+        <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
+          <Link
+            to="/free-week"
+            className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90"
+          >
+            Start Free Week
+          </Link>
+          <a
+            href="https://www.wellnessliving.com/schedule/miracleperformance"
+            className="px-5 py-3 rounded-2xl bg-blue-700 text-white hover:bg-blue-800"
+          >
+            Book Now
+          </a>
         </div>
-      </section>
+      </div>
+
+      {/* RIGHT: video */}
+      <div className="w-full md:w-1/3 flex justify-center">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full max-h-[420px] sm:max-h-[480px] md:max-h-[520px] rounded-xl shadow-lg object-cover"
+        >
+          <source src="/mp_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Why */}
       <section id="why" className="py-16 md:py-20">
