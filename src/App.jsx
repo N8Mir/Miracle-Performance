@@ -390,9 +390,14 @@ function HomePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         />
-        <p className="mt-4 md:mt-6 text-white/80 text-lg md:text-xl">
-          4 Classes – 1 Membership
-        </p>
+        <motion.h1
+  className="mt-4 md:mt-6 text-3xl md:text-5xl font-extrabold text-white text-center md:text-left"
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+>
+  4 Classes – 1 Membership
+</motion.h1>
 
         <p className="mt-4 md:mt-6 text-white/80 max-w-2xl mx-auto md:mx-0">
           Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class — zero intimidation with a fun, supportive environment!
