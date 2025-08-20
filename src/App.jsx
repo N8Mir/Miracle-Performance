@@ -741,100 +741,115 @@ export default function MiraclePerformanceApp() {
         </Routes>
 
        {/* Footer */}
-<footer className="bg-black text-white mt-20">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-5 gap-8">
-    
-    {/* Logo & tagline */}
+<footer className="border-t">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-start justify-between gap-10">
+    {/* Logo + name + tagline */}
     <div>
-      <img
-        src="/mp-small-logo.png"
-        alt="Miracle Performance small logo"
-        className="h-12 w-auto mb-4"
-        loading="lazy"
-      />
-      <p className="text-sm text-gray-400">
+      <div className="flex items-center gap-2">
+        <img
+          src="/mp-small-logo.png"
+          alt="Miracle Performance small logo"
+          className="h-12 w-auto"
+          loading="lazy"
+          decoding="async"
+        />
+        <span className="font-semibold text-gray-900 text-base">Miracle Performance</span>
+      </div>
+      <p className="mt-2 text-sm text-gray-500">
         Strength • Conditioning • Performance
+      </p>
+      <p className="mt-3 max-w-sm">
+        Boutique group training: strength, conditioning, VersaClimber, boxing — coached in small groups for real progress.
       </p>
     </div>
 
-    {/* Explore */}
-    <div>
-      <h4 className="font-semibold mb-3">Explore</h4>
-      <ul className="space-y-2 text-sm">
-        <li><a href="/#classes" className="hover:underline">Classes</a></li>
-        <li><a href="/#training" className="hover:underline">Training</a></li>
-        <li><a href="/#trainers" className="hover:underline">Trainers</a></li>
-        <li><a href="/#schedule" className="hover:underline">Schedule</a></li>
-        <li><a href="/#pricing" className="hover:underline">Pricing</a></li>
-        <li><a href="/#map" className="hover:underline">Find Us</a></li>
-      </ul>
+    {/* Columns */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full md:w-auto">
+      {/* Explore */}
+      <div>
+        <h4 className="font-semibold mb-3 text-gray-900">Explore</h4>
+        <ul className="space-y-2">
+          <li><a href="/#classes" className="hover:underline">Studios</a></li>
+          <li><a href="/#training" className="hover:underline">Training</a></li>
+          <li><a href="/#trainers" className="hover:underline">Trainers</a></li>
+          <li><a href="/#pricing" className="hover:underline">Pricing</a></li>
+          <li><a href="/#schedule" className="hover:underline">Schedule</a></li>
+        </ul>
+      </div>
+
+      {/* Members (with app badges) */}
+      <div>
+        <h4 className="font-semibold mb-3 text-gray-900">Members</h4>
+        <ul className="space-y-2">
+          <li>
+            <a href="https://www.wellnessliving.com/login/miracleperformance"
+               target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Member Login
+            </a>
+          </li>
+          <li>
+            <a href="https://www.wellnessliving.com/schedule/miracleperformance"
+               target="_blank" rel="noopener noreferrer" className="hover:underline">
+              Book a Class
+            </a>
+          </li>
+          <li>
+            <a href="/free-week" className="hover:underline">Claim Free Week</a>
+          </li>
+        </ul>
+
+        <p className="mt-4 text-xs font-medium text-gray-500 uppercase tracking-wide">
+          Download our Booking App:
+        </p>
+        <div className="mt-2 flex flex-col gap-2">
+          <a
+            href="https://apps.apple.com/us/app/wellnessliving-achieve/id1204569497"
+            target="_blank" rel="noopener noreferrer"
+          >
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="Download on the App Store"
+              className="h-10"
+            />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.wellnessliving.achieve"
+            target="_blank" rel="noopener noreferrer"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Get it on Google Play"
+              className="h-10"
+            />
+          </a>
+        </div>
+      </div>
+
+      {/* Contact */}
+      <div>
+        <h4 className="font-semibold mb-3 text-gray-900">Contact</h4>
+        <ul className="space-y-2">
+          <li>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=23400+Mercantile+Rd,+Suite+5,+Beachwood,+OH+44122"
+              target="_blank" rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              23400 Mercantile Rd, Suite 5, Beachwood, OH 44122
+            </a>
+          </li>
+          <li>
+            <a href="tel:12168329212" className="hover:underline">216-832-9212</a>
+          </li>
+          <li>
+            <a href="mailto:Nate@Mpcle.com" className="hover:underline">Nate@Mpcle.com</a>
+          </li>
+        </ul>
+      </div>
     </div>
-
-   {/* Members */}
-<div>
-  <h4 className="font-semibold mb-3">Members</h4>
-  <ul className="space-y-2 text-sm">
-    <li>
-      <a href="https://www.wellnessliving.com/login/miracleperformance" 
-         target="_blank" rel="noopener noreferrer" 
-         className="hover:underline">Member Login</a>
-    </li>
-    <li>
-      <a href="https://www.wellnessliving.com/schedule/miracleperformance" 
-         target="_blank" rel="noopener noreferrer" 
-         className="hover:underline">Book a Class</a>
-    </li>
-    <li>
-      <a href="/free-week" className="hover:underline">Claim Free Week</a>
-    </li>
-  </ul>
-
-  {/* App download badges */}
-  <div className="mt-4 flex flex-col gap-2">
-    <a href="https://apps.apple.com/us/app/wellnessliving-achieve/id1204569497" 
-       target="_blank" rel="noopener noreferrer">
-      <img 
-        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
-        alt="Download on the App Store" 
-        className="h-10"
-      />
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=com.wellnessliving.achieve" 
-       target="_blank" rel="noopener noreferrer">
-      <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-        alt="Get it on Google Play" 
-        className="h-10"
-      />
-    </a>
-  </div>
-</div>
-
-
-    {/* Contact */}
-    <div>
-      <h4 className="font-semibold mb-3">Contact</h4>
-      <ul className="space-y-2 text-sm text-gray-400">
-        <li>Email: <a href="mailto:Nate@Mpcle.com" className="hover:underline">Nate@Mpcle.com</a></li>
-        <li>Phone: <a href="tel:12168329212" className="hover:underline">(216) 832-9212</a></li>
-        <li>Location: Cleveland, OH</li>
-      </ul>
-    </div>
-
-    {/* Social */}
-    <div>
-      <h4 className="font-semibold mb-3">Follow Us</h4>
-      <ul className="flex gap-4 text-gray-400">
-        <li><a href="https://www.instagram.com/miracleperformance" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
-        <li><a href="https://www.facebook.com/miracleperformance" target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div className="border-t border-gray-800 py-4 text-center text-xs text-gray-500">
-    © {new Date().getFullYear()} Miracle Performance. All rights reserved.
   </div>
 </footer>
+
         
       </div>
     </BrowserRouter>
