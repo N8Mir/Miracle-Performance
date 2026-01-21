@@ -660,7 +660,7 @@ function HomePage() {
           </div>
 
           <p className="text-xs text-gray-500 mt-4">
-            *Prices are placeholders—replace with your actual rates and discounts.
+        
           </p>
         </div>
       </section>
