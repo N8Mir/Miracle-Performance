@@ -837,7 +837,7 @@ export default function MiraclePerformanceApp() {
           Download our Booking App:
         </p>
         <div className="mt-2 flex flex-row gap-3">
-          <a href="https://apps.apple.com/us/app/wellnessliving-achieve/id1204569497" target="_blank" rel="noopener noreferrer">
+          <a href="https://apps.apple.com/us/app/wellnessliving-achieve/id6756274607" target="_blank" rel="noopener noreferrer">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" className="h-10" />
           </a>
           <a href="https://play.google.com/store/apps/details?id=com.wellnessliving.achieve" target="_blank" rel="noopener noreferrer">
