@@ -1,4 +1,6 @@
 import React from "react";
+import ClassCardGallery from "../components/ClassCardGallery";
+import { mpClassCards, redwaveClassCards } from "../data/classCards";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
