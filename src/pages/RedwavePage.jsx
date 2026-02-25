@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Check, Flame, Sparkles, HeartPulse, Timer } from "lucide-react";
 import { redwaveBenefits, redwaveClasses } from "../data/redwave";
+import ClassCardGallery from "../components/ClassCardGallery";
+import { redwaveClassCards } from "../data/classCards";
 
 export default function RedwavePage() {
   return (
@@ -40,7 +42,12 @@ export default function RedwavePage() {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2 text-sm">
-            {["Infrared heat", "850nm near-infrared light", "Guided recovery", "Self-led blocks"].map((t) => (
+            {[
+              "Infrared heat",
+              "850nm near-infrared light",
+              "Guided recovery",
+              "Self-led blocks",
+            ].map((t) => (
               <span
                 key={t}
                 className="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white/90"
@@ -52,12 +59,35 @@ export default function RedwavePage() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* NEW: Redwave class cards (your webp graphics) */}
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold">
-            Why Infrared + 850nm?
-          </h2>
+          <div className="flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold">Redwave Classes</h2>
+              <p className="mt-3 text-gray-600 max-w-3xl">
+                Swipe (mobile) or click (desktop) to view each class card. All Redwave
+                sessions are included with memberships and class packs.
+              </p>
+            </div>
+            <a
+              href="https://www.wellnessliving.com/schedule/miracleperformance"
+              target="_blank"
+              rel="noreferrer"
+              className="px-5 py-3 rounded-2xl bg-black text-white font-semibold hover:opacity-90"
+            >
+              View Schedule
+            </a>
+          </div>
+
+          <ClassCardGallery items={redwaveClassCards} />
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold">Why Infrared + 850nm?</h2>
           <p className="mt-3 text-gray-600 max-w-3xl">
             Redwave sessions are built to make your training feel better and your
             recovery more effective. (Not medical advice—this is wellness + performance programming.)
@@ -75,12 +105,28 @@ export default function RedwavePage() {
           {/* Science-backed (careful) highlights */}
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: <Flame className="w-6 h-6" />, title: "Warm up faster", desc: "Infrared warmth supports readiness so movement feels smoother." },
-              { icon: <Sparkles className="w-6 h-6" />, title: "Recovery support", desc: "Near-infrared photobiomodulation is studied for recovery, soreness, and inflammation balance." },
-              { icon: <HeartPulse className="w-6 h-6" />, title: "Feel-good finish", desc: "Many people leave feeling looser, calmer, and recharged." },
-              { icon: <Timer className="w-6 h-6" />, title: "Time efficient", desc: "20-minute self-led blocks and 50–60 minute classes." },
+              {
+                icon: <Flame className="w-6 h-6" />,
+                title: "Warm up faster",
+                desc: "Infrared warmth supports readiness so movement feels smoother.",
+              },
+              {
+                icon: <Sparkles className="w-6 h-6" />,
+                title: "Recovery support",
+                desc: "Near-infrared photobiomodulation is studied for recovery, soreness, and inflammation balance.",
+              },
+              {
+                icon: <HeartPulse className="w-6 h-6" />,
+                title: "Feel-good finish",
+                desc: "Many people leave feeling looser, calmer, and recharged.",
+              },
+              {
+                icon: <Timer className="w-6 h-6" />,
+                title: "Time efficient",
+                desc: "20-minute self-led blocks and 50–60 minute classes.",
+              },
             ].map((x) => (
-              <div key={x.title} className="p-6 rounded-2xl border bg-gray-50">
+              <div key={x.title} className="p-6 rounded-2xl border bg-white">
                 <div className="w-11 h-11 rounded-xl bg-blue-700/10 text-blue-700 flex items-center justify-center">
                   {x.icon}
                 </div>
@@ -93,7 +139,7 @@ export default function RedwavePage() {
       </section>
 
       {/* The Redwave Difference */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="rounded-2xl overflow-hidden border bg-white">
@@ -135,7 +181,7 @@ export default function RedwavePage() {
                 >
                   View Schedule
                 </a>
-                <Link to="/" className="px-5 py-3 rounded-2xl border hover:bg-white">
+                <Link to="/" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">
                   Back to Home
                 </Link>
               </div>
@@ -144,12 +190,12 @@ export default function RedwavePage() {
         </div>
       </section>
 
-      {/* Class Menu */}
-      <section className="py-12 md:py-16">
+      {/* Class Menu (text list) */}
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold">Redwave Class Menu</h2>
           <p className="mt-3 text-gray-600 max-w-3xl">
-            Choose recovery-first sessions or hybrid formats that combine training + infrared-based recovery.
+            Quick descriptions for each format.
           </p>
 
           <div className="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -170,7 +216,10 @@ export default function RedwavePage() {
                   >
                     Book This
                   </a>
-                  <a href="sms:12168329212" className="inline-flex px-4 py-2 rounded-xl border hover:bg-gray-50 text-sm font-semibold">
+                  <a
+                    href="sms:12168329212"
+                    className="inline-flex px-4 py-2 rounded-xl border hover:bg-gray-50 text-sm font-semibold"
+                  >
                     Text Questions
                   </a>
                 </div>
@@ -189,7 +238,7 @@ export default function RedwavePage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold">FAQs</h2>
 
@@ -212,7 +261,7 @@ export default function RedwavePage() {
                 a: "Most people love 1–3x/week depending on training load—great pre-workout warm-up or post-workout recovery.",
               },
             ].map((f) => (
-              <div key={f.q} className="p-6 rounded-2xl border bg-white">
+              <div key={f.q} className="p-6 rounded-2xl border bg-gray-50">
                 <div className="font-semibold">{f.q}</div>
                 <p className="mt-2 text-sm text-gray-600">{f.a}</p>
               </div>
