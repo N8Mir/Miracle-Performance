@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function ScheduleWidget() {
   const containerRef = React.useRef(null);
@@ -6,28 +6,50 @@ export default function ScheduleWidget() {
   React.useEffect(() => {
     if (!containerRef.current) return;
 
-    // Clear anything previously rendered
-    containerRef.current.innerHTML = '';
+    // Clear any previous render (important for route changes)
+    containerRef.current.innerHTML = "";
 
-    // 1) Add the widget container div
-    const widgetDiv = document.createElement('div');
-    widgetDiv.className = 'wl-widget';
-    // IMPORTANT: use plain "&" here (not &amp;) since we're setting an attribute programmatically
-    widgetDiv.setAttribute('data', 'k_skin=28591&k_business=136685');
+    // Widget mount node
+    const widgetDiv = document.createElement("div");
+    widgetDiv.className = "wl-widget";
+    widgetDiv.setAttribute("data", "k_skin=28591&k_business=136685");
     containerRef.current.appendChild(widgetDiv);
 
-    // 2) Add the script tag AFTER the container is in the DOM
-    const script = document.createElement('script');
-    script.src = 'https://www.wellnessliving.com/rs/skin-widget-static.js';
-    script.type = 'text/javascript';
+    // External script
+    const script = document.createElement("script");
+    script.id = "wellnessliving-widget-script";
+    script.src = "https://www.wellnessliving.com/rs/skin-widget-static.js";
+    script.type = "text/javascript";
     script.async = true;
     containerRef.current.appendChild(script);
 
-    // (Optional) Cleanup on unmount
     return () => {
-      if (containerRef.current) containerRef.current.innerHTML = '';
+      if (containerRef.current) {
+        containerRef.current.innerHTML = "";
+      }
     };
   }, []);
 
-  return <div ref={containerRef} />;
+  return (
+    <div className="w-full">
+      {/* Keeps layout stable while widget loads */}
+      <div
+        ref={containerRef}
+        aria-label="Live class schedule widget"
+        className="min-h-[500px]"
+      />
+      <div className="mt-3 text-sm text-gray-600">
+        If the schedule doesn’t load,{" "}
+        <a
+          href="https://www.wellnessliving.com/schedule/miracleperformance"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-700 hover:underline"
+        >
+          open the full schedule here
+        </a>
+        .
+      </div>
+    </div>
+  );
 }
