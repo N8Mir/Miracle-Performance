@@ -74,11 +74,11 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                4 Classes — 1 Membership
+                8 Classes — 1 Membership
               </motion.h1>
 
               <p className="mt-4 md:mt-6 text-white/90 max-w-2xl mx-auto md:mx-0">
-                Strength. Conditioning. VersaClimber. Boxing. Small-group classes with expert coaches so you get real coaching in every class — zero intimidation and a fun, supportive environment.
+                Strength, Conditioning, VersaClimber, Boxing, and Redwave Infrared—mix & match your week. Small-group classes with expert coaches so you get real coaching in every class — zero intimidation and a fun, supportive environment.
               </p>
 
               {/* Trust tags */}
@@ -154,6 +154,62 @@ export default function HomePage() {
         </div>
       </section>
 
+{/* Redwave Feature */}
+<section id="redwave" className="scroll-mt-24 py-16 md:py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+      <div className="rounded-2xl overflow-hidden border bg-white">
+        <img
+          src="/redwave-studio.webp"
+          alt="Redwave Infrared Studio"
+          className="w-full h-[360px] object-cover"
+          loading="lazy"
+        />
+      </div>
+
+      <div>
+        <p className="text-sm uppercase tracking-wide text-gray-500">New</p>
+        <h2 className="mt-2 text-3xl md:text-4xl font-bold">Redwave Infrared Studio</h2>
+        <p className="mt-4 text-gray-600 max-w-2xl">
+          Infrared heat + 850nm near-infrared light in a purpose-built recovery and performance studio.
+          Take guided IR classes or book self-led recovery blocks—fully included in your membership and packs.
+        </p>
+
+        <ul className="mt-6 space-y-3 text-sm text-gray-700">
+          {[
+            "Infrared warmth to support deeper mobility and better warm-ups",
+            "850nm near-infrared (photobiomodulation) studied for recovery support",
+            "Guided classes + self-led 20-minute recovery blocks",
+            "Perfect add-on before or after training",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2">
+              <span className="mt-2 h-2 w-2 rounded-full bg-blue-700" />
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            to="/redwave"
+            className="px-5 py-3 rounded-2xl bg-blue-700 text-white font-semibold hover:bg-blue-800"
+          >
+            Learn More
+          </Link>
+          <a
+            href="https://www.wellnessliving.com/schedule/miracleperformance"
+            target="_blank"
+            rel="noreferrer"
+            className="px-5 py-3 rounded-2xl border hover:bg-white"
+          >
+            Book Redwave
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
       {/* Classes */}
       <section id="classes" className="scroll-mt-24 py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,6 +258,40 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+
+            {/* Redwave IR Classes list */}
+<div className="mt-12">
+  <div className="flex items-end justify-between gap-6 flex-wrap">
+    <div>
+      <h3 className="text-2xl font-bold">Redwave Infrared Classes</h3>
+      <p className="mt-2 text-gray-600 max-w-2xl">
+        Included in membership + packs. Infrared heat + 850nm near-infrared light sessions designed for mobility, recovery, and performance.
+      </p>
+    </div>
+    <Link
+      to="/redwave"
+      className="px-5 py-3 rounded-2xl bg-black text-white font-semibold hover:opacity-90"
+    >
+      Learn More
+    </Link>
+  </div>
+
+  <div className="mt-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+    {[
+      { title: "IR Active Recovery", desc: "Guided recovery: mobility + stretching + nervous system reset." },
+      { title: "IR Pilates / Barre Fusion", desc: "Low-impact strength + core + posture in infrared warmth." },
+      { title: "IR Functional Flow", desc: "Flow-based mobility + strength + breathwork." },
+      { title: "IR Climb + Yoga", desc: "Cardio + mobility + recovery in one session." },
+      { title: "30min Climb + 30min IR Yoga", desc: "High output + deep reset—best of both worlds." },
+      { title: "IR Self-Led Recovery", desc: "20-minute open studio blocks with guided routines." },
+    ].map((c) => (
+      <div key={c.title} className="p-6 rounded-2xl border bg-white">
+        <div className="font-semibold">{c.title}</div>
+        <p className="mt-2 text-sm text-gray-600">{c.desc}</p>
+      </div>
+    ))}
+  </div>
+</div>
           </div>
         </div>
       </section>
