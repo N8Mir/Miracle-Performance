@@ -7,6 +7,7 @@ export default function SiteHeader() {
 
   const navItems = [
     { label: "Classes", to: "/#classes" },
+    { label: "Redwave", to: "/redwave" },
     { label: "Training", to: "/#training" },
     { label: "Schedule", to: "/#schedule" },
     { label: "Pricing", to: "/#pricing" },
