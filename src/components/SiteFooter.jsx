@@ -29,6 +29,7 @@ export default function SiteFooter() {
             <h4 className="font-semibold mb-3">Explore</h4>
             <ul className="space-y-2">
               <li><Link to="/#classes" className="hover:underline">Classes</Link></li>
+              <li><Link to="/redwave" className="hover:underline">Redwave</Link></li>
               <li><Link to="/#training" className="hover:underline">Training</Link></li>
               <li><Link to="/#pricing" className="hover:underline">Pricing</Link></li>
               <li><Link to="/#schedule" className="hover:underline">Schedule</Link></li>
