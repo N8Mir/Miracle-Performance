@@ -3,30 +3,22 @@ import ClassCardGallery from "../components/ClassCardGallery";
 import { mpClassCards, redwaveClassCards } from "../data/classCards";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  Check,
-  MapPin,
-  Dumbbell,
-  Clock,
-  Users,
-  Star,
-  ExternalLink,
-} from "lucide-react";
+import { Check, MapPin, Dumbbell, Clock, Users, Star, ExternalLink } from "lucide-react";
 import ScheduleWidget from "../components/ScheduleWidget";
 import { memberships, packages } from "../data/pricing";
 
 const REVIEW_SCORES = {
-  google: null, // set when you want, e.g. "5.0 (120+)"
+  google: null, // e.g. "5.0 (120+)"
   classpass: "4.9 (2500+)",
-  wellness: null, // set when you want
+  wellness: null, // e.g. "5.0 (200+)"
 };
 
 export default function HomePage() {
   const features = [
     {
       icon: <Dumbbell className="w-6 h-6" />,
-      title: "4 Studios, 1 Membership",
-      desc: "Strength, Conditioning, VersaClimber, and Boxing—mix & match your week.",
+      title: "8 Classes, 1 Membership",
+      desc: "Strength, Met-Con, Climb, Boxing + Redwave Infrared—mix & match your week.",
     },
     {
       icon: <Users className="w-6 h-6" />,
@@ -80,21 +72,21 @@ export default function HomePage() {
               </motion.h1>
 
               <p className="mt-4 md:mt-6 text-white/90 max-w-2xl mx-auto md:mx-0">
-                Strength, Conditioning, VersaClimber, Boxing, and Redwave Infrared—mix & match your week. Small-group classes with expert coaches so you get real coaching in every class — zero intimidation and a fun, supportive environment.
+                Strength, Met-Con, Climb, Boxing, and Redwave Infrared—mix & match your week.
+                Small-group classes with expert coaches so you get real coaching in every class — zero intimidation
+                and a fun, supportive environment.
               </p>
 
               {/* Trust tags */}
               <div className="mt-5 flex flex-wrap justify-center md:justify-start gap-2 text-sm">
-                {["Beachwood, OH", "Beginner-Friendly", "Small-Group Coaching", "40+ Classes/Week"].map(
-                  (item) => (
-                    <span
-                      key={item}
-                      className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90"
-                    >
-                      {item}
-                    </span>
-                  )
-                )}
+                {["Beachwood, OH", "Beginner-Friendly", "Small-Group Coaching", "40+ Classes/Week"].map((item) => (
+                  <span
+                    key={item}
+                    className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
 
               <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
@@ -139,7 +131,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold">Why People Choose Miracle Performance</h2>
           <p className="mt-3 text-gray-600 max-w-2xl">
-            We design smart training for busy people. Get the support of a coach and the energy of a class without the chaos.
+            We design smart training for busy people. Get the support of a coach and the energy of a class without the
+            chaos.
           </p>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -156,133 +149,94 @@ export default function HomePage() {
         </div>
       </section>
 
-{/* Redwave Feature */}
-<section id="redwave" className="scroll-mt-24 py-16 md:py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid lg:grid-cols-2 gap-10 items-center">
-      <div className="rounded-2xl overflow-hidden border bg-white">
-        <img
-          src="/redwave-studio.webp"
-          alt="Redwave Infrared Studio"
-          className="w-full h-[360px] object-cover"
-          loading="lazy"
-        />
-      </div>
+      {/* Redwave Feature */}
+      <section id="redwave" className="scroll-mt-24 py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="rounded-2xl overflow-hidden border bg-white">
+              <img
+                src="/redwave-studio.webp"
+                alt="Redwave Infrared Studio"
+                className="w-full h-[360px] object-cover"
+                loading="lazy"
+              />
+            </div>
 
-      <div>
-        <p className="text-sm uppercase tracking-wide text-gray-500">New</p>
-        <h2 className="mt-2 text-3xl md:text-4xl font-bold">Redwave Infrared Studio</h2>
-        <p className="mt-4 text-gray-600 max-w-2xl">
-          Infrared heat + 850nm near-infrared light in a purpose-built recovery and performance studio.
-          Take guided IR classes or book self-led recovery blocks—fully included in your membership and packs.
-        </p>
+            <div>
+              <p className="text-sm uppercase tracking-wide text-gray-500">New</p>
+              <h2 className="mt-2 text-3xl md:text-4xl font-bold">Redwave Infrared Studio</h2>
+              <p className="mt-4 text-gray-600 max-w-2xl">
+                Infrared heat + 850nm near-infrared light in a purpose-built recovery and performance studio. Take
+                guided IR classes or book self-led recovery blocks—fully included in your membership and packs.
+              </p>
 
-        <ul className="mt-6 space-y-3 text-sm text-gray-700">
-          {[
-            "Infrared warmth to support deeper mobility and better warm-ups",
-            "850nm near-infrared (photobiomodulation) studied for recovery support",
-            "Guided classes + self-led 20-minute recovery blocks",
-            "Perfect add-on before or after training",
-          ].map((item) => (
-            <li key={item} className="flex items-start gap-2">
-              <span className="mt-2 h-2 w-2 rounded-full bg-blue-700" />
-              {item}
-            </li>
-          ))}
-        </ul>
+              <ul className="mt-6 space-y-3 text-sm text-gray-700">
+                {[
+                  "Infrared warmth to support deeper mobility and better warm-ups",
+                  "850nm near-infrared (photobiomodulation) studied for recovery support",
+                  "Guided classes + self-led 20-minute recovery blocks",
+                  "Perfect add-on before or after training",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-2 h-2 w-2 rounded-full bg-blue-700" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            to="/redwave"
-            className="px-5 py-3 rounded-2xl bg-blue-700 text-white font-semibold hover:bg-blue-800"
-          >
-            Learn More
-          </Link>
-          <a
-            href="https://www.wellnessliving.com/schedule/miracleperformance"
-            target="_blank"
-            rel="noreferrer"
-            className="px-5 py-3 rounded-2xl border hover:bg-white"
-          >
-            Book Redwave
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-      
-     {/* Classes */}
-<section id="classes" className="scroll-mt-24 py-16 md:py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-3xl md:text-4xl font-bold">Classes</h2>
-    <p className="mt-3 text-gray-600 max-w-3xl">
-      Everything is included in membership + packs. Choose your lane—or mix across the week.
-    </p>
-
-    {/* MP classes */}
-    <h3 className="mt-10 text-2xl font-bold">Miracle Performance</h3>
-    <p className="mt-2 text-gray-600 max-w-2xl">
-      Strength • Met-Con • Climb • Boxing
-    </p>
-    <ClassCardGallery items={mpClassCards} />
-
-    {/* Redwave */}
-    <div className="mt-14 flex items-end justify-between gap-6 flex-wrap">
-      <div>
-        <h3 className="text-2xl font-bold">Redwave Infrared Studio</h3>
-        <p className="mt-2 text-gray-600 max-w-3xl">
-          Infrared heat + <strong>850nm near-infrared light</strong> sessions designed for mobility, recovery,
-          and performance. Included with membership + packs.
-        </p>
-      </div>
-
-      <Link
-        to="/redwave"
-        className="px-5 py-3 rounded-2xl bg-blue-700 text-white font-semibold hover:bg-blue-800"
-      >
-        Learn More
-      </Link>
-    </div>
-
-    <ClassCardGallery items={redwaveClassCards} />
-  </div>
-</section>
-
-            {/* Redwave IR Classes list */}
-<div className="mt-12">
-  <div className="flex items-end justify-between gap-6 flex-wrap">
-    <div>
-      <h3 className="text-2xl font-bold">Redwave Infrared Classes</h3>
-      <p className="mt-2 text-gray-600 max-w-2xl">
-        Included in membership + packs. Infrared heat + 850nm near-infrared light sessions designed for mobility, recovery, and performance.
-      </p>
-    </div>
-    <Link
-      to="/redwave"
-      className="px-5 py-3 rounded-2xl bg-black text-white font-semibold hover:opacity-90"
-    >
-      Learn More
-    </Link>
-  </div>
-
-  <div className="mt-6 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-    {[
-      { title: "IR Active Recovery", desc: "Guided recovery: mobility + stretching + nervous system reset." },
-      { title: "IR Pilates / Barre Fusion", desc: "Low-impact strength + core + posture in infrared warmth." },
-      { title: "IR Functional Flow", desc: "Flow-based mobility + strength + breathwork." },
-      { title: "IR Climb + Yoga", desc: "Cardio + mobility + recovery in one session." },
-      { title: "30min Climb + 30min IR Yoga", desc: "High output + deep reset—best of both worlds." },
-      { title: "IR Self-Led Recovery", desc: "20-minute open studio blocks with guided routines." },
-    ].map((c) => (
-      <div key={c.title} className="p-6 rounded-2xl border bg-white">
-        <div className="font-semibold">{c.title}</div>
-        <p className="mt-2 text-sm text-gray-600">{c.desc}</p>
-      </div>
-    ))}
-  </div>
-</div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  to="/redwave"
+                  className="px-5 py-3 rounded-2xl bg-blue-700 text-white font-semibold hover:bg-blue-800"
+                >
+                  Learn More
+                </Link>
+                <a
+                  href="https://www.wellnessliving.com/schedule/miracleperformance"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-5 py-3 rounded-2xl border hover:bg-white"
+                >
+                  Book Redwave
+                </a>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Classes */}
+      <section id="classes" className="scroll-mt-24 py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold">Classes</h2>
+          <p className="mt-3 text-gray-600 max-w-3xl">
+            Everything is included in membership + packs. Choose your lane—or mix across the week.
+          </p>
+
+          {/* MP classes */}
+          <h3 className="mt-10 text-2xl font-bold">Miracle Performance</h3>
+          <p className="mt-2 text-gray-600 max-w-2xl">Strength • Met-Con • Climb • Boxing</p>
+          <ClassCardGallery items={mpClassCards} />
+
+          {/* Redwave */}
+          <div className="mt-14 flex items-end justify-between gap-6 flex-wrap">
+            <div>
+              <h3 className="text-2xl font-bold">Redwave Infrared Studio</h3>
+              <p className="mt-2 text-gray-600 max-w-3xl">
+                Infrared heat + <strong>850nm near-infrared light</strong> sessions designed for mobility, recovery,
+                and performance. Included with membership + packs.
+              </p>
+            </div>
+
+            <Link
+              to="/redwave"
+              className="px-5 py-3 rounded-2xl bg-blue-700 text-white font-semibold hover:bg-blue-800"
+            >
+              Learn More
+            </Link>
+          </div>
+
+          <ClassCardGallery items={redwaveClassCards} />
         </div>
       </section>
 
@@ -291,14 +245,16 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold">Personal Training</h2>
           <p className="mt-3 text-gray-600 max-w-2xl">
-            Customized coaching for faster results and focused accountability. Choose one-on-one or train with a small group.
+            Customized coaching for faster results and focused accountability. Choose one-on-one or train with a small
+            group.
           </p>
 
           <div className="mt-10 grid md:grid-cols-2 gap-6">
             <div className="rounded-2xl border bg-white p-6">
               <h3 className="text-xl font-semibold">One-on-One Training</h3>
               <p className="text-gray-600 mt-2">
-                Fully personalized programming tailored to your goals, schedule, and training history. Perfect for maximizing progress with direct coach attention.
+                Fully personalized programming tailored to your goals, schedule, and training history. Perfect for
+                maximizing progress with direct coach attention.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
@@ -318,10 +274,7 @@ export default function HomePage() {
                 >
                   Email Us
                 </a>
-                <a
-                  href="sms:12168329212"
-                  className="px-5 py-3 rounded-2xl border hover:bg-gray-50"
-                >
+                <a href="sms:12168329212" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">
                   Text 216-832-9212
                 </a>
               </div>
@@ -330,7 +283,8 @@ export default function HomePage() {
             <div className="rounded-2xl border bg-white p-6">
               <h3 className="text-xl font-semibold">Semi-Private Training (1–4 People)</h3>
               <p className="text-gray-600 mt-2">
-                Train with friends or teammates and get individualized coaching in a small group. Same quality as 1:1 with more energy—and shared cost.
+                Train with friends or teammates and get individualized coaching in a small group. Same quality as 1:1
+                with more energy—and shared cost.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-gray-700">
                 <li className="flex items-start gap-2">
@@ -350,10 +304,7 @@ export default function HomePage() {
                 >
                   Contact for Pricing
                 </a>
-                <a
-                  href="sms:12168329212"
-                  className="px-5 py-3 rounded-2xl border hover:bg-gray-50"
-                >
+                <a href="sms:12168329212" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">
                   Text 216-832-9212
                 </a>
               </div>
@@ -366,9 +317,7 @@ export default function HomePage() {
       <section id="schedule" className="scroll-mt-24 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold">Schedule</h2>
-          <p className="mt-3 text-gray-600 max-w-2xl">
-            View our live class schedule and reserve your spot instantly.
-          </p>
+          <p className="mt-3 text-gray-600 max-w-2xl">View our live class schedule and reserve your spot instantly.</p>
 
           <div className="mt-8 rounded-2xl border overflow-hidden p-4 bg-white">
             <ScheduleWidget />
@@ -533,7 +482,9 @@ export default function HomePage() {
                   <div className="font-semibold">Google Reviews</div>
                   <div className="text-sm text-gray-600 mt-1">
                     {REVIEW_SCORES.google ? (
-                      <>Average: <span className="font-semibold">{REVIEW_SCORES.google}</span></>
+                      <>
+                        Average: <span className="font-semibold">{REVIEW_SCORES.google}</span>
+                      </>
                     ) : (
                       <>Read latest reviews</>
                     )}
@@ -563,7 +514,9 @@ export default function HomePage() {
                   <div className="font-semibold">WellnessLiving Reviews</div>
                   <div className="text-sm text-gray-600 mt-1">
                     {REVIEW_SCORES.wellness ? (
-                      <>Average: <span className="font-semibold">{REVIEW_SCORES.wellness}</span></>
+                      <>
+                        Average: <span className="font-semibold">{REVIEW_SCORES.wellness}</span>
+                      </>
                     ) : (
                       <>Read latest reviews</>
                     )}
@@ -573,7 +526,8 @@ export default function HomePage() {
               </div>
 
               <p className="text-xs text-gray-500 mt-3">
-                (Embedding third-party reviews directly is often restricted; linking avoids cross-site limitations and keeps pages fast.)
+                (Embedding third-party reviews directly is often restricted; linking avoids cross-site limitations and
+                keeps pages fast.)
               </p>
             </div>
           </div>
