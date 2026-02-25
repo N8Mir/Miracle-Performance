@@ -9,6 +9,7 @@ import ScrollManager from "./components/ScrollManager.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import FreeWeekPage from "./pages/FreeWeekPage.jsx";
+import RedwavePage from "./pages/RedwavePage.jsx";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/free-week" element={<FreeWeekPage />} />
+          <Route path="/redwave" element={<RedwavePage />} />
         </Routes>
         <SiteFooter />
         <MobileStickyCTA />
