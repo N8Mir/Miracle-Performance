@@ -212,54 +212,42 @@ export default function HomePage() {
   </div>
 </section>
       
-      {/* Classes */}
-      <section id="classes" className="scroll-mt-24 py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold">Four Classes. Endless Results.</h2>
-          <p className="mt-3 text-gray-600 max-w-2xl">
-            Mix modalities across your week to build strength, stamina, and mobility without plateaus.
-          </p>
+     {/* Classes */}
+<section id="classes" className="scroll-mt-24 py-16 md:py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl md:text-4xl font-bold">Classes</h2>
+    <p className="mt-3 text-gray-600 max-w-3xl">
+      Everything is included in membership + packs. Choose your lane—or mix across the week.
+    </p>
 
-          <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-            <div className="rounded-2xl overflow-hidden border bg-black text-white">
-              <div className="h-44 bg-cover bg-center" style={{ backgroundImage: "url('/strength.webp')" }} />
-              <div className="p-5">
-                <h3 className="font-semibold text-lg text-blue-500">Strength</h3>
-                <p className="text-sm mt-2">
-                  Progressive resistance training in a supportive group setting, designed to build lean muscle and long-term durability.
-                </p>
-              </div>
-            </div>
+    {/* MP classes */}
+    <h3 className="mt-10 text-2xl font-bold">Miracle Performance</h3>
+    <p className="mt-2 text-gray-600 max-w-2xl">
+      Strength • Met-Con • Climb • Boxing
+    </p>
+    <ClassCardGallery items={mpClassCards} />
 
-            <div className="rounded-2xl overflow-hidden border bg-black text-white">
-              <div className="h-44 bg-cover bg-center" style={{ backgroundImage: "url('/conditioning.webp')" }} />
-              <div className="p-5">
-                <h3 className="font-semibold text-lg text-blue-500">Metabolic Conditioning</h3>
-                <p className="text-sm mt-2">
-                  High-energy sessions combining cardio and strength intervals to maximize calorie burn and endurance.
-                </p>
-              </div>
-            </div>
+    {/* Redwave */}
+    <div className="mt-14 flex items-end justify-between gap-6 flex-wrap">
+      <div>
+        <h3 className="text-2xl font-bold">Redwave Infrared Studio</h3>
+        <p className="mt-2 text-gray-600 max-w-3xl">
+          Infrared heat + <strong>850nm near-infrared light</strong> sessions designed for mobility, recovery,
+          and performance. Included with membership + packs.
+        </p>
+      </div>
 
-            <div className="rounded-2xl overflow-hidden border bg-black text-white">
-              <div className="h-44 bg-cover bg-center" style={{ backgroundImage: "url('/versaclimber.webp')" }} />
-              <div className="p-5">
-                <h3 className="font-semibold text-lg text-blue-500">VersaClimber</h3>
-                <p className="text-sm mt-2">
-                  Low-impact, total-body cardio on the VersaClimber that skyrockets endurance and torches calories in record time.
-                </p>
-              </div>
-            </div>
+      <Link
+        to="/redwave"
+        className="px-5 py-3 rounded-2xl bg-blue-700 text-white font-semibold hover:bg-blue-800"
+      >
+        Learn More
+      </Link>
+    </div>
 
-            <div className="rounded-2xl overflow-hidden border bg-black text-white">
-              <div className="h-44 bg-cover bg-center" style={{ backgroundImage: "url('/boxing.webp')" }} />
-              <div className="p-5">
-                <h3 className="font-semibold text-lg text-blue-500">Boxing</h3>
-                <p className="text-sm mt-2">
-                  Technique-driven boxing workouts that sharpen skills, improve agility, and build serious stamina — no experience needed.
-                </p>
-              </div>
-            </div>
+    <ClassCardGallery items={redwaveClassCards} />
+  </div>
+</section>
 
             {/* Redwave IR Classes list */}
 <div className="mt-12">
