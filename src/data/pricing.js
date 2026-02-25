@@ -1,0 +1,77 @@
+export const memberships = [
+  {
+    name: "4 sessions / mo",
+    sub: "Budget-friendly",
+    price: 69,
+    features: ["All Class Access", "App booking", "Coach feedback"],
+    cta: "Start Free Week",
+    link: "/free-week",
+  },
+  {
+    name: "8 sessions / mo",
+    sub: "Most popular",
+    price: 119,
+    features: ["All Class Access", "App booking", "Coach feedback"],
+    cta: "Start Free Week",
+    link: "/free-week",
+  },
+  {
+    name: "12 sessions / mo",
+    sub: "Train 3x/week",
+    price: 149,
+    features: ["All Class Access", "App booking", "Coach feedback"],
+    cta: "Start Free Week",
+    link: "/free-week",
+  },
+  {
+    name: "Unlimited / mo",
+    sub: "Best results",
+    price: 199,
+    features: ["Unlimited classes", "App booking", "Coach feedback"],
+    cta: "Start Free Week",
+    link: "/free-week",
+  },
+];
+
+export const packages = [
+  {
+    name: "Drop-In",
+    sub: "Single class",
+    price: 25,
+    features: ["Any studio", "Coach guidance"],
+    cta: "Book a Class",
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233847",
+  },
+  {
+    name: "5 Sessions",
+    sub: "$23/session",
+    price: 115,
+    features: ["Flexible", "3-month expiry"],
+    cta: "Get 5-Pack",
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233849",
+  },
+  {
+    name: "10 Sessions",
+    sub: "$21/session",
+    price: 210,
+    features: ["Great value", "1-year expiry"],
+    cta: "Get 10-Pack",
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233855",
+  },
+  {
+    name: "20 Sessions",
+    sub: "$19/session",
+    price: 380,
+    features: ["Great savings", "1-year expiry"],
+    cta: "Get 20-Pack",
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233862",
+  },
+  {
+    name: "30 Sessions",
+    sub: "$16/session",
+    price: 480,
+    features: ["Best per-class price", "1-year expiry"],
+    cta: "Get 30-Pack",
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233865",
+  },
+];
