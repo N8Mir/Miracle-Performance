@@ -166,16 +166,16 @@ export default function HomePage() {
               <p className="text-sm uppercase tracking-wide text-gray-500">New</p>
               <h2 className="mt-2 text-3xl md:text-4xl font-bold">Redwave Infrared Studio</h2>
               <p className="mt-4 text-gray-600 max-w-2xl">
-                Infrared heat + 850nm near-infrared light in a purpose-built recovery and performance studio. Take
+                Infrared heat + 850nm near-infrared Redlight Therapy in a purpose-built recovery and performance studio. Take
                 guided IR classes or book self-led recovery blocks—fully included in your membership and packs.
               </p>
 
               <ul className="mt-6 space-y-3 text-sm text-gray-700">
                 {[
                   "Infrared warmth to support deeper mobility and better warm-ups",
-                  "850nm near-infrared (photobiomodulation) studied for recovery support",
-                  "Guided classes + self-led 20-minute recovery blocks",
-                  "Perfect add-on before or after training",
+                  "850nm near-infrared Redlight Therapy (photobiomodulation) studied for recovery support",
+                  "Guided classes + self-led 30-minute recovery blocks",
+                  "Perfect add-on to your training program",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="mt-2 h-2 w-2 rounded-full bg-blue-700" />
