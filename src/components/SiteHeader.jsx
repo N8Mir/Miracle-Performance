@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { LogIn, Menu, X } from "lucide-react";
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Identify if we are currently on the Redwave landing page
+  const isRedwaveRoute = location.pathname.startsWith("/redwave");
 
   const navItems = [
     { label: "Classes", to: "/#classes" },
-    { label: "Redwave", to: "/redwave" },
+    { label: "Redwave", to: "/redwave", variant: "redwave" },
     { label: "Training", to: "/#training" },
     { label: "Schedule", to: "/#schedule" },
     { label: "Pricing", to: "/#pricing" },
@@ -17,6 +21,7 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
+        {/* Brand */}
         <Link to="/" className="flex items-center gap-3 min-w-0">
           <img
             src="/mp-small-logo.png"
@@ -32,11 +37,29 @@ export default function SiteHeader() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          {navItems.map((item) => (
-            <Link key={item.label} to={item.to} className="hover:text-black">
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isRedwave = item.variant === "redwave";
+
+            // Redwave styled as a pill button in nav
+            if (isRedwave) {
+              return (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  className="px-3 py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 font-semibold"
+                >
+                  Redwave
+                </Link>
+              );
+            }
+
+            return (
+              <Link key={item.label} to={item.to} className="hover:text-black">
+                {item.label}
+              </Link>
+            );
+          })}
+
           <a
             href="https://www.wellnessliving.com/login/miracleperformance"
             target="_blank"
@@ -54,13 +77,20 @@ export default function SiteHeader() {
             href="https://www.wellnessliving.com/schedule/miracleperformance"
             target="_blank"
             rel="noreferrer"
-            className="px-3 py-2 rounded-xl border border-blue-700 text-blue-700 hover:bg-blue-50"
+            className={`px-3 py-2 rounded-xl border hover:bg-gray-50 ${
+              isRedwaveRoute
+                ? "border-red-600 text-red-700 hover:bg-red-50"
+                : "border-blue-700 text-blue-700 hover:bg-blue-50"
+            }`}
           >
             Book Now
           </a>
+
           <Link
             to="/free-week"
-            className="inline-flex items-center px-4 py-2 rounded-xl bg-blue-700 text-white hover:bg-blue-800"
+            className={`inline-flex items-center px-4 py-2 rounded-xl text-white font-semibold ${
+              isRedwaveRoute ? "bg-red-600 hover:bg-red-700" : "bg-blue-700 hover:bg-blue-800"
+            }`}
           >
             Claim Free Week
           </Link>
@@ -70,10 +100,13 @@ export default function SiteHeader() {
         <div className="md:hidden flex items-center gap-2">
           <Link
             to="/free-week"
-            className="px-3 py-2 rounded-xl bg-blue-700 text-white text-sm font-semibold whitespace-nowrap"
+            className={`px-3 py-2 rounded-xl text-white text-sm font-semibold whitespace-nowrap ${
+              isRedwaveRoute ? "bg-red-600 hover:bg-red-700" : "bg-blue-700 hover:bg-blue-800"
+            }`}
           >
             Free Week
           </Link>
+
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
@@ -89,16 +122,37 @@ export default function SiteHeader() {
       {menuOpen && (
         <div className="md:hidden border-t bg-white">
           <nav className="px-4 py-3 flex flex-col gap-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.to}
-                onClick={() => setMenuOpen(false)}
-                className="px-3 py-2 rounded-lg hover:bg-gray-50"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {/* Optional: show Redwave logo at the top of mobile menu */}
+            <div className="px-3 py-2 flex items-center gap-3">
+              <img
+                src="/redwave-logo.webp"
+                alt="Redwave"
+                className="h-7 w-auto"
+                loading="lazy"
+              />
+              <span className="text-xs uppercase tracking-wide text-gray-500">
+                Infrared Studio
+              </span>
+            </div>
+
+            {navItems.map((item) => {
+              const isRedwave = item.variant === "redwave";
+
+              return (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  onClick={() => setMenuOpen(false)}
+                  className={`px-3 py-2 rounded-lg ${
+                    isRedwave
+                      ? "bg-red-600 text-white hover:bg-red-700 font-semibold"
+                      : "hover:bg-gray-50"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
 
             <a
               href="https://www.wellnessliving.com/schedule/miracleperformance"
