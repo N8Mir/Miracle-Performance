@@ -163,15 +163,17 @@ export default function HomePage() {
             </div>
 
             <div>
-             <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
   <img
     src="/redwave-logo.webp"
     alt="Redwave"
-    className="h-8 w-auto"
+    className="h-12 w-auto"
     loading="lazy"
     decoding="async"
   />
-  <p className="text-sm uppercase tracking-wide text-gray-500">New</p>
+  <p className="text-xs md:text-sm uppercase tracking-wide text-gray-500">
+    New
+  </p>
 </div>
               <h2 className="mt-2 text-3xl md:text-4xl font-bold">Redwave Infrared Studio</h2>
               <p className="mt-4 text-gray-600 max-w-2xl">
