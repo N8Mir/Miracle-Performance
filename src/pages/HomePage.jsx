@@ -174,7 +174,7 @@ export default function HomePage() {
                 {[
                   "Infrared warmth to support deeper mobility and better warm-ups",
                   "850nm near-infrared Redlight Therapy (photobiomodulation) studied for recovery support",
-                  "Guided classes + self-led 30-minute recovery blocks",
+                  "4 Instructor-guided classes + self-led 30-minute recovery blocks",
                   "Perfect add-on to your training program",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
