@@ -187,7 +187,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
                   to="/redwave"
-                  className="px-5 py-3 rounded-2xl bg-blue-700 text-white font-semibold hover:bg-blue-800"
+                  className="px-5 py-3 rounded-2xl bg-red-600 text-white font-semibold hover:bg-red-700"
                 >
                   Learn More
                 </Link>
@@ -236,7 +236,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <ClassCardGallery items={redwaveClassCards} />
+          <ClassCardGallery items={redwaveClassCards} variant="redwave" />
         </div>
       </section>
 
