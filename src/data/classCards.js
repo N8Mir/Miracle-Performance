@@ -26,7 +26,7 @@ export const mpClassCards = [
   {
     id: "boxing",
     title: "Boxing",
-    image: "/class-cards/boxing.webp",
+    image: "/class-cards/boxfit.webp",
     modalText:
       "Technique-driven boxing workouts for stamina, coordination, and stress relief—no experience needed.",
     primaryCta: {
