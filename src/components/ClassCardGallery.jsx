@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { X, ExternalLink } from "lucide-react";
 
-function CtaButton({ cta, isPrimary, onClose }) {
+function CtaButton({ cta, isPrimary, onClose, primaryBtnClass }) {
   if (!cta) return null;
 
   const base =
     "inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl font-semibold";
   const cls = isPrimary
-    ? `${base} bg-blue-700 text-white hover:bg-blue-800`
+    ? `${base} ${primaryBtnClass}`
     : `${base} border hover:bg-gray-50`;
 
   if (cta.external) {
@@ -32,12 +32,22 @@ function CtaButton({ cta, isPrimary, onClose }) {
   );
 }
 
-export default function ClassCardGallery({ items }) {
+export default function ClassCardGallery({ items, variant = "mp" }) {
   const [active, setActive] = React.useState(null);
+
+  const primaryBtnClass =
+    variant === "redwave"
+      ? "bg-red-600 text-white hover:bg-red-700"
+      : "bg-blue-700 text-white hover:bg-blue-800";
+
+  const badgeClass =
+    variant === "redwave"
+      ? "bg-red-600/90 text-white"
+      : "bg-blue-700/90 text-white";
 
   return (
     <>
-      {/* Mobile: swipe | Desktop: grid */}
+      {/* Mobile swipe | Desktop grid */}
       <div className="mt-8">
         <div className="flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-6 md:overflow-visible">
           {items.map((item) => (
@@ -55,14 +65,20 @@ export default function ClassCardGallery({ items }) {
                   decoding="async"
                   className="w-full aspect-[4/5] object-cover group-hover:scale-[1.01] transition"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/0 to-black/0 opacity-70" />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 opacity-80" />
+
+                <div className="absolute top-3 left-3">
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${badgeClass}`}>
+                    {variant === "redwave" ? "REDWAVE" : "CLASS"}
+                  </span>
+                </div>
+
                 <div className="absolute bottom-3 left-3 right-3">
                   <div className="text-white font-semibold text-sm md:text-base">
                     {item.title}
                   </div>
-                  <div className="text-white/80 text-xs mt-1">
-                    Tap to view details
-                  </div>
+                  <div className="text-white/80 text-xs mt-1">Tap to view details</div>
                 </div>
               </div>
             </button>
@@ -70,7 +86,7 @@ export default function ClassCardGallery({ items }) {
         </div>
 
         <p className="mt-3 text-xs text-gray-500 md:hidden">
-          Swipe to view more classes →
+          Swipe to view more →
         </p>
       </div>
 
@@ -97,15 +113,38 @@ export default function ClassCardGallery({ items }) {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold">{active.title}</h3>
+                {/* Optional logo for Redwave */}
+                {variant === "redwave" && (
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="/redwave-logo.webp"
+                      alt="Redwave"
+                      className="h-8 w-auto"
+                      loading="lazy"
+                    />
+                    <span className="text-xs uppercase tracking-wide text-gray-500">
+                      Included with membership + packs
+                    </span>
+                  </div>
+                )}
+
+                <h3 className="mt-3 text-xl font-bold">{active.title}</h3>
                 <p className="mt-2 text-sm text-gray-600">
-                  {active.modalText ||
-                    "Book your spot or learn more about this class format."}
+                  {active.modalText || "Book your spot or learn more about this class format."}
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <CtaButton cta={active.primaryCta} isPrimary onClose={() => setActive(null)} />
-                  <CtaButton cta={active.secondaryCta} onClose={() => setActive(null)} />
+                  <CtaButton
+                    cta={active.primaryCta}
+                    isPrimary
+                    onClose={() => setActive(null)}
+                    primaryBtnClass={primaryBtnClass}
+                  />
+                  <CtaButton
+                    cta={active.secondaryCta}
+                    onClose={() => setActive(null)}
+                    primaryBtnClass={primaryBtnClass}
+                  />
                 </div>
 
                 <div className="mt-6 text-xs text-gray-500">
