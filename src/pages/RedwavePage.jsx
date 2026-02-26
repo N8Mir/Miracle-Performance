@@ -12,11 +12,22 @@ export default function RedwavePage() {
       <section className="relative overflow-hidden bg-black text-white">
         <div className="absolute inset-0 opacity-30 bg-[url('/redwave-hero.webp')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black" />
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <p className="text-sm uppercase tracking-wider text-white/70">
-            Included with membership + packs
-          </p>
-          <h1 className="mt-2 text-3xl md:text-5xl font-extrabold">
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <img
+              src="/redwave-logo.webp"
+              alt="Redwave"
+              className="h-10 md:h-12 w-auto"
+              loading="eager"
+            />
+            <span className="text-xs uppercase tracking-wider text-white/70">
+              Included with membership + packs
+            </span>
+          </div>
+
+          <h1 className="mt-4 text-3xl md:text-5xl font-extrabold">
             Redwave Infrared Studio
           </h1>
           <p className="mt-4 max-w-2xl text-white/85">
@@ -29,7 +40,7 @@ export default function RedwavePage() {
               href="https://www.wellnessliving.com/schedule/miracleperformance"
               target="_blank"
               rel="noreferrer"
-              className="px-5 py-3 rounded-2xl bg-blue-700 text-white font-semibold hover:bg-blue-800"
+              className="px-5 py-3 rounded-2xl bg-red-600 text-white font-semibold hover:bg-red-700"
             >
               Book Redwave
             </a>
@@ -42,12 +53,7 @@ export default function RedwavePage() {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2 text-sm">
-            {[
-              "Infrared heat",
-              "850nm near-infrared light",
-              "Guided recovery",
-              "Self-led blocks",
-            ].map((t) => (
+            {["Infrared heat", "850nm near-infrared light", "Guided recovery", "Self-led blocks"].map((t) => (
               <span
                 key={t}
                 className="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white/90"
@@ -59,15 +65,15 @@ export default function RedwavePage() {
         </div>
       </section>
 
-      {/* NEW: Redwave class cards (your webp graphics) */}
+      {/* Class Cards */}
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between gap-6 flex-wrap">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold">Redwave Classes</h2>
               <p className="mt-3 text-gray-600 max-w-3xl">
-                Swipe (mobile) or click (desktop) to view each class card. All Redwave
-                sessions are included with memberships and class packs.
+                Swipe (mobile) or click (desktop) to view each class card.
+                Redwave is included with memberships and class packs.
               </p>
             </div>
             <a
@@ -80,12 +86,12 @@ export default function RedwavePage() {
             </a>
           </div>
 
-          <ClassCardGallery items={redwaveClassCards} />
+          <ClassCardGallery items={redwaveClassCards} variant="redwave" />
         </div>
       </section>
 
       {/* Benefits */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-red-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold">Why Infrared + 850nm?</h2>
           <p className="mt-3 text-gray-600 max-w-3xl">
@@ -102,32 +108,15 @@ export default function RedwavePage() {
             ))}
           </div>
 
-          {/* Science-backed (careful) highlights */}
           <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              {
-                icon: <Flame className="w-6 h-6" />,
-                title: "Warm up faster",
-                desc: "Infrared warmth supports readiness so movement feels smoother.",
-              },
-              {
-                icon: <Sparkles className="w-6 h-6" />,
-                title: "Recovery support",
-                desc: "Near-infrared photobiomodulation is studied for recovery, soreness, and inflammation balance.",
-              },
-              {
-                icon: <HeartPulse className="w-6 h-6" />,
-                title: "Feel-good finish",
-                desc: "Many people leave feeling looser, calmer, and recharged.",
-              },
-              {
-                icon: <Timer className="w-6 h-6" />,
-                title: "Time efficient",
-                desc: "20-minute self-led blocks and 50–60 minute classes.",
-              },
+              { icon: <Flame className="w-6 h-6" />, title: "Warm up faster", desc: "Infrared warmth supports readiness so movement feels smoother." },
+              { icon: <Sparkles className="w-6 h-6" />, title: "Recovery support", desc: "Near-infrared photobiomodulation is studied for recovery and soreness support." },
+              { icon: <HeartPulse className="w-6 h-6" />, title: "Feel-good finish", desc: "Many people leave feeling looser, calmer, and recharged." },
+              { icon: <Timer className="w-6 h-6" />, title: "Time efficient", desc: "20-minute self-led blocks and 50–60 minute classes." },
             ].map((x) => (
               <div key={x.title} className="p-6 rounded-2xl border bg-white">
-                <div className="w-11 h-11 rounded-xl bg-blue-700/10 text-blue-700 flex items-center justify-center">
+                <div className="w-11 h-11 rounded-xl bg-red-600/10 text-red-700 flex items-center justify-center">
                   {x.icon}
                 </div>
                 <div className="mt-4 font-semibold">{x.title}</div>
@@ -162,11 +151,11 @@ export default function RedwavePage() {
                 {[
                   "Included in all memberships + class packs",
                   "Guided IR formats + self-led blocks",
-                  "Designed to pair before/after Strength, Conditioning, Climb, and Boxing",
+                  "Designed to pair before/after Strength, Met-Con, Climb, and Boxing",
                   "Performance vibe: calm, focused, and efficient",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 mt-0.5 text-blue-700" />
+                    <Check className="w-5 h-5 mt-0.5 text-red-700" />
                     {item}
                   </li>
                 ))}
@@ -177,9 +166,9 @@ export default function RedwavePage() {
                   href="https://www.wellnessliving.com/schedule/miracleperformance"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90"
+                  className="px-5 py-3 rounded-2xl bg-red-600 text-white hover:bg-red-700"
                 >
-                  View Schedule
+                  Book Redwave
                 </a>
                 <Link to="/" className="px-5 py-3 rounded-2xl border hover:bg-gray-50">
                   Back to Home
@@ -190,13 +179,11 @@ export default function RedwavePage() {
         </div>
       </section>
 
-      {/* Class Menu (text list) */}
+      {/* Class Menu */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold">Redwave Class Menu</h2>
-          <p className="mt-3 text-gray-600 max-w-3xl">
-            Quick descriptions for each format.
-          </p>
+          <p className="mt-3 text-gray-600 max-w-3xl">Quick descriptions for each format.</p>
 
           <div className="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
             {redwaveClasses.map((c) => (
@@ -212,7 +199,7 @@ export default function RedwavePage() {
                     href="https://www.wellnessliving.com/schedule/miracleperformance"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex px-4 py-2 rounded-xl bg-blue-700 text-white hover:bg-blue-800 text-sm font-semibold"
+                    className="inline-flex px-4 py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 text-sm font-semibold"
                   >
                     Book This
                   </a>
@@ -229,44 +216,11 @@ export default function RedwavePage() {
 
           <p className="mt-8 text-sm text-gray-600">
             Not sure where to start? Text{" "}
-            <a href="sms:12168329212" className="text-blue-700 hover:underline">
+            <a href="sms:12168329212" className="text-red-700 hover:underline">
               216-832-9212
             </a>{" "}
             and we’ll recommend a first session.
           </p>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section className="py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold">FAQs</h2>
-
-          <div className="mt-6 grid md:grid-cols-2 gap-6">
-            {[
-              {
-                q: "Is Redwave included in my membership/package?",
-                a: "Yes — Redwave is included in memberships and class packs. Book it like any other class.",
-              },
-              {
-                q: "Is this a workout or recovery?",
-                a: "Both. Some sessions are movement-based (Pilates/Barre, Functional Flow), others are recovery-first (Active Recovery, Self-Led blocks).",
-              },
-              {
-                q: "What should I bring?",
-                a: "Comfortable athletic clothing and a water bottle. We’ll guide you through the session.",
-              },
-              {
-                q: "How often should I do it?",
-                a: "Most people love 1–3x/week depending on training load—great pre-workout warm-up or post-workout recovery.",
-              },
-            ].map((f) => (
-              <div key={f.q} className="p-6 rounded-2xl border bg-gray-50">
-                <div className="font-semibold">{f.q}</div>
-                <p className="mt-2 text-sm text-gray-600">{f.a}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </main>
