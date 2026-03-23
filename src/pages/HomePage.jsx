@@ -334,6 +334,133 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Redwave Class Series */}
+      <section className="py-32 px-8 bg-surface relative overflow-hidden">
+        {/* Header */}
+        <div className="max-w-7xl mx-auto mb-20">
+          <span className="font-headline text-redwave font-black tracking-widest text-xs uppercase mb-4 block">
+            INFRARED RECOVERY
+          </span>
+          <h2 className="font-headline text-4xl md:text-7xl font-black tracking-tighter uppercase italic text-glow-red">
+            <span className="text-redwave">REDWAVE </span>
+            <span className="text-white/20">CLASS SERIES</span>
+          </h2>
+        </div>
+
+        {/* Cards */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+          {[
+            {
+              img: "/class-cards/ir-active-recovery.webp",
+              badge: "RECOVERY",
+              title: "IR ACTIVE RECOVERY",
+              bullets: ["Release tension", "Improve mobility", "Accelerate muscle repair"],
+            },
+            {
+              img: "/class-cards/ir-functional-flow.webp",
+              badge: "FLOW",
+              title: "IR FUNCTIONAL FLOW",
+              bullets: ["Improve flexibility", "Enhance stability", "Functional strength"],
+            },
+            {
+              img: "/class-cards/ir-pilates-barre-fusion.webp",
+              badge: "SCULPT",
+              title: "IR PILATES + BARRE",
+              bullets: ["Strengthen core", "Improve posture", "Sculpt lean muscle"],
+            },
+            {
+              img: "/class-cards/ir-climb-yoga.webp",
+              badge: "HYBRID",
+              title: "IR CLIMB + YOGA",
+              bullets: ["Build endurance", "Improve mobility", "Accelerate recovery"],
+            },
+          ].map(({ img, badge, title, bullets }) => (
+            <div key={title} className="flex flex-col bg-surface-container-high border-b-4 border-redwave group">
+              {/* Image */}
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <img
+                  src={img}
+                  alt={title}
+                  className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-redwave-dark/60 to-transparent group-hover:opacity-0 transition-all duration-300" />
+                <div className="absolute top-4 right-4 z-10">
+                  <div className="bg-redwave text-white px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">
+                    {badge}
+                  </div>
+                </div>
+                <div className="absolute bottom-4 left-8 pointer-events-none">
+                  <h3 className="font-headline text-2xl font-black text-white leading-none">{title}</h3>
+                </div>
+              </div>
+
+              {/* Body */}
+              <div className="p-8 space-y-6 flex flex-col flex-1">
+                <ul className="space-y-3 flex-1">
+                  {bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-white">
+                      <span className="material-symbols-outlined text-redwave text-[14px] leading-none mt-px">bolt</span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://www.wellnessliving.com/schedule/miracleperformance"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full bg-white text-redwave-dark text-[10px] font-black tracking-widest px-4 py-3 uppercase text-center hover:bg-redwave hover:text-white transition-colors"
+                >
+                  BOOK NOW
+                </a>
+              </div>
+            </div>
+          ))}
+
+          {/* 5th card — Self-guided session */}
+          <div className="flex flex-col bg-surface-container-high border-b-4 border-redwave group">
+            {/* No-image panel */}
+            <div className="relative aspect-[3/4] overflow-hidden flex items-center justify-center">
+              {/* Red glow circle */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#ff2d2d" stopOpacity="0.25" />
+                    <stop offset="100%" stopColor="#ff2d2d" stopOpacity="0" />
+                  </radialGradient>
+                </defs>
+                <ellipse cx="150" cy="200" rx="140" ry="140" fill="url(#redGlow)" />
+              </svg>
+              <div className="absolute top-4 right-4 z-10">
+                <div className="bg-redwave text-white px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">
+                  SELF-GUIDED
+                </div>
+              </div>
+              <div className="absolute bottom-4 left-8 pointer-events-none">
+                <h3 className="font-headline text-2xl font-black text-white leading-none">POST-WORKOUT<br />RECOVERY</h3>
+              </div>
+            </div>
+
+            {/* Body */}
+            <div className="p-8 space-y-6 flex flex-col flex-1">
+              <ul className="space-y-3 flex-1">
+                {["30-min session", "Video-led", "5 phases"].map((b) => (
+                  <li key={b} className="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-white">
+                    <span className="material-symbols-outlined text-redwave text-[14px] leading-none mt-px">bolt</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/redwave"
+                className="block w-full bg-white text-redwave-dark text-[10px] font-black tracking-widest px-4 py-3 uppercase text-center hover:bg-redwave hover:text-white transition-colors"
+              >
+                LEARN MORE →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why */}
       <section id="why" className="scroll-mt-24 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
