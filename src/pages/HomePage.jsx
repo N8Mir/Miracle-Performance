@@ -461,6 +461,144 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Pricing */}
+      <section id="pricing" className="py-32 px-8 bg-surface-container-lowest">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="font-headline text-4xl md:text-7xl font-black tracking-tighter italic uppercase text-white mb-4">
+            TIERED ACCESS.
+          </h2>
+          <p className="font-headline text-xl font-bold uppercase tracking-tight text-white mb-2">MEMBERSHIPS</p>
+          <p className="font-body text-on-surface-variant">Month-to-month, upgrade/downgrade, or cancel anytime.</p>
+        </div>
+
+        {/* Credit explainer */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12 max-w-2xl mx-auto">
+          {[
+            { credits: "1 CREDIT", label: "Redwave Recovery Session" },
+            { credits: "3 CREDITS", label: "Any MP Class" },
+            { credits: "4 CREDITS", label: "Redwave Premium Classes" },
+          ].map(({ credits, label }) => (
+            <div key={credits} className="bg-surface-container border border-outline-variant/20 p-4 flex items-center gap-3">
+              <span className="font-headline font-black text-2xl text-primary-dim">{credits}</span>
+              <span className="text-xs font-bold uppercase tracking-tight text-white">{label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Membership cards */}
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-outline-variant/20 border border-outline-variant/20 mb-8">
+          {memberships.map((m) => (
+            <div
+              key={m.name}
+              className={`p-8 flex flex-col justify-between relative ${
+                m.popular ? "bg-surface-container-low ring-1 ring-primary-dim/30" : "bg-surface-container"
+              }`}
+            >
+              {m.badge && (
+                <div className="absolute top-0 right-0 p-3">
+                  <span
+                    className={`font-headline text-[9px] font-black tracking-widest px-2 py-1 uppercase ${
+                      m.badgeColor === "redwave" ? "bg-redwave text-white" : "bg-primary-dim text-black"
+                    }`}
+                  >
+                    {m.badge}
+                  </span>
+                </div>
+              )}
+              <div>
+                <h3 className={`font-headline text-xl font-black mb-1 uppercase tracking-tight ${m.popular ? "text-primary-dim" : "text-white"}`}>
+                  {m.name}
+                </h3>
+                <div className="flex items-baseline gap-1 mb-8">
+                  <span className="font-headline text-4xl font-black text-white">${m.price}</span>
+                  <span className="text-on-surface-variant font-bold text-xs tracking-widest uppercase">/ MO</span>
+                </div>
+                <ul className="space-y-4 mb-10">
+                  {m.features.map((f) => (
+                    <li key={f} className="flex gap-2 text-xs font-bold tracking-tight text-white">
+                      <span className="material-symbols-outlined text-primary-dim text-base leading-none mt-px">check</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link
+                to={m.link}
+                className={`block text-center font-headline text-xs font-bold py-4 transition-all ${
+                  m.popular
+                    ? "bg-primary-dim text-black hover:bg-blue-400"
+                    : "border border-outline-variant text-white hover:bg-white hover:text-black"
+                }`}
+              >
+                {m.cta}
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* Packages */}
+        <div className="max-w-[1400px] mx-auto mt-32">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl md:text-5xl font-black tracking-tighter italic uppercase text-white mb-4">
+              PACKAGES.
+            </h2>
+            <p className="font-body text-on-surface-variant">Flexible options for the focused athlete.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 border border-outline-variant/20">
+            {packages.map((p) => {
+              const isRedwave = p.accent === "redwave";
+              return (
+                <div
+                  key={p.name}
+                  className={`bg-surface-container p-8 flex flex-col justify-between border-b-4 ${
+                    isRedwave ? "border-redwave" : "border-primary-dim"
+                  }`}
+                >
+                  <div>
+                    <h3 className={`font-headline text-lg font-black mb-1 uppercase tracking-tight ${isRedwave ? "text-redwave" : "text-primary-dim"}`}>
+                      {p.name}
+                    </h3>
+                    <div className="flex items-baseline gap-1 mb-6">
+                      <span className={`font-headline text-3xl font-black ${isRedwave ? "text-redwave" : "text-primary-dim"}`}>
+                        ${p.price}
+                      </span>
+                    </div>
+                    <ul className="space-y-3 mb-8">
+                      {p.features.map((f) => (
+                        <li key={f} className="flex gap-2 text-xs font-bold tracking-tight text-white">
+                          <span className={`material-symbols-outlined text-base leading-none mt-px ${isRedwave ? "text-redwave" : "text-primary-dim"}`}>
+                            confirmation_number
+                          </span>
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`block text-center font-headline text-[10px] font-bold py-3 uppercase tracking-widest transition-all ${
+                      isRedwave
+                        ? "bg-redwave text-white hover:bg-redwave-dark"
+                        : "bg-primary-dim text-black hover:bg-blue-400"
+                    }`}
+                  >
+                    {p.cta}
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Bottom note */}
+        <p className="text-center mt-12 font-body text-sm text-on-surface-variant">
+          Your first week is always free. Credits roll over month to month. Cancel anytime.
+        </p>
+      </section>
+
       {/* Why */}
       <section id="why" className="scroll-mt-24 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
