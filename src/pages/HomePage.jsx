@@ -37,22 +37,27 @@ export default function HomePage() {
   ];
 
   return (
-    <>
+    <div className="overflow-x-hidden w-full">
       {/* Lead Magnet Banner */}
       <div id="trial" className="bg-yellow-400 text-black text-center py-3 text-sm">
         <strong>First Week Free — No Obligation.</strong> Try us out and feel the difference.
       </div>
 
       {/* Hero */}
-      <section id="top" className="relative h-screen w-full flex items-center justify-start px-8 overflow-hidden">
-        {/* Background video */}
+      <section id="top" className="relative h-screen w-full flex items-center justify-start px-4 md:px-8 overflow-hidden">
+        {/* Mobile background image (video hidden on mobile) */}
+        <div
+          className="md:hidden absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/gym-floor.jpeg)" }}
+        />
+        {/* Desktop background video */}
         <video
           autoPlay
           muted
           loop
           playsInline
           poster="/gym-floor.jpeg"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover"
         >
           <source src="/mp_video__1_.mp4" type="video/mp4" />
         </video>
@@ -68,7 +73,7 @@ export default function HomePage() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-headline font-black leading-none tracking-tighter text-6xl md:text-9xl mb-6">
+          <h1 className="font-headline font-black leading-none tracking-tighter text-5xl md:text-9xl mb-6">
             <span className="text-primary-dim block text-glow">TRAIN HARD.</span>
             <span className="text-redwave block text-glow-red">RECOVER FASTER.</span>
           </h1>
@@ -96,7 +101,7 @@ export default function HomePage() {
           </div>
 
           {/* Stats row */}
-          <div className="flex flex-wrap gap-8 mt-16 pt-8 border-t border-white/10">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap gap-6 md:gap-8 mt-10 md:mt-16 pt-8 border-t border-white/10">
             {[
               { stat: "20+", label: "YEARS COACHING" },
               { stat: "60+", label: "WEEKLY CLASSES" },
@@ -113,7 +118,7 @@ export default function HomePage() {
       </section>
 
       {/* Intro — Real Results */}
-      <section className="relative py-32 px-8 overflow-hidden min-h-[600px] flex items-center video-placeholder">
+      <section className="relative py-16 md:py-32 px-8 overflow-hidden md:min-h-[600px] flex items-center video-placeholder">
         {/* Overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background pointer-events-none" />
 
@@ -183,9 +188,9 @@ export default function HomePage() {
       </section>
 
       {/* MP Class Series */}
-      <section id="classes" className="py-32 px-8 bg-surface-container-lowest relative overflow-hidden">
+      <section id="classes" className="py-16 md:py-32 px-8 bg-surface-container-lowest relative overflow-hidden">
         {/* Header */}
-        <div className="max-w-7xl mx-auto mb-20">
+        <div className="max-w-7xl mx-auto mb-10 md:mb-20">
           <span className="font-headline text-primary-dim font-black tracking-widest text-xs uppercase mb-4 block">
             THE CORE OF THE LAB
           </span>
@@ -196,7 +201,7 @@ export default function HomePage() {
         </div>
 
         {/* Cards */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {[
             {
               img: "/class-cards/mp-strength.webp",
@@ -269,8 +274,8 @@ export default function HomePage() {
       </section>
 
       {/* Redwave Studio Feature */}
-      <section className="relative py-32 px-8 bg-black overflow-hidden border-t border-redwave/20">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+      <section className="relative py-16 md:py-32 px-8 bg-black overflow-hidden border-t border-redwave/20">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 md:gap-20 items-center">
 
           {/* Left */}
           <div className="w-full lg:w-1/2 space-y-8">
@@ -335,9 +340,9 @@ export default function HomePage() {
       </section>
 
       {/* Redwave Class Series */}
-      <section className="py-32 px-8 bg-surface relative overflow-hidden">
+      <section className="py-16 md:py-32 px-8 bg-surface relative overflow-hidden">
         {/* Header */}
-        <div className="max-w-7xl mx-auto mb-20">
+        <div className="max-w-7xl mx-auto mb-10 md:mb-20">
           <span className="font-headline text-redwave font-black tracking-widest text-xs uppercase mb-4 block">
             INFRARED RECOVERY
           </span>
@@ -348,7 +353,7 @@ export default function HomePage() {
         </div>
 
         {/* Cards */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
           {[
             {
               img: "/class-cards/ir-active-recovery.webp",
@@ -417,7 +422,7 @@ export default function HomePage() {
           ))}
 
           {/* 5th card — Self-guided session */}
-          <div className="flex flex-col bg-surface-container-high border-b-4 border-redwave group">
+          <div className="col-span-2 xl:col-span-1 flex flex-col bg-surface-container-high border-b-4 border-redwave group">
             {/* No-image panel */}
             <div className="relative aspect-[3/4] overflow-hidden flex items-center justify-center">
               {/* Red glow circle */}
@@ -462,9 +467,9 @@ export default function HomePage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-32 px-8 bg-surface-container-lowest">
+      <section id="pricing" className="py-16 md:py-32 px-8 bg-surface-container-lowest">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-10 md:mb-20">
           <h2 className="font-headline text-4xl md:text-7xl font-black tracking-tighter italic uppercase text-white mb-4">
             TIERED ACCESS.
           </h2>
@@ -538,14 +543,14 @@ export default function HomePage() {
         </div>
 
         {/* Packages */}
-        <div className="max-w-[1400px] mx-auto mt-32">
+        <div className="max-w-[1400px] mx-auto mt-16 md:mt-32">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-5xl font-black tracking-tighter italic uppercase text-white mb-4">
               PACKAGES.
             </h2>
             <p className="font-body text-on-surface-variant">Flexible options for the focused athlete.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 border border-outline-variant/20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 border border-outline-variant/20">
             {packages.map((p) => {
               const isRedwave = p.accent === "redwave";
               return (
@@ -600,7 +605,7 @@ export default function HomePage() {
       </section>
 
       {/* Reviews */}
-      <section id="reviews" className="bg-surface-container-lowest py-24 px-8">
+      <section id="reviews" className="bg-surface-container-lowest py-12 md:py-24 px-8">
         {/* Rating row */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12 text-center">
           <span className="font-headline text-4xl font-black text-white">5.0</span>
@@ -644,7 +649,7 @@ export default function HomePage() {
       </section>
 
       {/* Location */}
-      <section id="location" className="bg-black py-24 px-8">
+      <section id="location" className="bg-black py-12 md:py-24 px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left */}
           <div className="space-y-6">
@@ -692,7 +697,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Bar */}
-      <section className="bg-primary-dim py-20 px-8 text-center">
+      <section className="bg-primary-dim py-12 md:py-20 px-8 text-center">
         <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase italic text-black">
           YOUR FIRST WEEK IS FREE.
         </h2>
@@ -702,13 +707,13 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
             to="/free-week"
-            className="bg-black text-white px-10 py-5 font-headline font-bold text-lg hover:bg-surface-container transition-all"
+            className="w-full sm:w-auto bg-black text-white px-10 py-5 font-headline font-bold text-lg hover:bg-surface-container transition-all min-h-[44px]"
           >
             BOOK A FREE TRIAL
           </Link>
           <Link
             to="/#classes"
-            className="border-2 border-black text-black px-10 py-5 font-headline font-bold text-lg hover:bg-black hover:text-white transition-all"
+            className="w-full sm:w-auto border-2 border-black text-black px-10 py-5 font-headline font-bold text-lg hover:bg-black hover:text-white transition-all min-h-[44px]"
           >
             VIEW SCHEDULE
           </Link>
@@ -1133,6 +1138,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
