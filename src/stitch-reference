@@ -1,0 +1,633 @@
+<html class="dark" lang="en"><head></head><body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-fixed">```html
+
+
+    <meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MIRACLE PERFORMANCE | THE PULSE OF PERFORMANCE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#4b0052",
+                        "primary-fixed-dim": "#5b90ff",
+                        "surface-tint": "#8aacff",
+                        "tertiary-fixed": "#fda0fc",
+                        "on-surface": "#ffffff",
+                        "secondary-dim": "#d7d4d3",
+                        "surface-container-highest": "#262626",
+                        "surface-dim": "#0e0e0e",
+                        "outline": "#757575",
+                        "tertiary": "#ffb7fc",
+                        "on-tertiary": "#712377",
+                        "surface-container": "#191919",
+                        "surface-container-high": "#1f1f1f",
+                        "outline-variant": "#484848",
+                        "primary-container": "#739eff",
+                        "on-secondary-fixed": "#403f3f",
+                        "on-primary-fixed-variant": "#002966",
+                        "surface-variant": "#262626",
+                        "secondary-container": "#474646",
+                        "surface-container-low": "#131313",
+                        "tertiary-dim": "#ee93ee",
+                        "error-dim": "#d7383b",
+                        "on-primary-fixed": "#000000",
+                        "surface-bright": "#2c2c2c",
+                        "tertiary-container": "#fda0fc",
+                        "on-primary": "#002b6b",
+                        "inverse-on-surface": "#555555",
+                        "primary-fixed": "#739eff",
+                        "on-error-container": "#ffa8a3",
+                        "background": "#0e0e0e",
+                        "surface-container-lowest": "#000000",
+                        "on-secondary": "#525151",
+                        "secondary": "#e5e2e1",
+                        "on-secondary-container": "#d2d0cf",
+                        "secondary-fixed-dim": "#d7d4d3",
+                        "primary-dim": "#006df8",
+                        "inverse-surface": "#f9f9f9",
+                        "primary": "#8aacff",
+                        "inverse-primary": "#0058cc",
+                        "on-tertiary-container": "#66176d",
+                        "on-background": "#ffffff",
+                        "on-error": "#490006",
+                        "error-container": "#9f0519",
+                        "on-secondary-fixed-variant": "#5c5b5b",
+                        "on-tertiary-fixed-variant": "#712277",
+                        "error": "#ff716c",
+                        "on-primary-container": "#002053",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface": "#0e0e0e",
+                        "on-surface-variant": "#ababab",
+                        "tertiary-fixed-dim": "#ee93ee",
+                        "redwave": "#ff2d2d",
+                        "redwave-dark": "#990000"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(0, 109, 248, 0.4);
+        }
+        .text-glow-red {
+            text-shadow: 0 0 15px rgba(255, 45, 45, 0.6);
+        }
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+        }
+        .red-accent-glow {
+            box-shadow: 0 0 40px rgba(255, 45, 45, 0.15);
+        }
+        .video-placeholder {
+            background: linear-gradient(rgba(14, 14, 14, 0.8), rgba(14, 14, 14, 0.8)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+<nav class="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/5 shadow-[0_0_20px_rgba(0,112,255,0.1)] flex justify-between items-center px-8 h-20">
+<div class="text-2xl font-black tracking-tighter text-white font-headline">MIRACLE PERFORMANCE</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs font-bold text-primary-dim border-b-2 border-primary-dim pb-1" href="#">STUDIO</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs font-bold text-white/70 hover:text-white transition-colors" href="#">CLASSES</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs font-bold text-white/70 hover:text-white transition-colors" href="#">RECOVERY</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs font-bold text-white/70 hover:text-white transition-colors" href="#">MEMBERSHIP</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs font-bold text-white/70 hover:text-white transition-colors px-4 py-2 hidden sm:block">FREE TRIAL</button>
+<button class="bg-primary-dim text-on-primary-fixed font-['Space_Grotesk'] uppercase tracking-[0.05em] text-xs font-bold px-6 py-3 hover:bg-primary transition-all duration-300">JOIN NOW</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-start px-8 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="High intensity workout" class="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK8xanQD3t2fF_jMFMNe4LFVmnmxmW4o0uuhmad488GIOXESnUTn-rCq6_yq_r_X2nR-yhnsxHETr2Y2ARoimzjuYbXHr5sqc_pwhqMFVFlS-LuWDXuLn9uSIFQp1Vk_CfHEJa2iH82c05IZomruYpYariez4KukDUFaYI8oNwmXQ-Nsl-JAi9wJ6PnAO1ZvHSisplO15OXw1u6FNDOLts53W-tmruk0eGTlFXmMJ8aTwyP0Kgwc2nXODiYM3UulKeqiunrgMWRr8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-5xl">
+<div class="font-headline text-white font-black text-xs md:text-sm tracking-[0.3em] uppercase mb-4 opacity-100 border-l-4 border-primary-dim pl-4">ELITE FITNESS MEETS ADVANCED RECOVERY</div>
+<h1 class="font-headline text-6xl md:text-9xl font-black leading-none tracking-tighter mb-6">
+<span class="text-primary-dim block text-glow">TRAIN HARD.</span>
+<span class="text-redwave block text-glow-red">RECOVER FASTER.</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-xl mb-10">8 unique small-group classes with expert coaches designed to make you move better and feel better. This is not a gym. This is Miracle Performance</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-dim text-on-primary-fixed font-headline font-bold text-lg px-10 py-5 hover:bg-primary transition-all">BOOK A FREE TRIAL</button>
+<button class="border border-outline text-on-surface font-headline font-bold text-lg px-10 py-5 hover:bg-on-surface hover:text-surface transition-all">VIEW SCHEDULE</button>
+</div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="relative py-32 px-8 overflow-hidden min-h-[800px] flex items-center video-placeholder">
+<div class="bg-noise absolute inset-0 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-5">
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter mb-8 italic uppercase">REAL RESULTS.<br/><span class="text-primary">FOR REAL PEOPLE.</span></h2>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed mb-8">
+                            We’ve designed an ecosystem of everyday performance. Miracle Performance is where sustainable growth meets scientific restoration, built for anyone ready to pursue their best self.
+                        </p>
+<div class="flex items-center gap-4 text-xs font-bold tracking-[0.2em] uppercase text-white/50">
+<span class="w-12 h-px bg-white/30"></span>
+                            EVERYDAY PERFORMANCE
+                        </div>
+</div>
+<div class="lg:col-span-7">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pillar: Strength -->
+<div class="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-primary-dim/10 transition-all duration-500 hover:border-primary/30">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">fitness_center</span>
+</div>
+<h3 class="font-headline text-xl font-bold tracking-tight mb-4 uppercase">STRENGTH</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                                    Functional resistance training designed to build a resilient foundation and lasting power.
+                                </p>
+<span class="text-[10px] font-black tracking-widest text-primary uppercase">BUILD POWER</span>
+</div>
+<!-- Pillar: Conditioning -->
+<div class="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-primary-dim/10 transition-all duration-500 hover:border-primary/30">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">bolt</span>
+</div>
+<h3 class="font-headline text-xl font-bold tracking-tight mb-4 uppercase">CONDITIONING</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                                    High-intensity metabolic circuits that push your engine further and torch body fat.
+                                </p>
+<span class="text-[10px] font-black tracking-widest text-primary uppercase">MAX CAPACITY</span>
+</div>
+<!-- Pillar: Recovery -->
+<div class="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-redwave/10 transition-all duration-500 hover:border-redwave/30">
+<div class="mb-6">
+<span class="material-symbols-outlined text-redwave text-4xl">spa</span>
+</div>
+<h3 class="font-headline text-xl font-bold tracking-tight mb-4 uppercase">RECOVERY</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                                    Infrared and red-light therapy to reset your nervous system and accelerate repair.
+                                </p>
+<span class="text-[10px] font-black tracking-widest text-redwave uppercase">RESTORE CELLULAR</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MP CLASS SERIES -->
+<section class="py-32 px-8 bg-surface-container-lowest relative overflow-hidden">
+<div class="bg-noise absolute inset-0 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto mb-20">
+<span class="font-headline text-primary-dim font-black tracking-widest text-xs uppercase mb-4 block">THE CORE OF THE LAB</span>
+<h2 class="font-headline text-4xl md:text-7xl font-black tracking-tighter uppercase italic text-glow">MP <span class="text-white/20">CLASS SERIES</span></h2>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- MP Strength -->
+<div class="flex flex-col bg-surface-container-high border-b-4 border-primary-dim group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="MP Strength" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uhpPJFbSvDWjEptVwqaiezgi55IkL-Qw9aq5eItoUwAqtvRIFiIA_jqmy3WM0_s7mwM-Aw4tSnZCuMvlDbluFRVn08kSjARC4Ebm_Nt5Z7En9fquBrsTiWhjSX4sQ_ZYM1X6EvvoPQ-KYTr1zsl1-8gv-TmeRWLRzI4rQPOwZP7AOumFpxHyu05v0tLM06Msj4-Vmw3YCXyosw3tODjh8FO-VNL19uZUkmPGlI7LzyGY3GhGGABfBAZMZCKATJKVN9fQ9vwkeQhOw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-transparent group-hover:to-transparent transition-all duration-300"></div>
+<div class="absolute top-4 right-4 z-10">
+<div class="bg-primary-dim text-on-primary-fixed px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">STRENGTH</div>
+</div>
+<div class="absolute bottom-4 left-8 pointer-events-none">
+<h3 class="font-headline text-2xl font-black text-white leading-none">MP STRENGTH</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Build lean muscle
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Improve bone density
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Increase functional resilience
+                            </li>
+</ul>
+<button class="w-full bg-white text-primary-dim text-[10px] font-black tracking-widest px-4 py-3 uppercase hover:bg-primary hover:text-on-primary-fixed transition-colors">BOOK NOW</button>
+</div>
+</div>
+<!-- Met-Con Circuit -->
+<div class="flex flex-col bg-surface-container-high border-b-4 border-primary-dim group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="Met-Con Circuit" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugI9-Tesohj8c7lNE-vFA3e-P_QvVi3LrSt9vmxTrJ4yjboZCOTLMrhBgF-Z0L02IlIQF_nHU_yCezWcZGecEL_Gz1TaaE42pm6rEyNhukPDUfuTI71kQSsMnBayZ6SOPe22FGVVt3XgayaR4VO7Z7Fj3lhriFig7PCDpVb_AoMWlYEIs-8X_sfyxo6IQRp8rtmV_N45Ov81cF-m7YmjYZJepHFKn1czUGOkGQe1tRBGdVh0oC6VrH4OYQQIvYfY34CMwIUJ-uYcA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-transparent group-hover:to-transparent transition-all duration-300"></div>
+<div class="absolute top-4 right-4 z-10">
+<div class="bg-primary-dim text-on-primary-fixed px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">CONDITIONING</div>
+</div>
+<div class="absolute bottom-4 left-8 pointer-events-none">
+<h3 class="font-headline text-2xl font-black text-white leading-none">MET-CON CIRCUIT</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Maximize calorie burn
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Enhance endurance
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Boost metabolic performance
+                            </li>
+</ul>
+<button class="w-full bg-white text-primary-dim text-[10px] font-black tracking-widest px-4 py-3 uppercase hover:bg-primary hover:text-on-primary-fixed transition-colors">BOOK NOW</button>
+</div>
+</div>
+<!-- MP Climb -->
+<div class="flex flex-col bg-surface-container-high border-b-4 border-primary-dim group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="MP Climb" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uiGcLuTkQZUUozDj7gAmpHhKmOH-mGLpRgqg78vMTAf2KzL7buAQqcmw4Q8nDkX1IML7-nmmxoGo2ZPupfZLQG4aLOE91KcAzH8uY_Tx4hlGoDBc5__fPYjEvt55p-phW3a7toFACF_v-OhkUoPAph4s7w4oY23hiHwWEu1maLNoAhheDr5uSYtli-hr3S31e5jWNzoBkceiOM-fLjuA2x34Y0DgTLkeO_GibBNkwqkUbEpmhGI4ZwkUhABiKekQp8JgBaDjhlu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-transparent group-hover:to-transparent transition-all duration-300"></div>
+<div class="absolute top-4 right-4 z-10">
+<div class="bg-primary-dim text-on-primary-fixed px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">VERTICAL</div>
+</div>
+<div class="absolute bottom-4 left-8 pointer-events-none">
+<h3 class="font-headline text-2xl font-black text-white leading-none">MP CLIMB</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Zero-impact training
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Build elite cardio
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Full-body conditioning
+                            </li>
+</ul>
+<button class="w-full bg-white text-primary-dim text-[10px] font-black tracking-widest px-4 py-3 uppercase hover:bg-primary hover:text-on-primary-fixed transition-colors">BOOK NOW</button>
+</div>
+</div>
+<!-- Boxfit -->
+<div class="flex flex-col bg-surface-container-high border-b-4 border-primary-dim group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="Boxfit" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uhueYVVZ4mU1kJp5TLgDPHxKXoJAlSQhhPg4NImHp7KmtsfgOUqer4BAupHy2eMyOLbFi3eup13tXdFQMwV7v38aFTjS3hll2nljC5HJ9JklbeAF6jYKuLC3b8S0liIyZc-UxLFEmzwl8EkAd6yRKNv_4Eb-lVT9kmsdU8ujxAxjFkv_qJpxmk-cQcWGlyS8SkbEh6-gQ2cNaZBllEYmLyyyqhi_MIkzsb1jsvz7g5rozS1TNIcwVL85Befk1yRiOpOwC6K_kjqhA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-transparent group-hover:to-transparent transition-all duration-300"></div>
+<div class="absolute top-4 right-4 z-10">
+<div class="bg-primary-dim text-on-primary-fixed px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">COMBAT</div>
+</div>
+<div class="absolute bottom-4 left-8 pointer-events-none">
+<h3 class="font-headline text-2xl font-black text-white leading-none">BOXFIT</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Build striking power
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> Improve footwork
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">check_circle</span> High-energy conditioning
+                            </li>
+</ul>
+<button class="w-full bg-white text-primary-dim text-[10px] font-black tracking-widest px-4 py-3 uppercase hover:bg-primary hover:text-on-primary-fixed transition-colors">BOOK NOW</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Redwave Infrared Studio Section -->
+<section class="relative py-32 px-8 bg-black overflow-hidden border-t border-redwave/20">
+<div class="bg-noise absolute inset-0 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+<div class="w-full lg:w-1/2 space-y-8">
+<div class="max-w-[300px]">
+<img alt="Redwave Logo" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ui2P57vsXPAR2ovlnwtMuZXUcWfsBshpWgb8iyX5aVd6TqET1p77DhMsOwIJC7yyXaryuMbAFQFC14aaMaZ6tlIkvZ3Ir5SaqllA2WLZt2YSKziBDJWCwdN3xl2-UHwHP-kB2rCMB-Xin72TUHxjQFw25vIBl50qqrwfawzqDl-lviKwUZD0S6TTFl8x07tnD5M0EhHHbUb5lfPppOBMqi8hxxV-BNz-4t8WKi3lA6Mrh_rR1GL6ywvR8L2LROmr7o-QlJQYKpEWQ"/>
+</div>
+<div class="aspect-[4/3] overflow-hidden red-accent-glow border border-redwave/20">
+<img alt="Redwave Infrared Studio" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ughQwNf70nLxmAR4vHr4-OsK9ctod3AUZ_Bt7_bYuV9ru7YeQcAgpdTyUzV8BtXfXLSREZpnHPbPS5hCG81ZyEiapyP0HLK3kHLy_ayHhjT93SUPyWN-QXpZl3IknrooWZIVdqtVLd29A_htVkq2YDvWscVp9eS23Ho1tSpmSzejMzGw9dqqKDwEiAFO081ZsHDKYnOj1Qi-8qPSVz0t310n5oTV5wmZGm2NXkQGUe1wDIWGWBshzyFRCuf5QNwR8v0EPEQ0gKyxg"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2 space-y-10">
+<div class="space-y-4">
+<span class="font-headline text-redwave font-black tracking-widest text-xs uppercase block">ELITE RECOVERY EXPERIENCE</span>
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase italic text-glow-red"><span class="text-redwave">REDWAVE</span> <span class="text-white">INFRARED STUDIO</span></h2>
+</div>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                        Redwave Infrared Studio is a modern wellness space combining infrared heat and red light therapy with movement, recovery, and relaxation. Infrared helps improve circulation, ease muscle tension, and support recovery, while red light therapy may help reduce inflammation, support skin health, and enhance cellular repair.
+                    </p>
+<div>
+<h3 class="font-headline text-xl font-black uppercase mb-6 tracking-tight flex items-center gap-3">
+<span class="w-10 h-[2px] bg-redwave"></span> THE BENEFITS
+                        </h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Reduces muscle soreness</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Faster workout recovery</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Improves mobility</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Better circulation</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Promotes relaxation</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Prevents overuse injuries</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Overall performance boost</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Balanced wellness</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Mental reset</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-redwave text-lg">bolt</span>
+<span class="text-xs font-bold tracking-tight uppercase">Beyond just a workout</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Redwave Class Series Section -->
+<section class="py-32 px-8 bg-surface relative overflow-hidden">
+<div class="bg-noise absolute inset-0 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto mb-20">
+<span class="font-headline text-redwave font-black tracking-widest text-xs uppercase mb-4 block">INFRARED PERFORMANCE</span>
+<h2 class="font-headline text-4xl md:text-7xl font-black tracking-tighter uppercase italic text-glow-red"><span class="text-redwave">REDWAVE</span> <span class="text-white/20">CLASS SERIES</span></h2>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- IR Active Recovery -->
+<div class="flex flex-col bg-surface-container-high border-b-4 border-redwave group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="IR Active Recovery" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uiJBRKwCNinhMt0OUPJClJvsLqVMPe77-8vS1yU5E3H0k5xCRa4_0F8DccEnr6gx72vlKr6s577rkpJe_MG8XKURMLjYbUkvDC6EG1UfFLVb-3T03hfeW2YFyG2sVfytxiGbjAf32th2__nwpe-TTutLHnHbWSOCDpZPyKS4i92eMqQVHERdGz2O5pk6nUkLISlpriCG-C-ZVxuYfflaxfst2Yp4LDshUS7k1vELFKWeTv3iQCgieCwsdpr9vMbbdhhFe_c5TsG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-redwave-dark/60 to-transparent group-hover:from-transparent group-hover:to-transparent transition-all duration-300"></div>
+<div class="absolute top-4 right-4 z-10">
+<div class="bg-redwave text-white px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">RECOVERY</div>
+</div>
+<div class="absolute bottom-4 left-8 pointer-events-none">
+<h3 class="font-headline text-2xl font-black text-white leading-none">IR ACTIVE RECOVERY</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Release tension
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Improve mobility
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Accelerate muscle repair
+                            </li>
+</ul>
+<button class="w-full bg-white text-redwave-dark text-[10px] font-black tracking-widest px-4 py-3 uppercase hover:bg-redwave hover:text-white transition-colors">BOOK NOW</button>
+</div>
+</div>
+<!-- IR Functional Flow -->
+<div class="flex flex-col bg-surface-container-high border-b-4 border-redwave group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="IR Functional Flow" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uh_TFdfimU-axaPVILx1zVi2mp1HFaSG1_xbudegnZrnBRjcBNVR4QIGp2mO7wWfq_o5JMYhJnHPPhG_sJz2UlAI9RmMdR5UuJ1dzchTXkHFTWAEcx7r_E4gRHFuuU6UHyIP9J9vkYvhp6D2kUngMpb2WLr0-_2jEpPxbR85yTiyUb-qANzU0ohn-GY9kEXzxCymxH3ch57voGWNCFoYgA6OuiLVIVrBtwi9k0TIcL24_kELE4ZU03QwkKS5uShCudx68lxVbCQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-redwave-dark/60 to-transparent group-hover:from-transparent group-hover:to-transparent transition-all duration-300"></div>
+<div class="absolute top-4 right-4 z-10">
+<div class="bg-redwave text-white px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">FLOW</div>
+</div>
+<div class="absolute bottom-4 left-8 pointer-events-none">
+<h3 class="font-headline text-2xl font-black text-white leading-none">IR FUNCTIONAL FLOW</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Improve flexibility
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Enhance stability
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Functional strength
+                            </li>
+</ul>
+<button class="w-full bg-white text-redwave-dark text-[10px] font-black tracking-widest px-4 py-3 uppercase hover:bg-redwave hover:text-white transition-colors">BOOK NOW</button>
+</div>
+</div>
+<!-- IR Pilates + Barre Fusion -->
+<div class="flex flex-col bg-surface-container-high border-b-4 border-redwave group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="IR Pilates + Barre Fusion" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uikw1UdNVtOIv_2QFndd7IxC9fbL4ti8SXSQj1xZZ38l8vacL0oFR7a3oX9V5uxzGEwtYdUWTC5WVnQsqlVbKuByYkR4xeFv4S2_XngshSY8zq6eWEU6Gijwivktypgl4wSTPVQppGj9klyQ5x07W5fFJSY2PPd3kZFGXLiT6bCm2UTDW2mGFsLxekyl0AWQIRFS1QE4hyPnWn47fNex5l1_iTW2YPu2QLemlaQ3aTP2hu0XiBo56RYS9cdKfLefilaLRN_ICWE2g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-redwave-dark/60 to-transparent group-hover:from-transparent group-hover:to-transparent transition-all duration-300"></div>
+<div class="absolute top-4 right-4 z-10">
+<div class="bg-redwave text-white px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">SCULPT</div>
+</div>
+<div class="absolute bottom-4 left-8 pointer-events-none">
+<h3 class="font-headline text-2xl font-black text-white leading-none">IR PILATES + BARRE</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Strengthen core
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Improve posture
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Sculpt lean muscle
+                            </li>
+</ul>
+<button class="w-full bg-white text-redwave-dark text-[10px] font-black tracking-widest px-4 py-3 uppercase hover:bg-redwave hover:text-white transition-colors">BOOK NOW</button>
+</div>
+</div>
+<!-- IR Climb + Yoga -->
+<div class="flex flex-col bg-surface-container-high border-b-4 border-redwave group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="IR Climb + Yoga" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uht0Pzn6kp_aYTPrN1wWryI2WcxaQVBDkCwK3ZGUlwEsPdRgr_gWIwLUxZY6KiExXMVE9tCydGjmDTeSn7z26LEroZW6E6QXNpWkiFg_PuQ0CNKm3TAtRpG_HxxT3jiKRYSA3hOC99S8AahcLee2JpNL1pSDSrmpGJgpnFgMalP9_8pr2hwu854TZwMSZ7vK6GO1pJLiYcGeSJTu_KG7OVCfQmdsAmAPQp8AWwpZYgxVvEEjnoQwXoqp5Bgyq7xFdsMAD6umwAc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-redwave-dark/60 to-transparent group-hover:from-transparent group-hover:to-transparent transition-all duration-300"></div>
+<div class="absolute top-4 right-4 z-10">
+<div class="bg-redwave text-white px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">HYBRID</div>
+</div>
+<div class="absolute bottom-4 left-8 pointer-events-none">
+<h3 class="font-headline text-2xl font-black text-white leading-none">IR CLIMB + YOGA</h3>
+</div>
+</div>
+<div class="p-8 space-y-6">
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Build endurance
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Improve mobility
+                            </li>
+<li class="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-on-surface">
+<span class="material-symbols-outlined text-redwave text-[14px]">bolt</span> Accelerate recovery
+                            </li>
+</ul>
+<button class="w-full bg-white text-redwave-dark text-[10px] font-black tracking-widest px-4 py-3 uppercase hover:bg-redwave hover:text-white transition-colors">BOOK NOW</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Section -->
+<section class="py-32 px-8 bg-surface-container-lowest">
+<div class="max-w-[1400px] mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl md:text-7xl font-black tracking-tighter mb-4 italic uppercase">TIERED ACCESS.</h2>
+<div class="space-y-2">
+<p class="font-headline text-xl md:text-2xl font-bold uppercase tracking-tight">MEMBERSHIPS</p>
+<p class="text-on-surface-variant font-body">Month-to-month, upgrade/downgrade, or cancel anytime.</p>
+</div>
+</div>
+<!-- Memberships Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-outline-variant/20 border border-outline-variant/20 mb-20">
+<!-- Starter -->
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-xl font-black mb-1 uppercase tracking-tight">STARTER</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-headline text-4xl font-black">$75</span>
+<span class="text-on-surface-variant font-bold text-xs tracking-widest uppercase">/ MO</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> 12 CREDITS/MO</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ~4 CLASSES</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ROLLOVER INCLUDED</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ALL CLASS ACCESS</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> APP BOOKING</li>
+</ul>
+</div>
+<button class="border border-outline font-headline text-xs font-bold py-4 hover:bg-on-surface hover:text-surface transition-all">SELECT PLAN</button>
+</div>
+<!-- Essential -->
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-xl font-black mb-1 uppercase tracking-tight">ESSENTIAL</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-headline text-4xl font-black">$129</span>
+<span class="text-on-surface-variant font-bold text-xs tracking-widest uppercase">/ MO</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> 24 CREDITS/MO</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ~8 CLASSES</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ROLLOVER INCLUDED</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> REDWAVE ACCESS</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> APP BOOKING</li>
+</ul>
+</div>
+<button class="border border-outline font-headline text-xs font-bold py-4 hover:bg-on-surface hover:text-surface transition-all">SELECT PLAN</button>
+</div>
+<!-- Performance -->
+<div class="bg-surface-container-low p-8 flex flex-col justify-between relative ring-1 ring-primary/30">
+<div class="absolute top-0 right-0 p-3">
+<span class="bg-primary text-on-primary-fixed font-headline text-[9px] font-black tracking-widest px-2 py-1 uppercase">★ MOST POPULAR</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-black mb-1 uppercase tracking-tight text-primary">PERFORMANCE</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-headline text-4xl font-black">$159</span>
+<span class="text-on-surface-variant font-bold text-xs tracking-widest uppercase">/ MO</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> 36 CREDITS/MO</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ~12 CLASSES</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ROLLOVER INCLUDED</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> REDWAVE ACCESS</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> 1 GUEST PASS / MO</li>
+</ul>
+</div>
+<button class="bg-primary text-on-primary-fixed font-headline text-xs font-bold py-4 hover:bg-white transition-all shadow-[0_0_20px_rgba(138,172,255,0.2)]">SELECT PLAN</button>
+</div>
+<!-- Elite -->
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-xl font-black mb-1 uppercase tracking-tight">ELITE</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-headline text-4xl font-black">$215</span>
+<span class="text-on-surface-variant font-bold text-xs tracking-widest uppercase">/ MO</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> 72 CREDITS/MO</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> UP TO ~24 CLASSES</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ROLLOVER INCLUDED</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> REDWAVE ACCESS</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> 1 GUEST PASS / MO</li>
+</ul>
+</div>
+<button class="border border-outline font-headline text-xs font-bold py-4 hover:bg-on-surface hover:text-surface transition-all">SELECT PLAN</button>
+</div>
+<!-- Ultimate -->
+<div class="bg-surface-container p-8 flex flex-col justify-between relative">
+<div class="absolute top-0 right-0 p-3">
+<span class="bg-redwave text-white font-headline text-[9px] font-black tracking-widest px-2 py-1 uppercase">NEW</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-black mb-1 uppercase tracking-tight">ULTIMATE</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="font-headline text-4xl font-black">$249</span>
+<span class="text-on-surface-variant font-bold text-xs tracking-widest uppercase">/ MO</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">all_inclusive</span> UNLIMITED CREDITS</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> NO CAP</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> ALL REDWAVE OFFERS</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> APP BOOKING</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary text-base">check</span> 2 GUEST PASSES / MO</li>
+</ul>
+</div>
+<button class="border border-outline font-headline text-xs font-bold py-4 hover:bg-on-surface hover:text-surface transition-all">SELECT PLAN</button>
+</div>
+</div>
+<!-- Packages Section -->
+<div class="mt-32">
+<div class="text-center mb-12">
+<h2 class="font-headline text-3xl md:text-5xl font-black tracking-tighter mb-4 italic uppercase">PACKAGES.</h2>
+<p class="text-on-surface-variant font-body">Flexible options for the focused athlete.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 border border-outline-variant/20">
+<!-- Drop-in Regular -->
+<div class="bg-surface-container p-8 flex flex-col justify-between border-b-4 border-primary-dim">
+<div>
+<h3 class="font-headline text-lg font-black mb-1 uppercase tracking-tight text-primary-dim">DROP-IN (REGULAR)</h3>
+<div class="flex items-baseline gap-1 mb-6">
+<span class="font-headline text-3xl font-black text-primary-dim">$25</span>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary-dim text-base">confirmation_number</span> 3 CREDITS</li>
+<li class="flex gap-2 text-xs font-bold tracking-tight"><span class="material-symbols-outlined text-primary-dim text-base">check</span> ANY MP CLASS</li>
+</ul>
+</div>
+<button class="bg-primary-dim text-on-primary-fixed font-headline text-[10px] font-bold py-3 hover:bg-primary transition-all uppercase tracking-widest">BUY NOW</button>
+</div>
+<!-- Drop-in Redwave -->
+<div class="bg-surface-container p-8 flex flex-col justify-between border-b-4 border-redwave">
+<div>
+<h3 class="font-headline text-lg font-black mb-1 uppercase tracking-tight text-redwave">DROP-IN (REDWAVE)</h3>
+<div class="flex items-baseline gap-1 mb-6">
+</div></div></div></div></div></div></section></main></body></html>
