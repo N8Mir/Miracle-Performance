@@ -182,6 +182,92 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* MP Class Series */}
+      <section id="classes" className="py-32 px-8 bg-surface-container-lowest relative overflow-hidden">
+        {/* Header */}
+        <div className="max-w-7xl mx-auto mb-20">
+          <span className="font-headline text-primary-dim font-black tracking-widest text-xs uppercase mb-4 block">
+            THE CORE OF THE LAB
+          </span>
+          <h2 className="font-headline text-4xl md:text-7xl font-black tracking-tighter uppercase italic text-glow">
+            <span className="text-primary-dim">MP </span>
+            <span className="text-white/20">CLASS SERIES</span>
+          </h2>
+        </div>
+
+        {/* Cards */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            {
+              img: "/class-cards/mp-strength.webp",
+              badge: "STRENGTH",
+              title: "MP STRENGTH",
+              bullets: ["Build lean muscle", "Improve bone density", "Increase functional resilience"],
+            },
+            {
+              img: "/class-cards/met-con-circuit.webp",
+              badge: "CONDITIONING",
+              title: "MET-CON CIRCUIT",
+              bullets: ["Maximize calorie burn", "Enhance endurance", "Boost metabolic performance"],
+            },
+            {
+              img: "/class-cards/mp-climb.webp",
+              badge: "VERTICAL",
+              title: "MP CLIMB",
+              bullets: ["Zero-impact training", "Build elite cardio", "Full-body conditioning"],
+            },
+            {
+              img: "/class-cards/boxfit.webp",
+              badge: "COMBAT",
+              title: "BOXFIT",
+              bullets: ["Build striking power", "Improve footwork", "High-energy conditioning"],
+            },
+          ].map(({ img, badge, title, bullets }) => (
+            <div key={title} className="flex flex-col bg-surface-container-high border-b-4 border-primary-dim group">
+              {/* Image */}
+              <div className="relative aspect-[3/4] overflow-hidden">
+                <img
+                  src={img}
+                  alt={title}
+                  className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-0 transition-all duration-300" />
+                {/* Badge */}
+                <div className="absolute top-4 right-4 z-10">
+                  <div className="bg-primary-dim text-black px-3 py-1 font-headline text-[10px] font-black tracking-widest uppercase">
+                    {badge}
+                  </div>
+                </div>
+                {/* Card title */}
+                <div className="absolute bottom-4 left-8 pointer-events-none">
+                  <h3 className="font-headline text-2xl font-black text-white leading-none">{title}</h3>
+                </div>
+              </div>
+
+              {/* Body */}
+              <div className="p-8 space-y-6 flex flex-col flex-1">
+                <ul className="space-y-3 flex-1">
+                  {bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-white">
+                      <span className="material-symbols-outlined text-primary-dim text-[14px] leading-none mt-px">check_circle</span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://www.wellnessliving.com/schedule/miracleperformance"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block w-full bg-white text-primary-dim text-[10px] font-black tracking-widest px-4 py-3 uppercase text-center hover:bg-primary-dim hover:text-black transition-colors"
+                >
+                  BOOK NOW
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Why */}
       <section id="why" className="scroll-mt-24 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
