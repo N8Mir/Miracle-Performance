@@ -112,6 +112,76 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Intro — Real Results */}
+      <section className="relative py-32 px-8 overflow-hidden min-h-[600px] flex items-center video-placeholder">
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/60 to-background pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+            {/* Left */}
+            <div className="lg:col-span-5">
+              <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter italic uppercase mb-8">
+                REAL RESULTS.<br />
+                <span className="text-primary-dim">FOR REAL PEOPLE.</span>
+              </h2>
+              <p className="font-body text-xl text-on-surface-variant leading-relaxed mb-8">
+                We've designed an ecosystem of everyday performance. Miracle Performance is where sustainable growth
+                meets scientific restoration, built for anyone ready to pursue their best self.
+              </p>
+              <div className="flex items-center gap-4 text-xs font-bold tracking-[0.2em] uppercase text-white/50">
+                <span className="w-12 h-px bg-white/30" />
+                EVERYDAY PERFORMANCE
+              </div>
+            </div>
+
+            {/* Right — pillar cards */}
+            <div className="lg:col-span-7">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                {/* Strength */}
+                <div className="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-primary-dim/10 hover:border-primary-dim/30 transition-all duration-500">
+                  <div className="mb-6">
+                    <span className="material-symbols-outlined text-primary-dim text-4xl">fitness_center</span>
+                  </div>
+                  <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">STRENGTH</h3>
+                  <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                    Functional resistance training designed to build a resilient foundation and lasting power.
+                  </p>
+                  <span className="text-[10px] font-black tracking-widest text-primary-dim uppercase">BUILD POWER</span>
+                </div>
+
+                {/* Conditioning */}
+                <div className="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-primary-dim/10 hover:border-primary-dim/30 transition-all duration-500">
+                  <div className="mb-6">
+                    <span className="material-symbols-outlined text-primary-dim text-4xl">bolt</span>
+                  </div>
+                  <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">CONDITIONING</h3>
+                  <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                    High-intensity metabolic circuits that push your engine further and torch body fat.
+                  </p>
+                  <span className="text-[10px] font-black tracking-widest text-primary-dim uppercase">MAX CAPACITY</span>
+                </div>
+
+                {/* Recovery */}
+                <div className="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-redwave/10 hover:border-redwave/30 transition-all duration-500">
+                  <div className="mb-6">
+                    <span className="material-symbols-outlined text-redwave text-4xl">spa</span>
+                  </div>
+                  <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">RECOVERY</h3>
+                  <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                    Infrared and red-light therapy to reset your nervous system and accelerate repair.
+                  </p>
+                  <span className="text-[10px] font-black tracking-widest text-redwave uppercase">RESTORE CELLULAR</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why */}
       <section id="why" className="scroll-mt-24 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

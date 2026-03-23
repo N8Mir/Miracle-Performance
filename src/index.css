@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html, body, #root { height: 100%; }
+
+.video-placeholder {
+  background: linear-gradient(rgba(14,14,14,0.8), rgba(14,14,14,0.8)), url('/gym-floor.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
 
 .text-glow {
   text-shadow: 0 0 15px rgba(0, 109, 248, 0.4);
