@@ -10,7 +10,7 @@ export default function HomePage() {
 <section id="top" className="relative min-h-screen w-full flex items-center overflow-hidden bg-black">
   
   {/* Left side — content */}
-  <div className="relative z-10 w-full md:w-1/2 px-8 md:px-16 py-24">
+  <div className="relative z-10 w-full md:w-1/2 px-8 md:px-16 pt-32 pb-24">
     {/* Eyebrow */}
     <div className="font-headline text-white font-black text-xs tracking-[0.3em] uppercase mb-6 border-l-4 border-primary-dim pl-4">
       ELITE FITNESS MEETS ADVANCED RECOVERY
@@ -68,7 +68,7 @@ export default function HomePage() {
       loop
       playsInline
       poster="/gym-floor.jpeg"
-      className="absolute inset-0 w-full h-full object-cover"
+      className="absolute inset-0 w-full h-full object-cover object-top"
     >
       <source src="/mp_video.mp4" type="video/mp4" />
     </video>
