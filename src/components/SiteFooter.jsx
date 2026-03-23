@@ -60,26 +60,8 @@ export default function SiteFooter() {
                 Book a Class
               </a>
             </li>
-            <li>
-              <a
-                href="https://classpass.com/studios/miracle-performance-beachwood"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                ClassPass
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                Gift Cards
-              </a>
-            </li>
+          
+            
           </ul>
         </div>
 
