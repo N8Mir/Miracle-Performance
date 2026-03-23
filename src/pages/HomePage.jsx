@@ -22,7 +22,7 @@ export default function HomePage() {
           poster="/gym-floor.jpeg"
           className="hidden md:block absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/mp_video__1_.mp4" type="video/mp4" />
+          <source src="/mp_video.mp4" type="video/mp4" />
         </video>
 
         {/* Gradient overlay */}
