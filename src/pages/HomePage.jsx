@@ -599,6 +599,122 @@ export default function HomePage() {
         </p>
       </section>
 
+      {/* Reviews */}
+      <section id="reviews" className="bg-surface-container-lowest py-24 px-8">
+        {/* Rating row */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-12 text-center">
+          <span className="font-headline text-4xl font-black text-white">5.0</span>
+          <span className="text-primary-dim text-xl tracking-widest">★★★★★</span>
+          <span className="text-on-surface-variant text-sm">82 Reviews · WellnessLiving Top Choice</span>
+        </div>
+
+        {/* Review cards */}
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              quote: "I have taken a great number of group workouts at various locations. I am not exaggerating when I say that Miracle Performance offers the very best. The instructors here are more knowledgeable and the programming more thoughtful than anywhere else I've trained.",
+              name: "Dean V.",
+              source: "Yelp",
+            },
+            {
+              quote: "If you're looking for something beyond the scope of a traditional fitness center, then this place has exactly what you need. Miracle Performance takes a more personal approach — you feel like you actually matter here.",
+              name: "Angelo C.",
+              source: "Yelp",
+            },
+            {
+              quote: "[PASTE GOOGLE REVIEW 1 HERE]",
+              name: "[Name]",
+              source: "Google Review",
+            },
+            {
+              quote: "[PASTE GOOGLE REVIEW 2 HERE]",
+              name: "[Name]",
+              source: "Google Review",
+            },
+          ].map(({ quote, name, source }) => (
+            <div key={name + source} className="bg-surface-container border border-outline-variant/20 p-8">
+              <div className="text-primary-dim text-sm mb-4">★★★★★</div>
+              <p className="font-body text-on-surface-variant leading-relaxed italic mb-6 text-base">"{quote}"</p>
+              <span className="font-headline text-xs font-bold uppercase tracking-widest text-white/50">
+                — {name}, {source}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Location */}
+      <section id="location" className="bg-black py-24 px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left */}
+          <div className="space-y-6">
+            <span className="font-headline text-primary-dim font-black tracking-widest text-xs uppercase block">
+              FIND US
+            </span>
+            <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase italic text-white">
+              BEACHWOOD, OH.
+            </h2>
+            <div className="space-y-1 font-body text-on-surface-variant text-lg">
+              <p>23400 Mercantile Rd, Suite 4/5</p>
+              <p>Beachwood, OH 44122</p>
+            </div>
+            <p className="font-body text-on-surface-variant">
+              <a href="tel:12168329212" className="hover:text-white transition-colors">(216) 832-9212</a>
+            </p>
+            <div className="space-y-1 text-xs font-bold uppercase tracking-wide text-white/70">
+              <p>Mon–Fri: 5:30am – 8:00pm</p>
+              <p>Sat: 7:00am – 12:00pm</p>
+              <p>Sun: 8:30am – 10:00am</p>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Miracle+Performance+Beachwood+OH"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block border border-outline-variant text-white px-8 py-4 font-headline font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+            >
+              GET DIRECTIONS →
+            </a>
+          </div>
+
+          {/* Right — map */}
+          <div className="w-full aspect-video border border-outline-variant/20">
+            <iframe
+              title="Miracle Performance Location"
+              src="https://www.google.com/maps?q=23400%20Mercantile%20Rd%20Suite%205%20Beachwood%20OH%2044122&output=embed"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              style={{ border: 0, display: "block" }}
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Bar */}
+      <section className="bg-primary-dim py-20 px-8 text-center">
+        <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase italic text-black">
+          YOUR FIRST WEEK IS FREE.
+        </h2>
+        <p className="font-body text-black/70 text-lg mt-4 mb-10">
+          No commitment. No credit card. No obligation. Just show up.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Link
+            to="/free-week"
+            className="bg-black text-white px-10 py-5 font-headline font-bold text-lg hover:bg-surface-container transition-all"
+          >
+            BOOK A FREE TRIAL
+          </Link>
+          <Link
+            to="/#classes"
+            className="border-2 border-black text-black px-10 py-5 font-headline font-bold text-lg hover:bg-black hover:text-white transition-all"
+          >
+            VIEW SCHEDULE
+          </Link>
+        </div>
+      </section>
+
       {/* Why */}
       <section id="why" className="scroll-mt-24 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
