@@ -1,4 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html, body, #root { height: 100%; }
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(0, 109, 248, 0.4);
+}
+.text-glow-red {
+  text-shadow: 0 0 15px rgba(255, 45, 45, 0.6);
+}
+.red-accent-glow {
+  box-shadow: 0 0 40px rgba(255, 45, 45, 0.15);
+}
