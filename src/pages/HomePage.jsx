@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className="overflow-x-hidden w-full">
       {/* Hero */}
-      <section id="top" className="relative h-screen w-full flex items-center justify-start px-4 md:px-8 overflow-hidden">
+      <section id="top" className="relative min-h-screen w-full flex items-center justify-start px-4 md:px-8 overflow-hidden">
         {/* Mobile background image (video hidden on mobile) */}
         <div
           className="md:hidden absolute inset-0 bg-cover bg-center"
@@ -31,7 +31,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 max-w-5xl">
           {/* Eyebrow */}
-          <div className="font-headline text-white font-black text-xs tracking-[0.3em] uppercase mb-4 border-l-4 border-primary-dim pl-4 text-white">"
+          <div className="font-headline text-white font-black text-xs tracking-[0.3em] uppercase mb-4 border-l-4 border-primary-dim pl-4 text-white">
             ELITE FITNESS MEETS ADVANCED RECOVERY
           </div>
 
