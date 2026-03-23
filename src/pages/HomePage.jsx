@@ -268,6 +268,72 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Redwave Studio Feature */}
+      <section className="relative py-32 px-8 bg-black overflow-hidden border-t border-redwave/20">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+
+          {/* Left */}
+          <div className="w-full lg:w-1/2 space-y-8">
+            <img src="/redwave-logo.webp" alt="Redwave" className="w-48 h-auto" />
+            <div className="aspect-[4/3] overflow-hidden red-accent-glow border border-redwave/20">
+              <img src="/redwave-studio.jpeg" alt="Redwave Infrared Studio" className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* Right */}
+          <div className="w-full lg:w-1/2 space-y-10">
+            <div className="space-y-4">
+              <span className="font-headline text-redwave font-black tracking-widest text-xs uppercase block">
+                ELITE RECOVERY EXPERIENCE
+              </span>
+              <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase italic text-glow-red">
+                <span className="text-redwave">REDWAVE</span>
+                <span className="text-white"> INFRARED STUDIO</span>
+              </h2>
+            </div>
+
+            <p className="font-body text-lg text-on-surface-variant leading-relaxed">
+              Redwave Infrared Studio is a modern wellness space combining infrared heat and red light therapy with
+              movement, recovery, and relaxation. Infrared helps improve circulation, ease muscle tension, and support
+              recovery, while red light therapy may help reduce inflammation, support skin health, and enhance cellular
+              repair.
+            </p>
+
+            <div>
+              <h3 className="font-headline text-xl font-black uppercase mb-6 tracking-tight flex items-center gap-3">
+                <span className="w-10 h-[2px] bg-redwave" /> THE BENEFITS
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                {[
+                  "Reduces muscle soreness",
+                  "Faster workout recovery",
+                  "Improves mobility",
+                  "Better circulation",
+                  "Promotes relaxation",
+                  "Prevents overuse injuries",
+                  "Overall performance boost",
+                  "Balanced wellness",
+                  "Mental reset",
+                  "Beyond just a workout",
+                ].map((benefit) => (
+                  <div key={benefit} className="flex items-center gap-3">
+                    <span className="material-symbols-outlined text-redwave text-lg">bolt</span>
+                    <span className="text-xs font-bold tracking-tight uppercase text-white">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              to="/redwave"
+              className="inline-block bg-redwave text-white font-headline font-bold px-8 py-4 hover:bg-redwave-dark transition-all"
+            >
+              EXPLORE REDWAVE →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Why */}
       <section id="why" className="scroll-mt-24 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
