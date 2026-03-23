@@ -2,7 +2,6 @@ import React from "react";
 import ClassCardGallery from "../components/ClassCardGallery";
 import { mpClassCards, redwaveClassCards } from "../data/classCards";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { Check, MapPin, Dumbbell, Clock, Users, Star, ExternalLink } from "lucide-react";
 import ScheduleWidget from "../components/ScheduleWidget";
 import { memberships, packages } from "../data/pricing";
@@ -45,83 +44,70 @@ export default function HomePage() {
       </div>
 
       {/* Hero */}
-      <section id="top" className="scroll-mt-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700" />
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
+      <section id="top" className="relative h-screen w-full flex items-center justify-start px-8 overflow-hidden">
+        {/* Background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/gym-floor.jpeg"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/mp_video__1_.mp4" type="video/mp4" />
+        </video>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-            {/* Left */}
-            <div className="flex-1 text-white text-center md:text-left">
-              <motion.img
-                src="/mp-hero-logo.png"
-                alt="Miracle Performance"
-                className="h-20 md:h-28 w-auto mx-auto md:mx-0"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
 
-              <motion.h1
-                className="mt-4 md:mt-6 text-3xl md:text-5xl font-extrabold text-white text-center md:text-left"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                8 Classes — 1 Membership
-              </motion.h1>
+        {/* Content */}
+        <div className="relative z-10 max-w-5xl">
+          {/* Eyebrow */}
+          <div className="font-headline text-white font-black text-xs tracking-[0.3em] uppercase mb-4 border-l-4 border-primary-dim pl-4">
+            ELITE FITNESS MEETS ADVANCED RECOVERY
+          </div>
 
-              <p className="mt-4 md:mt-6 text-white/90 max-w-2xl mx-auto md:mx-0">
-                Strength, Met-Con, Climb, Boxing, and Redwave Infrared—mix & match your week.
-                Small-group classes with expert coaches so you get real coaching in every class — zero intimidation
-                and a fun, supportive environment.
-              </p>
+          {/* Headline */}
+          <h1 className="font-headline font-black leading-none tracking-tighter text-6xl md:text-9xl mb-6">
+            <span className="text-primary-dim block text-glow">TRAIN HARD.</span>
+            <span className="text-redwave block text-glow-red">RECOVER FASTER.</span>
+          </h1>
 
-              {/* Trust tags */}
-              <div className="mt-5 flex flex-wrap justify-center md:justify-start gap-2 text-sm">
-                {["Beachwood, OH", "Beginner-Friendly", "Small-Group Coaching", "40+ Classes/Week"].map((item) => (
-                  <span
-                    key={item}
-                    className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90"
-                  >
-                    {item}
-                  </span>
-                ))}
+          {/* Subline */}
+          <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-xl mb-10">
+            8 unique small-group classes with expert coaches designed to make you move better and feel better.
+            This is not a gym. This is Miracle Performance.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              to="/free-week"
+              className="bg-primary-dim text-black font-headline font-bold text-lg px-10 py-5 hover:bg-blue-400 transition-all"
+            >
+              BOOK A FREE TRIAL
+            </Link>
+            <Link
+              to="/#classes"
+              className="border border-white/40 text-white font-headline font-bold text-lg px-10 py-5 hover:bg-white hover:text-black transition-all"
+            >
+              VIEW SCHEDULE
+            </Link>
+          </div>
+
+          {/* Stats row */}
+          <div className="flex flex-wrap gap-8 mt-16 pt-8 border-t border-white/10">
+            {[
+              { stat: "20+", label: "YEARS COACHING" },
+              { stat: "60+", label: "WEEKLY CLASSES" },
+              { stat: "5",   label: "REDWAVE FORMATS" },
+              { stat: "5★",  label: "82 REVIEWS" },
+            ].map(({ stat, label }) => (
+              <div key={label}>
+                <div className="font-headline font-black text-3xl text-primary-dim">{stat}</div>
+                <div className="text-on-surface-variant text-xs uppercase tracking-widest mt-1">{label}</div>
               </div>
-
-              <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
-                <Link
-                  to="/free-week"
-                  className="px-5 py-3 rounded-2xl bg-white text-gray-900 font-semibold hover:opacity-90"
-                >
-                  Start Free Week
-                </Link>
-                <a
-                  href="https://www.wellnessliving.com/schedule/miracleperformance"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="px-5 py-3 rounded-2xl bg-blue-700 text-white hover:bg-blue-800"
-                >
-                  Book Now
-                </a>
-              </div>
-            </div>
-
-            {/* Right */}
-            <div className="w-full md:w-1/3 flex justify-center">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                poster="/hero-video-poster.jpg"
-                className="w-full max-h-[420px] sm:max-h-[480px] md:max-h-[520px] rounded-xl shadow-lg object-cover"
-              >
-                <source src="/mp_video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+            ))}
           </div>
         </div>
       </section>
