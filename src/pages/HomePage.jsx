@@ -6,79 +6,84 @@ import ScheduleWidget from "../components/ScheduleWidget";
 export default function HomePage() {
   return (
     <div className="overflow-x-hidden w-full">
-      {/* Hero */}
-      <section id="top" className="relative min-h-screen w-full flex items-center justify-start px-4 md:px-8 overflow-hidden">
-        {/* Mobile background image (video hidden on mobile) */}
-        <div
-          className="md:hidden absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/gym-floor.jpeg)" }}
-        />
-        {/* Desktop background video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/gym-floor.jpeg"
-          className="hidden md:block absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/mp_video.mp4" type="video/mp4" />
-        </video>
+     {/* Hero */}
+<section id="top" className="relative min-h-screen w-full flex items-center overflow-hidden bg-black">
+  
+  {/* Left side — content */}
+  <div className="relative z-10 w-full md:w-1/2 px-8 md:px-16 py-24">
+    {/* Eyebrow */}
+    <div className="font-headline text-white font-black text-xs tracking-[0.3em] uppercase mb-6 border-l-4 border-primary-dim pl-4">
+      ELITE FITNESS MEETS ADVANCED RECOVERY
+    </div>
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+    {/* Headline */}
+    <h1 className="font-headline font-black leading-none tracking-tighter text-5xl md:text-7xl mb-6">
+      <span className="text-primary-dim block text-glow">TRAIN SMARTER.</span>
+      <span className="text-redwave block text-glow-red">RECOVER FASTER.</span>
+    </h1>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-5xl">
-          {/* Eyebrow */}
-          <div className="font-headline text-white font-black text-xs tracking-[0.3em] uppercase mb-4 border-l-4 border-primary-dim pl-4 text-white">
-            ELITE FITNESS MEETS ADVANCED RECOVERY
-          </div>
+    {/* Subline */}
+    <p className="font-body text-lg text-white/70 max-w-md mb-10">
+      8 unique small-group classes with expert coaches designed to make you move better and feel better.
+      This is not a gym. This is Miracle Performance.
+    </p>
 
-          {/* Headline */}
-          <h1 className="font-headline font-black leading-none tracking-tighter text-4xl md:text-6xl">
-            <span className="text-primary-dim block text-glow">TRAIN SMARTER.</span>
-            <span className="text-redwave block text-glow-red">RECOVER FASTER.</span>
-          </h1>
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row gap-4 mb-12">
+      <Link
+        to="/free-week"
+        className="bg-primary-dim text-black font-headline font-bold text-lg px-10 py-5 hover:bg-blue-400 transition-all"
+      >
+        BOOK A FREE TRIAL
+      </Link>
+      <Link
+        to="/#classes"
+        className="border border-white/40 text-white font-headline font-bold text-lg px-10 py-5 hover:bg-white hover:text-black transition-all"
+      >
+        VIEW SCHEDULE
+      </Link>
+    </div>
 
-          {/* Subline */}
-          <p className="font-body text-xl md:text-2xl text-white/70 max-w-xl mb-10">
-            8 unique small-group classes with expert coaches designed to make you move better and feel better.
-            This is not a gym. This is Miracle Performance.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              to="/free-week"
-              className="bg-primary-dim text-black font-headline font-bold text-lg px-10 py-5 hover:bg-blue-400 transition-all"
-            >
-              BOOK A FREE TRIAL
-            </Link>
-            <Link
-              to="/#classes"
-              className="border border-white/40 text-white font-headline font-bold text-lg px-10 py-5 hover:bg-white hover:text-black transition-all"
-            >
-              VIEW SCHEDULE
-            </Link>
-          </div>
-
-          {/* Stats row */}
-          <div className="grid grid-cols-2 md:flex md:flex-wrap gap-6 md:gap-8 mt-10 md:mt-16 pt-8 border-t border-white/10">
-            {[
-              { stat: "20+", label: "YEARS COACHING" },
-              { stat: "60+", label: "WEEKLY CLASSES" },
-              { stat: "5",   label: "REDWAVE FORMATS" },
-              { stat: "5★",  label: "82 REVIEWS" },
-            ].map(({ stat, label }) => (
-              <div key={label}>
-                <div className="font-headline font-black text-3xl text-primary-dim">{stat}</div>
-                <div className="text-white/70 text-xs uppercase tracking-widest mt-1">{label}</div>
-              </div>
-            ))}
-          </div>
+    {/* Stats row */}
+    <div className="grid grid-cols-2 md:flex md:flex-wrap gap-6 pt-8 border-t border-white/10">
+      {[
+        { stat: "20+", label: "YEARS COACHING" },
+        { stat: "60+", label: "WEEKLY CLASSES" },
+        { stat: "5",   label: "REDWAVE FORMATS" },
+        { stat: "5★",  label: "82 REVIEWS" },
+      ].map(({ stat, label }) => (
+        <div key={label}>
+          <div className="font-headline font-black text-3xl text-primary-dim">{stat}</div>
+          <div className="text-white/70 text-xs uppercase tracking-widest mt-1">{label}</div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+
+  {/* Right side — video */}
+  <div className="hidden md:block w-1/2 h-screen relative">
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      poster="/gym-floor.jpeg"
+      className="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src="/mp_video.mp4" type="video/mp4" />
+    </video>
+    {/* Dark edge fade on left side of video */}
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
+  </div>
+
+  {/* Mobile background */}
+  <div
+    className="md:hidden absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url(/gym-floor.jpeg)" }}
+  />
+  <div className="md:hidden absolute inset-0 bg-black/70" />
+
+</section>
 
       {/* Intro — Real Results */}
       <section className="relative py-16 md:py-32 px-8 overflow-hidden md:min-h-[600px] flex items-center video-placeholder">
