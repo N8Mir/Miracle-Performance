@@ -1,185 +1,154 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { LogIn, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+
+const navItems = [
+  { label: "STUDIO", to: "/" },
+  { label: "CLASSES", to: "/#classes" },
+  { label: "RECOVERY", to: "/redwave" },
+  { label: "MEMBERSHIP", to: "/#pricing" },
+];
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Identify if we are currently on the Redwave landing page
-  const isRedwaveRoute = location.pathname.startsWith("/redwave");
-
-  const navItems = [
-    { label: "Classes", to: "/#classes" },
-    { label: "Redwave", to: "/redwave", variant: "redwave" },
-    { label: "Training", to: "/#training" },
-    { label: "Schedule", to: "/#schedule" },
-    { label: "Pricing", to: "/#pricing" },
-    { label: "Find Us", to: "/#map" },
-  ];
+  function isActive(to) {
+    if (to === "/") return location.pathname === "/" && !location.hash;
+    if (to.startsWith("/#")) return location.pathname === "/" && location.hash === to.slice(1);
+    return location.pathname.startsWith(to);
+  }
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
-        {/* Brand */}
-        <Link to="/" className="flex items-center gap-3 min-w-0">
-          <img
-            src="/mp-small-logo.png"
-            alt="Miracle Performance"
-            className="h-10 w-auto"
-            loading="eager"
-            decoding="async"
-          />
-          <span className="font-semibold hidden sm:inline truncate">
-            Miracle Performance
-          </span>
+    <header
+      className="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-20"
+      style={{
+        background: "rgba(0,0,0,0.6)",
+        backdropFilter: "blur(24px)",
+        WebkitBackdropFilter: "blur(24px)",
+        borderBottom: "1px solid rgba(255,255,255,0.05)",
+        boxShadow: "0 0 20px rgba(0,112,255,0.1)",
+      }}
+    >
+      {/* Logo */}
+      <Link to="/">
+        <img src="/mp-logo.png" alt="Miracle Performance" className="h-10 w-auto" />
+      </Link>
+
+      {/* Desktop nav */}
+      <nav className="hidden md:flex gap-8 items-center">
+        {navItems.map((item) => {
+          const active = isActive(item.to);
+          const isRecovery = item.label === "RECOVERY";
+          return (
+            <Link
+              key={item.label}
+              to={item.to}
+              className={[
+                "font-headline uppercase tracking-[0.05em] text-xs font-bold transition-colors",
+                active
+                  ? "text-primary-dim border-b-2 border-primary-dim pb-1"
+                  : isRecovery
+                  ? "text-white/70 hover:text-redwave"
+                  : "text-white/70 hover:text-white",
+              ].join(" ")}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
+      </nav>
+
+      {/* Desktop CTAs */}
+      <div className="hidden md:flex gap-4 items-center">
+        <Link
+          to="/free-week"
+          className="font-headline uppercase tracking-[0.05em] text-xs font-bold text-white/70 hover:text-white transition-colors px-4 py-2"
+        >
+          FREE TRIAL
         </Link>
+        <Link
+          to="/free-week"
+          className="bg-primary-dim text-black font-headline uppercase tracking-[0.05em] text-xs font-bold px-6 py-3 hover:bg-blue-400 transition-all duration-300"
+        >
+          JOIN NOW
+        </Link>
+      </div>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          {navItems.map((item) => {
-            const isRedwave = item.variant === "redwave";
-
-            // Redwave styled as a pill button in nav
-            if (isRedwave) {
-              return (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  className="px-3 py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 font-semibold"
-                >
-                  Redwave
-                </Link>
-              );
-            }
-
-            return (
-              <Link key={item.label} to={item.to} className="hover:text-black">
-                {item.label}
-              </Link>
-            );
-          })}
-
-          <a
-            href="https://www.wellnessliving.com/login/miracleperformance"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1 px-3 py-2 rounded-xl border hover:bg-gray-50"
-          >
-            <LogIn className="w-4 h-4" />
-            Member Login
-          </a>
-        </nav>
-
-        {/* Desktop CTAs */}
-        <div className="hidden md:flex items-center gap-2">
-          <a
-            href="https://www.wellnessliving.com/schedule/miracleperformance"
-            target="_blank"
-            rel="noreferrer"
-            className={`px-3 py-2 rounded-xl border hover:bg-gray-50 ${
-              isRedwaveRoute
-                ? "border-red-600 text-red-700 hover:bg-red-50"
-                : "border-blue-700 text-blue-700 hover:bg-blue-50"
-            }`}
-          >
-            Book Now
-          </a>
-
-          <Link
-            to="/free-week"
-            className={`inline-flex items-center px-4 py-2 rounded-xl text-white font-semibold ${
-              isRedwaveRoute ? "bg-red-600 hover:bg-red-700" : "bg-blue-700 hover:bg-blue-800"
-            }`}
-          >
-            Claim Free Week
-          </Link>
-        </div>
-
-        {/* Mobile actions */}
-        <div className="md:hidden flex items-center gap-2">
-          <Link
-            to="/free-week"
-            className={`px-3 py-2 rounded-xl text-white text-sm font-semibold whitespace-nowrap ${
-              isRedwaveRoute ? "bg-red-600 hover:bg-red-700" : "bg-blue-700 hover:bg-blue-800"
-            }`}
-          >
-            Free Week
-          </Link>
-
-          <button
-            type="button"
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className="p-2 rounded-xl border hover:bg-gray-50"
-          >
-            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
+      {/* Mobile actions */}
+      <div className="md:hidden flex items-center gap-3">
+        <Link
+          to="/free-week"
+          className="bg-primary-dim text-black font-headline uppercase tracking-[0.05em] text-xs font-bold px-4 py-2"
+        >
+          JOIN NOW
+        </Link>
+        <button
+          type="button"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          className="p-2 text-white/70 hover:text-white transition-colors"
+        >
+          {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t bg-white">
-          <nav className="px-4 py-3 flex flex-col gap-1">
-            {/* Optional: show Redwave logo at the top of mobile menu */}
-            <div className="px-3 py-2 flex items-center gap-3">
-              <img
-                src="/redwave-logo.webp"
-                alt="Redwave"
-                className="h-7 w-auto"
-                loading="lazy"
-              />
-              <span className="text-xs uppercase tracking-wide text-gray-500">
-                Infrared Studio
-              </span>
-            </div>
-
+        <div
+          className="absolute top-20 left-0 w-full md:hidden"
+          style={{
+            background: "rgba(0,0,0,0.95)",
+            borderBottom: "1px solid rgba(255,255,255,0.05)",
+          }}
+        >
+          <nav className="px-8 py-6 flex flex-col gap-1">
             {navItems.map((item) => {
-              const isRedwave = item.variant === "redwave";
-
+              const active = isActive(item.to);
+              const isRecovery = item.label === "RECOVERY";
               return (
                 <Link
                   key={item.label}
                   to={item.to}
                   onClick={() => setMenuOpen(false)}
-                  className={`px-3 py-2 rounded-lg ${
-                    isRedwave
-                      ? "bg-red-600 text-white hover:bg-red-700 font-semibold"
-                      : "hover:bg-gray-50"
-                  }`}
+                  className={[
+                    "font-headline uppercase tracking-[0.05em] text-xs font-bold py-3 border-b transition-colors",
+                    "border-white/5",
+                    active
+                      ? "text-primary-dim"
+                      : isRecovery
+                      ? "text-white/70 hover:text-redwave"
+                      : "text-white/70 hover:text-white",
+                  ].join(" ")}
                 >
                   {item.label}
                 </Link>
               );
             })}
-
             <a
               href="https://www.wellnessliving.com/schedule/miracleperformance"
               target="_blank"
               rel="noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="px-3 py-2 rounded-lg hover:bg-gray-50"
+              className="font-headline uppercase tracking-[0.05em] text-xs font-bold py-3 border-b border-white/5 text-white/70 hover:text-white transition-colors"
             >
-              Book Now
+              BOOK NOW
             </a>
-
             <a
               href="https://www.wellnessliving.com/login/miracleperformance"
               target="_blank"
               rel="noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="px-3 py-2 rounded-lg hover:bg-gray-50"
+              className="font-headline uppercase tracking-[0.05em] text-xs font-bold py-3 border-b border-white/5 text-white/70 hover:text-white transition-colors"
             >
-              Member Login
+              MEMBER LOGIN
             </a>
-
             <a
               href="tel:12168329212"
               onClick={() => setMenuOpen(false)}
-              className="px-3 py-2 rounded-lg hover:bg-gray-50"
+              className="font-headline uppercase tracking-[0.05em] text-xs font-bold py-3 text-white/70 hover:text-white transition-colors"
             >
-              Call 216-832-9212
+              CALL 216-832-9212
             </a>
           </nav>
         </div>
