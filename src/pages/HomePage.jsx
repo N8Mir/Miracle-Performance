@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { memberships, packages } from "../data/pricing";
+import ScheduleWidget from "../components/ScheduleWidget";
 
 export default function HomePage() {
   return (
@@ -25,7 +26,7 @@ export default function HomePage() {
         </video>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
 
         {/* Content */}
         <div className="relative z-10 max-w-5xl">
@@ -41,7 +42,7 @@ export default function HomePage() {
           </h1>
 
           {/* Subline */}
-          <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-xl mb-10">
+          <p className="font-body text-xl md:text-2xl text-white/70 max-w-xl mb-10">
             8 unique small-group classes with expert coaches designed to make you move better and feel better.
             This is not a gym. This is Miracle Performance.
           </p>
@@ -72,7 +73,7 @@ export default function HomePage() {
             ].map(({ stat, label }) => (
               <div key={label}>
                 <div className="font-headline font-black text-3xl text-primary-dim">{stat}</div>
-                <div className="text-on-surface-variant text-xs uppercase tracking-widest mt-1">{label}</div>
+                <div className="text-white/70 text-xs uppercase tracking-widest mt-1">{label}</div>
               </div>
             ))}
           </div>
@@ -89,11 +90,11 @@ export default function HomePage() {
 
             {/* Left */}
             <div className="lg:col-span-5">
-              <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter italic uppercase mb-8">
+              <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter italic uppercase mb-8 text-white">
                 REAL RESULTS.<br />
                 <span className="text-primary-dim">FOR REAL PEOPLE.</span>
               </h2>
-              <p className="font-body text-xl text-on-surface-variant leading-relaxed mb-8">
+              <p className="font-body text-xl text-white/70 leading-relaxed mb-8">
                 We've designed an ecosystem of everyday performance. Miracle Performance is where sustainable growth
                 meets scientific restoration, built for anyone ready to pursue their best self.
               </p>
@@ -113,7 +114,7 @@ export default function HomePage() {
                     <span className="material-symbols-outlined text-primary-dim text-4xl">fitness_center</span>
                   </div>
                   <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">STRENGTH</h3>
-                  <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                  <p className="font-body text-sm text-white/70 leading-relaxed mb-6">
                     Functional resistance training designed to build a resilient foundation and lasting power.
                   </p>
                   <span className="text-[10px] font-black tracking-widest text-primary-dim uppercase">BUILD POWER</span>
@@ -125,7 +126,7 @@ export default function HomePage() {
                     <span className="material-symbols-outlined text-primary-dim text-4xl">bolt</span>
                   </div>
                   <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">CONDITIONING</h3>
-                  <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                  <p className="font-body text-sm text-white/70 leading-relaxed mb-6">
                     High-intensity metabolic circuits that push your engine further and torch body fat.
                   </p>
                   <span className="text-[10px] font-black tracking-widest text-primary-dim uppercase">MAX CAPACITY</span>
@@ -137,7 +138,7 @@ export default function HomePage() {
                     <span className="material-symbols-outlined text-redwave text-4xl">spa</span>
                   </div>
                   <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">RECOVERY</h3>
-                  <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
+                  <p className="font-body text-sm text-white/70 leading-relaxed mb-6">
                     Infrared and red-light therapy to reset your nervous system and accelerate repair.
                   </p>
                   <span className="text-[10px] font-black tracking-widest text-redwave uppercase">RESTORE CELLULAR</span>
@@ -153,7 +154,7 @@ export default function HomePage() {
       <section id="classes" className="py-16 md:py-32 px-8 bg-surface-container-lowest relative overflow-hidden">
         {/* Header */}
         <div className="max-w-7xl mx-auto mb-10 md:mb-20">
-          <span className="font-headline text-primary-dim font-black tracking-widest text-xs uppercase mb-4 block">
+          <span className="font-headline text-primary-dim font-black tracking-widest text-sm uppercase mb-4 block">
             THE CORE OF THE LAB
           </span>
           <h2 className="font-headline text-4xl md:text-7xl font-black tracking-tighter uppercase italic text-glow">
@@ -215,7 +216,7 @@ export default function HomePage() {
               <div className="p-8 space-y-6 flex flex-col flex-1">
                 <ul className="space-y-3 flex-1">
                   {bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-white">
+                    <li key={b} className="flex items-start gap-2 text-xs font-bold tracking-tight uppercase text-white/80">
                       <span className="material-symbols-outlined text-primary-dim text-[14px] leading-none mt-px">check_circle</span>
                       {b}
                     </li>
@@ -235,6 +236,21 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Schedule */}
+      <section id="schedule" className="py-16 md:py-24 px-8 bg-surface-container-lowest border-t border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10 md:mb-16">
+            <span className="font-headline text-primary-dim font-black tracking-widest text-sm uppercase mb-4 block">
+              BOOK A CLASS
+            </span>
+            <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase italic text-white">
+              CLASS SCHEDULE
+            </h2>
+          </div>
+          <ScheduleWidget />
+        </div>
+      </section>
+
       {/* Redwave Studio Feature */}
       <section className="relative py-16 md:py-32 px-8 bg-black overflow-hidden border-t border-redwave/20">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 md:gap-20 items-center">
@@ -250,7 +266,7 @@ export default function HomePage() {
           {/* Right */}
           <div className="w-full lg:w-1/2 space-y-10">
             <div className="space-y-4">
-              <span className="font-headline text-redwave font-black tracking-widest text-xs uppercase block">
+              <span className="font-headline text-redwave font-black tracking-widest text-sm uppercase block">
                 ELITE RECOVERY EXPERIENCE
               </span>
               <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase italic text-glow-red">
@@ -259,7 +275,7 @@ export default function HomePage() {
               </h2>
             </div>
 
-            <p className="font-body text-lg text-on-surface-variant leading-relaxed">
+            <p className="font-body text-lg text-white/70 leading-relaxed">
               Redwave Infrared Studio is a modern wellness space combining infrared heat and red light therapy with
               movement, recovery, and relaxation. Infrared helps improve circulation, ease muscle tension, and support
               recovery, while red light therapy may help reduce inflammation, support skin health, and enhance cellular
@@ -267,7 +283,7 @@ export default function HomePage() {
             </p>
 
             <div>
-              <h3 className="font-headline text-xl font-black uppercase mb-6 tracking-tight flex items-center gap-3">
+              <h3 className="font-headline text-xl font-black uppercase mb-6 tracking-tight flex items-center gap-3 text-white">
                 <span className="w-10 h-[2px] bg-redwave" /> THE BENEFITS
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
@@ -302,10 +318,10 @@ export default function HomePage() {
       </section>
 
       {/* Redwave Class Series */}
-      <section className="py-16 md:py-32 px-8 bg-surface relative overflow-hidden">
+      <section className="py-16 md:py-32 px-8 bg-black relative overflow-hidden">
         {/* Header */}
         <div className="max-w-7xl mx-auto mb-10 md:mb-20">
-          <span className="font-headline text-redwave font-black tracking-widest text-xs uppercase mb-4 block">
+          <span className="font-headline text-redwave font-black tracking-widest text-sm uppercase mb-4 block">
             INFRARED RECOVERY
           </span>
           <h2 className="font-headline text-4xl md:text-7xl font-black tracking-tighter uppercase italic text-glow-red">
@@ -365,7 +381,7 @@ export default function HomePage() {
               <div className="p-8 space-y-6 flex flex-col flex-1">
                 <ul className="space-y-3 flex-1">
                   {bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-white">
+                    <li key={b} className="flex items-start gap-2 text-xs font-bold tracking-tight uppercase text-white/80">
                       <span className="material-symbols-outlined text-redwave text-[14px] leading-none mt-px">bolt</span>
                       {b}
                     </li>
@@ -411,7 +427,7 @@ export default function HomePage() {
             <div className="p-8 space-y-6 flex flex-col flex-1">
               <ul className="space-y-3 flex-1">
                 {["30-min session", "Video-led", "5 phases"].map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-[10px] font-bold tracking-tight uppercase text-white">
+                  <li key={b} className="flex items-start gap-2 text-xs font-bold tracking-tight uppercase text-white/80">
                     <span className="material-symbols-outlined text-redwave text-[14px] leading-none mt-px">bolt</span>
                     {b}
                   </li>
@@ -436,11 +452,11 @@ export default function HomePage() {
             TIERED ACCESS.
           </h2>
           <p className="font-headline text-xl font-bold uppercase tracking-tight text-white mb-2">MEMBERSHIPS</p>
-          <p className="font-body text-on-surface-variant">Month-to-month, upgrade/downgrade, or cancel anytime.</p>
+          <p className="font-body text-white/70">Month-to-month, upgrade/downgrade, or cancel anytime.</p>
         </div>
 
         {/* Credit explainer */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
           {[
             { credits: "1 CREDIT", label: "Redwave Recovery Session" },
             { credits: "3 CREDITS", label: "Any MP Class" },
@@ -479,7 +495,7 @@ export default function HomePage() {
                 </h3>
                 <div className="flex items-baseline gap-1 mb-8">
                   <span className="font-headline text-4xl font-black text-white">${m.price}</span>
-                  <span className="text-on-surface-variant font-bold text-xs tracking-widest uppercase">/ MO</span>
+                  <span className="text-white/70 font-bold text-xs tracking-widest uppercase">/ MO</span>
                 </div>
                 <ul className="space-y-4 mb-10">
                   {m.features.map((f) => (
@@ -510,7 +526,7 @@ export default function HomePage() {
             <h2 className="font-headline text-3xl md:text-5xl font-black tracking-tighter italic uppercase text-white mb-4">
               PACKAGES.
             </h2>
-            <p className="font-body text-on-surface-variant">Flexible options for the focused athlete.</p>
+            <p className="font-body text-white/70">Flexible options for the focused athlete.</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 border border-outline-variant/20">
             {packages.map((p) => {
@@ -561,7 +577,7 @@ export default function HomePage() {
         </div>
 
         {/* Bottom note */}
-        <p className="text-center mt-12 font-body text-sm text-on-surface-variant">
+        <p className="text-center mt-12 font-body text-sm text-white/70">
           Your first week is always free. Credits roll over month to month. Cancel anytime.
         </p>
       </section>
@@ -572,7 +588,7 @@ export default function HomePage() {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12 text-center">
           <span className="font-headline text-4xl font-black text-white">5.0</span>
           <span className="text-primary-dim text-xl tracking-widest">★★★★★</span>
-          <span className="text-on-surface-variant text-sm">82 Reviews · WellnessLiving Top Choice</span>
+          <span className="text-white/70 text-sm">82 Reviews · WellnessLiving Top Choice</span>
         </div>
 
         {/* Review cards */}
@@ -601,7 +617,7 @@ export default function HomePage() {
           ].map(({ quote, name, source }) => (
             <div key={name + source} className="bg-surface-container border border-outline-variant/20 p-8">
               <div className="text-primary-dim text-sm mb-4">★★★★★</div>
-              <p className="font-body text-on-surface-variant leading-relaxed italic mb-6 text-base">"{quote}"</p>
+              <p className="font-body text-white/70 leading-relaxed italic mb-6 text-base">"{quote}"</p>
               <span className="font-headline text-xs font-bold uppercase tracking-widest text-white/50">
                 — {name}, {source}
               </span>
@@ -615,17 +631,17 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left */}
           <div className="space-y-6">
-            <span className="font-headline text-primary-dim font-black tracking-widest text-xs uppercase block">
+            <span className="font-headline text-primary-dim font-black tracking-widest text-sm uppercase block">
               FIND US
             </span>
             <h2 className="font-headline font-black text-4xl md:text-6xl tracking-tighter uppercase italic text-white">
               BEACHWOOD, OH.
             </h2>
-            <div className="space-y-1 font-body text-on-surface-variant text-lg">
+            <div className="space-y-1 font-body text-white/70 text-lg">
               <p>23400 Mercantile Rd, Suite 4/5</p>
               <p>Beachwood, OH 44122</p>
             </div>
-            <p className="font-body text-on-surface-variant">
+            <p className="font-body text-white/70">
               <a href="tel:12168329212" className="hover:text-white transition-colors">(216) 832-9212</a>
             </p>
             <div className="space-y-1 text-xs font-bold uppercase tracking-wide text-white/70">

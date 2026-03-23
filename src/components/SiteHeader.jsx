@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "STUDIO", to: "/" },
   { label: "CLASSES", to: "/#classes" },
+  { label: "SCHEDULE", to: "/#schedule" },
   { label: "RECOVERY", to: "/redwave" },
   { label: "MEMBERSHIP", to: "/#pricing" },
 ];
