@@ -40,6 +40,27 @@ export const memberships = [
   },
 ];
 
+export const topups = [
+  {
+    name: "SMALL TOP-UP",
+    price: 32,
+    credits: "12 CREDITS",
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685",
+  },
+  {
+    name: "MEDIUM TOP-UP",
+    price: 60,
+    credits: "24 CREDITS",
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685",
+  },
+  {
+    name: "LARGE TOP-UP",
+    price: 115,
+    credits: "48 CREDITS",
+    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685",
+  },
+];
+
 export const packages = [
   {
     name: "DROP-IN (REGULAR)",
