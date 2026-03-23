@@ -7,6 +7,8 @@ const navItems = [
   { label: "CLASSES", to: "/#classes" },
   { label: "RECOVERY", to: "/redwave" },
   { label: "MEMBERSHIP", to: "/#pricing" },
+  { label: "SCHEDULE", to: "/#schedule" },
+  { label: "PRICING", to: "/pricing" },
 ];
 
 export default function SiteHeader() {

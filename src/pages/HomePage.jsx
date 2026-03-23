@@ -31,13 +31,13 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 max-w-5xl">
           {/* Eyebrow */}
-          <div className="font-headline text-white font-black text-xs tracking-[0.3em] uppercase mb-4 border-l-4 border-primary-dim pl-4">
+          <div className="font-headline text-white font-black text-xs tracking-[0.3em] uppercase mb-4 border-l-4 border-primary-dim pl-4 text-white">"
             ELITE FITNESS MEETS ADVANCED RECOVERY
           </div>
 
           {/* Headline */}
-          <h1 className="font-headline font-black leading-none tracking-tighter text-5xl md:text-9xl mb-6">
-            <span className="text-primary-dim block text-glow">TRAIN HARD.</span>
+          <h1 className="font-headline font-black leading-none tracking-tighter text-4xl md:text-6xl">
+            <span className="text-primary-dim block text-glow">TRAIN SMARTER.</span>
             <span className="text-redwave block text-glow-red">RECOVER FASTER.</span>
           </h1>
 
