@@ -36,7 +36,7 @@ export default function ScheduleWidget() {
       <div
         ref={containerRef}
         aria-label="Live class schedule widget"
-        className="min-h-[500px]"
+        className="min-h-[200px]"
       />
       <div className="mt-3 text-sm text-gray-600">
         If the schedule doesn’t load,{" "}

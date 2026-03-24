@@ -156,7 +156,7 @@ export default function HomePage() {
       </section>
 
       {/* MP Class Series */}
-      <section id="classes" className="py-16 md:py-32 px-8 bg-surface-container-lowest relative overflow-hidden">
+      <section id="classes" className="py-16 md:py-16 px-8 bg-surface-container-lowest relative overflow-hidden">
         {/* Header */}
         <div className="max-w-7xl mx-auto mb-10 md:mb-20">
           <span className="font-headline text-primary-dim font-black tracking-widest text-sm uppercase mb-4 block">
@@ -243,7 +243,7 @@ export default function HomePage() {
 
       
       {/* Redwave Studio Feature */}
-      <section className="relative py-16 md:py-32 px-8 bg-black overflow-hidden border-t border-redwave/20">
+      <section className="relative py-16 md:py-16 px-8 bg-black overflow-hidden border-t border-redwave/20">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 md:gap-20 items-center">
 
           {/* Left */}
@@ -309,7 +309,7 @@ export default function HomePage() {
       </section>
 
       {/* Redwave Class Series */}
-      <section className="py-16 md:py-32 px-8 bg-black relative overflow-hidden">
+      <section className="py-16 md:py-16 px-8 bg-black relative overflow-hidden">
         {/* Header */}
         <div className="max-w-7xl mx-auto mb-10 md:mb-20">
           <span className="font-headline text-redwave font-black tracking-widest text-sm uppercase mb-4 block">
@@ -451,7 +451,7 @@ export default function HomePage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-16 md:py-32 px-8 bg-surface-container-lowest">
+      <section id="pricing" className="py-16 md:py-16 px-8 bg-surface-container-lowest">
         {/* Header */}
         <div className="text-center mb-10 md:mb-20">
           <h2 className="font-headline text-4xl md:text-7xl font-black tracking-tighter italic uppercase text-white mb-4">
