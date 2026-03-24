@@ -37,7 +37,7 @@ export default function HomePage() {
         BOOK A FREE TRIAL
       </Link>
       <Link
-        to="/#classes"
+        to="/#schedule"
         className="border border-white/40 text-white font-headline font-bold text-lg px-10 py-5 hover:bg-white hover:text-black transition-all"
       >
         VIEW SCHEDULE
