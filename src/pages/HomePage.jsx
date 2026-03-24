@@ -160,7 +160,7 @@ export default function HomePage() {
         {/* Header */}
         <div className="max-w-7xl mx-auto mb-10 md:mb-20">
           <span className="font-headline text-primary-dim font-black tracking-widest text-sm uppercase mb-4 block">
-            THE CORE OF THE LAB
+            SMALL GROUP PERSONAL TRAINING
           </span>
           <h2 className="font-headline text-4xl md:text-7xl font-black tracking-tighter uppercase italic text-glow">
             <span className="text-primary-dim">MP </span>
