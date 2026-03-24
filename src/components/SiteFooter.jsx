@@ -108,7 +108,7 @@ export default function SiteFooter() {
         {/* Social links — add hrefs when available */}
         <div className="flex gap-4">
           <a
-            href="https://www.instagram.com/miracleperformancecle"
+            href="https://www.instagram.com/miracle_performance"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/30 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors"
@@ -116,7 +116,7 @@ export default function SiteFooter() {
             Instagram
           </a>
           <a
-            href="https://www.facebook.com/miracleperformancecle"
+            href="https://www.facebook.com/MiraclePerformance/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/30 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors"
