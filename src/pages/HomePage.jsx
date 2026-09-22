@@ -67,6 +67,7 @@ export default function HomePage() {
       muted
       loop
       playsInline
+      preload="none"
       poster="/gym-floor.jpeg"
       className="absolute inset-0 w-full h-full object-cover object-top"
     >
