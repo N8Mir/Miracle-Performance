@@ -620,7 +620,7 @@ export default function HomePage() {
         {/* Rating row */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-4 text-center px-8">
           <span className="font-headline text-4xl font-black text-white">5.0</span>
-          <span className="text-primary-dim text-xl tracking-widest">★★★★★</span>
+          <span className="text-yellow-400 text-xl tracking-widest">★★★★★</span>
           <span className="text-white/70 text-sm">82 Reviews · WellnessLiving Top Choice</span>
         </div>
 
@@ -630,17 +630,17 @@ export default function HomePage() {
         </span>
 
         {/* Ticker */}
-        <div className="mp-marquee-wrap relative w-full overflow-hidden">
-          <ul className="mp-marquee flex w-max items-stretch gap-6 px-3 list-none">
+        <div className="mp-marquee-wrap relative w-full overflow-hidden pl-6">
+          <ul className="mp-marquee flex w-max items-start gap-6 px-3 list-none">
             {[...reviews, ...reviews].map((r, i) => (
               <li
                 key={`${r.author}-${i}`}
                 /* second pass is visual filler only — don't read every review twice */
                 aria-hidden={i >= reviews.length ? "true" : undefined}
-                className="w-[300px] sm:w-[360px] md:w-[400px] shrink-0 flex flex-col bg-surface-container border border-outline-variant/20 rounded-2xl p-8"
+                className="w-[300px] sm:w-[360px] md:w-[400px] h-56 shrink-0 overflow-hidden flex flex-col bg-surface-container border border-outline-variant/20 rounded-2xl p-8"
               >
-                <div className="text-primary-dim text-sm tracking-widest mb-4">★★★★★</div>
-                <p className="font-body text-white/70 leading-relaxed italic text-base flex-1">
+                <div className="text-yellow-400 text-sm tracking-widest mb-4">★★★★★</div>
+                <p className="font-body text-white/70 leading-relaxed italic text-base flex-1 line-clamp-3">
                   “{r.text}”
                 </p>
                 <span className="font-headline text-xs font-bold uppercase tracking-widest text-white/50 mt-6">
