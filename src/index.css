@@ -10,6 +10,32 @@ html, body, #root { height: 100%; }
   background-position: center;
 }
 
+/* Review ticker: track is the review list rendered twice, so translating by
+   exactly -50% lands on the start of the duplicate and loops seamlessly. */
+@keyframes mp-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.mp-marquee {
+  animation: mp-marquee 90s linear infinite;
+  will-change: transform;
+}
+
+.mp-marquee-wrap:hover .mp-marquee,
+.mp-marquee-wrap:focus-within .mp-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mp-marquee {
+    animation: none;
+  }
+  .mp-marquee-wrap {
+    overflow-x: auto;
+  }
+}
+
 .text-glow {
   text-shadow: 0 0 15px rgba(0, 109, 248, 0.4);
 }

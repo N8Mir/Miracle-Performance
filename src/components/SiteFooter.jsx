@@ -26,7 +26,7 @@ export default function SiteFooter() {
 
         {/* Column 2 — Train */}
         <div>
-          <h4 className="font-headline font-black text-xs tracking-widest uppercase mb-6 text-white">TRAIN</h4>
+          <span className="font-headline font-black text-xs tracking-widest uppercase mb-6 text-white block">TRAIN</span>
           <ul className="space-y-3 text-sm text-on-surface-variant">
             <li><Link to="/#classes" className="hover:text-white transition-colors">Classes</Link></li>
             <li><Link to="/redwave" className="hover:text-white transition-colors">Redwave Studio</Link></li>
@@ -38,7 +38,7 @@ export default function SiteFooter() {
 
         {/* Column 3 — Members */}
         <div>
-          <h4 className="font-headline font-black text-xs tracking-widest uppercase mb-6 text-white">MEMBERS</h4>
+          <span className="font-headline font-black text-xs tracking-widest uppercase mb-6 text-white block">MEMBERS</span>
           <ul className="space-y-3 text-sm text-on-surface-variant">
             <li>
               <a
@@ -67,7 +67,7 @@ export default function SiteFooter() {
 
         {/* Column 4 — Get the App */}
         <div>
-          <h4 className="font-headline font-black text-xs tracking-widest uppercase mb-2 text-white">GET THE APP</h4>
+          <span className="font-headline font-black text-xs tracking-widest uppercase mb-2 text-white block">GET THE APP</span>
           <p className="text-on-surface-variant text-xs mb-6">Book classes and manage your membership.</p>
           <div className="flex flex-col gap-3">
             <a

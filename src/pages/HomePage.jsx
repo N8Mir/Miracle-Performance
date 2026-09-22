@@ -3,6 +3,27 @@ import { Link } from "react-router-dom";
 import { memberships, packages } from "../data/pricing";
 import { Check, CircleCheck, Dumbbell, Flower2, Zap } from "lucide-react";
 
+const reviews = [
+  // Google Reviews
+  { text: "Awesome experience, great location, and incredible instructor. This was my 1st time there and I will be back! The challenge was awesome, and the instructor gave good instructions on how to use the equipment and how to modify the moves for your level. You will be very sweaty...and they even provide a towel on each climber. If you are looking for a fun experience and a way to burn lots of calories quickly...this is for you. Just Do It!", author: "Erica C.", source: "Google" },
+  { text: "Amazing, private facility for diverse fitness classes and personal training.", author: "Coach M.D. Alexander", source: "Google" },
+  { text: "Awesome staff, loved the MP Climb and LVL Up classes. Great conditioning and HIIT workouts. Lots of different equipment and variety in the classes.", author: "Leslie", source: "Google" },
+  { text: "Miracle Performance will test you in ways you hadn't known were possible. You will leave there feeling like a champ and looking like a mess. Great workout!", author: "AYH", source: "Google" },
+  { text: "Best Gym and trainers in town! Best way to start the day is at Miracle Performance!", author: "Julie S.", source: "Google" },
+  { text: "Great staff and excellent facility and equipment.", author: "Mark R.", source: "Google" },
+  // WellnessLiving Reviews
+  { text: "Nate's circuit workout is quick and efficient. Best of all, it brought back memories of my cross training days on the Rutgers Crew Team. I am so glad I added this to my weekly routine!", author: "Jenna S.", source: "WellnessLiving" },
+  { text: "Honestly, I have never been in a strength training program before (I hated gym in high school). And I was amazed I could work through a whole session. The tips and instruction on body posture really helped. And today, I thought I wouldn't be able to move. But, I feel energized.", author: "Peter F.", source: "WellnessLiving" },
+  { text: "Visited MPCLE for the first time and had a great work out. Trainer Eric did a great job and the MP-strength session kicked my butt.", author: "Brad K.", source: "WellnessLiving" },
+  { text: "Great workout and friendly, approachable people! As a first-timer they knew I was coming and made sure I was set up for success throughout the class. Excited to make this my home gym & get ripped!", author: "Katie S.", source: "WellnessLiving" },
+  { text: "I have heard for years how great MP is. Did my first session today and it matches all expectations! They have a new long term customer and I wish I listened faster and started earlier!", author: "Steven V.", source: "WellnessLiving" },
+  { text: "This is a phenomenal workout and it is so efficient time wise. It is also the kind of workout that I would never do without a leader. Jamie is the best!", author: "Mike B.", source: "WellnessLiving" },
+  { text: "I am very picky when it comes to my workouts. I find that many group classes don't do much to help me meet my athletic needs. Not so with Miracle Performance though. I've been a client of theirs for many years now, and I know that the trainers I work with have a lot more expertise than others I've met. The equipment is also top-notch and practical. I would recommend Miracle Performance.", author: "Virgilio V.", source: "WellnessLiving" },
+  // Yelp Reviews
+  { text: "I have taken a great number of group workouts at various locations. I am not exaggerating when I say that Miracle Performance offers the very best. The instructors here are more knowledgeable and the programming more thoughtful than anywhere else I've trained.", author: "Dean V.", source: "Yelp" },
+  { text: "If you're looking for something beyond the scope of a traditional fitness center, then this place has exactly what you need. Miracle Performance takes a more personal approach — you feel like you actually matter here.", author: "Angelo C.", source: "Yelp" },
+];
+
 export default function HomePage() {
   return (
     <div role="main" className="overflow-x-hidden w-full">
@@ -591,46 +612,43 @@ export default function HomePage() {
       </section>
 
       {/* Reviews */}
-      <section id="reviews" className="bg-surface-container-lowest py-12 md:py-24 px-8">
+      <section
+        id="reviews"
+        aria-label="Member reviews"
+        className="bg-surface-container-lowest py-12 md:py-24 overflow-hidden"
+      >
         {/* Rating row */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-12 text-center">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-4 text-center px-8">
           <span className="font-headline text-4xl font-black text-white">5.0</span>
           <span className="text-primary-dim text-xl tracking-widest">★★★★★</span>
           <span className="text-white/70 text-sm">82 Reviews · WellnessLiving Top Choice</span>
         </div>
 
-        {/* Review cards */}
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[
-            {
-              quote: "I have taken a great number of group workouts at various locations. I am not exaggerating when I say that Miracle Performance offers the very best. The instructors here are more knowledgeable and the programming more thoughtful than anywhere else I've trained.",
-              name: "Dean V.",
-              source: "Yelp",
-            },
-            {
-              quote: "If you're looking for something beyond the scope of a traditional fitness center, then this place has exactly what you need. Miracle Performance takes a more personal approach — you feel like you actually matter here.",
-              name: "Angelo C.",
-              source: "Yelp",
-            },
-            {
-              quote: "[PASTE GOOGLE REVIEW 1 HERE]",
-              name: "[Name]",
-              source: "Google Review",
-            },
-            {
-              quote: "[PASTE GOOGLE REVIEW 2 HERE]",
-              name: "[Name]",
-              source: "Google Review",
-            },
-          ].map(({ quote, name, source }) => (
-            <div key={name + source} className="bg-surface-container border border-outline-variant/20 p-8">
-              <div className="text-primary-dim text-sm mb-4">★★★★★</div>
-              <p className="font-body text-white/70 leading-relaxed italic mb-6 text-base">"{quote}"</p>
-              <span className="font-headline text-xs font-bold uppercase tracking-widest text-white/50">
-                — {name}, {source}
-              </span>
-            </div>
-          ))}
+        {/* Eyebrow */}
+        <span className="block text-center font-headline text-primary-dim font-black tracking-widest text-xs uppercase mb-10 px-8">
+          WHAT MEMBERS SAY
+        </span>
+
+        {/* Ticker */}
+        <div className="mp-marquee-wrap relative w-full overflow-hidden">
+          <ul className="mp-marquee flex w-max items-stretch gap-6 px-3 list-none">
+            {[...reviews, ...reviews].map((r, i) => (
+              <li
+                key={`${r.author}-${i}`}
+                /* second pass is visual filler only — don't read every review twice */
+                aria-hidden={i >= reviews.length ? "true" : undefined}
+                className="w-[300px] sm:w-[360px] md:w-[400px] shrink-0 flex flex-col bg-surface-container border border-outline-variant/20 rounded-2xl p-8"
+              >
+                <div className="text-primary-dim text-sm tracking-widest mb-4">★★★★★</div>
+                <p className="font-body text-white/70 leading-relaxed italic text-base flex-1">
+                  “{r.text}”
+                </p>
+                <span className="font-headline text-xs font-bold uppercase tracking-widest text-white/50 mt-6">
+                  — {r.author}, {r.source}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

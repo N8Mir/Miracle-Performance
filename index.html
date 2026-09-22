@@ -188,5 +188,24 @@
         }
       })();
     </script>
+
+    <!-- Patch the third-party chat button with an accessible name once it mounts. -->
+    <script>
+      (function() {
+        function patchChatBtn() {
+          var btn = document.getElementById('concerto-cb__chat-btn');
+          if (btn && !btn.getAttribute('aria-label')) {
+            btn.setAttribute('aria-label', 'Open chat');
+            var icon = document.getElementById('concerto-cb__chat-icon');
+            if (icon) icon.setAttribute('alt', 'Chat icon');
+          }
+        }
+        var observer = new MutationObserver(function() {
+          patchChatBtn();
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        setTimeout(function() { observer.disconnect(); }, 15000);
+      })();
+    </script>
   </body>
 </html>
