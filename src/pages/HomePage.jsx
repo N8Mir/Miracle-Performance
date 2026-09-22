@@ -68,7 +68,7 @@ export default function HomePage() {
       loop
       playsInline
       preload="none"
-      poster="/gym-floor.jpeg"
+      poster="/gym-floor-1920.webp"
       className="absolute inset-0 w-full h-full object-cover object-top"
     >
       <source src="/mp_video.mp4" type="video/mp4" />
@@ -77,11 +77,25 @@ export default function HomePage() {
     <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
   </div>
 
-  {/* Mobile background */}
-  <div
-    className="md:hidden absolute inset-0 bg-cover bg-center"
-    style={{ backgroundImage: "url(/gym-floor.jpeg)" }}
-  />
+  {/* Mobile background — LCP element on phones, so it stays eager + high priority */}
+  <div className="md:hidden absolute inset-0">
+    <picture>
+      <source
+        type="image/webp"
+        sizes="100vw"
+        srcSet="/gym-floor-768.webp 768w, /gym-floor-1280.webp 1280w, /gym-floor-1920.webp 1920w"
+      />
+      <img
+        src="/gym-floor.jpeg"
+        alt=""
+        width={1920}
+        height={1440}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+    </picture>
+  </div>
   <div className="md:hidden absolute inset-0 bg-black/70" />
 
 </section>
@@ -203,6 +217,10 @@ export default function HomePage() {
                 <img
                   src={img}
                   alt={title}
+                  width={1080}
+                  height={1350}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-0 transition-all duration-300" />
@@ -249,9 +267,25 @@ export default function HomePage() {
 
           {/* Left */}
           <div className="w-full lg:w-1/2 space-y-8">
-            <img src="/redwave-logo.webp" alt="Redwave" className="w-48 h-auto" />
+            <img
+              src="/redwave-logo.webp"
+              alt="Redwave"
+              width={1993}
+              height={570}
+              loading="lazy"
+              decoding="async"
+              className="w-48 h-auto"
+            />
             <div className="aspect-[4/3] overflow-hidden red-accent-glow border border-redwave/20">
-              <img src="/redwave-studio.jpeg" alt="Redwave Infrared Studio" className="w-full h-full object-cover" />
+              <img
+                src="/redwave-studio.jpeg"
+                alt="Redwave Infrared Studio"
+                width={4032}
+                height={3024}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -356,6 +390,10 @@ export default function HomePage() {
                 <img
                   src={img}
                   alt={title}
+                  width={1080}
+                  height={1350}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-redwave-dark/60 to-transparent group-hover:opacity-0 transition-all duration-300" />
