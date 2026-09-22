@@ -94,12 +94,51 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script
-      id="chat-bot"
-      defer
-      data-url="https://cdn.isaac.www.wellnessliving.com/chatbot_v2/?app=6901c6c316b8c3ad2c160ee1"
-      src="https://cdn.isaac.www.wellnessliving.com/resources/index.js"
-      data-env="https://cdn.isaac.www.wellnessliving.com"
-    ></script>
+    <!-- WellnessLiving chatbot: deferred until first interaction (or 2s), so its
+         ~1.7s of script execution stays out of the critical path. -->
+    <script>
+      (function () {
+        var EVENTS = ["scroll", "click", "touchstart"];
+        var loaded = false;
+        var cancelFallback;
+
+        function loadChatbot() {
+          if (loaded) return;
+          loaded = true;
+
+          if (cancelFallback) cancelFallback();
+          EVENTS.forEach(function (evt) {
+            window.removeEventListener(evt, loadChatbot);
+          });
+
+          var s = document.createElement("script");
+          s.id = "chat-bot";
+          s.async = true;
+          s.src = "https://cdn.isaac.www.wellnessliving.com/resources/index.js";
+          s.setAttribute(
+            "data-url",
+            "https://cdn.isaac.www.wellnessliving.com/chatbot_v2/?app=6901c6c316b8c3ad2c160ee1"
+          );
+          s.setAttribute("data-env", "https://cdn.isaac.www.wellnessliving.com");
+          document.body.appendChild(s);
+        }
+
+        EVENTS.forEach(function (evt) {
+          window.addEventListener(evt, loadChatbot, { once: true, passive: true });
+        });
+
+        if ("requestIdleCallback" in window) {
+          var idleHandle = requestIdleCallback(loadChatbot, { timeout: 10000 });
+          cancelFallback = function () {
+            cancelIdleCallback(idleHandle);
+          };
+        } else {
+          var timer = setTimeout(loadChatbot, 2000);
+          cancelFallback = function () {
+            clearTimeout(timer);
+          };
+        }
+      })();
+    </script>
   </body>
 </html>
