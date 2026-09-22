@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { memberships, packages } from "../data/pricing";
 import { Check, CircleCheck, Dumbbell, Flower2, Zap } from "lucide-react";
-import ScheduleWidget from "../components/ScheduleWidget";
 
 export default function HomePage() {
   return (
@@ -38,7 +37,7 @@ export default function HomePage() {
         BOOK A FREE TRIAL
       </Link>
       <Link
-        to="/#schedule"
+        to="/schedule"
         className="border border-white/40 text-white font-headline font-bold text-lg px-10 py-5 hover:bg-white hover:text-black transition-all"
       >
         VIEW SCHEDULE
@@ -458,21 +457,6 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Schedule */}
-      <section id="schedule" className="py-16 md:py-24 px-8 bg-surface-container-lowest border-t border-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-10 md:mb-16">
-            <span className="font-headline text-primary-dim font-black tracking-widest text-sm uppercase mb-4 block">
-              BOOK A CLASS
-            </span>
-            <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase italic text-white">
-              CLASS SCHEDULE
-            </h2>
-          </div>
-          <ScheduleWidget />
         </div>
       </section>
 

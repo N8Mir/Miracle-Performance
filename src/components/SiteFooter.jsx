@@ -30,7 +30,7 @@ export default function SiteFooter() {
           <ul className="space-y-3 text-sm text-on-surface-variant">
             <li><Link to="/#classes" className="hover:text-white transition-colors">Classes</Link></li>
             <li><Link to="/redwave" className="hover:text-white transition-colors">Redwave Studio</Link></li>
-            <li><Link to="/#schedule" className="hover:text-white transition-colors">Schedule</Link></li>
+            <li><Link to="/schedule" className="hover:text-white transition-colors">Schedule</Link></li>
             <li><Link to="/#pricing" className="hover:text-white transition-colors">Pricing</Link></li>
             <li><Link to="/free-week" className="hover:text-white transition-colors">Free Week Trial</Link></li>
           </ul>

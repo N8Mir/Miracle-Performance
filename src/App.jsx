@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import FreeWeekPage from "./pages/FreeWeekPage.jsx";
 import RedwavePage from "./pages/RedwavePage.jsx";
+import SchedulePage from "./pages/SchedulePage.jsx";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/schedule" element={<SchedulePage />} />
           <Route path="/free-week" element={<FreeWeekPage />} />
           <Route path="/redwave" element={<RedwavePage />} />
         </Routes>
