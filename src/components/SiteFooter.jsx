@@ -71,7 +71,7 @@ export default function SiteFooter() {
           <p className="text-on-surface-variant text-xs mb-6">Book classes and manage your membership.</p>
           <div className="flex flex-col gap-3">
             <a
-              href="https://apps.apple.com/us/app/wellnessliving-achieve/id1135932782"
+              href="https://apps.apple.com/us/app/wellnessliving-achieve/id6756274607"
               target="_blank"
               rel="noopener noreferrer"
             >

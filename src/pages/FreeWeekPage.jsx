@@ -101,7 +101,7 @@ export default function FreeWeekPage() {
               </p>
               <div className="mt-3 space-x-3">
                 <a
-                  href="https://apps.apple.com/us/app/wellnessliving-achieve/id1135932782"
+                  href="https://apps.apple.com/us/app/wellnessliving-achieve/id6756274607"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center px-3 py-2 rounded-xl border hover:bg-gray-50 text-sm"
