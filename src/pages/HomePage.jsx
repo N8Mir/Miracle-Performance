@@ -6,7 +6,7 @@ import ScheduleWidget from "../components/ScheduleWidget";
 
 export default function HomePage() {
   return (
-    <div className="overflow-x-hidden w-full">
+    <div role="main" className="overflow-x-hidden w-full">
      {/* Hero */}
 <section id="top" className="relative min-h-screen w-full flex items-center overflow-hidden bg-black">
   

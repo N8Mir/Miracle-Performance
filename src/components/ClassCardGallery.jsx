@@ -35,6 +35,18 @@ function CtaButton({ cta, isPrimary, onClose, primaryBtnClass }) {
 export default function ClassCardGallery({ items, variant = "mp" }) {
   const [active, setActive] = React.useState(null);
 
+  // Close the modal on Escape while it is open.
+  React.useEffect(() => {
+    if (!active) return;
+
+    function onKeyDown(e) {
+      if (e.key === "Escape") setActive(null);
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [active]);
+
   const primaryBtnClass =
     variant === "redwave"
       ? "bg-red-600 text-white hover:bg-red-700"
@@ -92,15 +104,24 @@ export default function ClassCardGallery({ items, variant = "mp" }) {
 
       {/* Modal */}
       {active && (
-        <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4">
-          <div className="relative w-full max-w-3xl bg-white rounded-2xl overflow-hidden">
+        <div
+          className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4"
+          onClick={() => setActive(null)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${active.title} details`}
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-3xl bg-white rounded-2xl overflow-hidden"
+          >
             <button
               type="button"
               onClick={() => setActive(null)}
               aria-label="Close"
               className="absolute top-3 right-3 p-2 rounded-xl bg-white/90 border hover:bg-white z-10"
             >
-              <X className="w-5 h-5" />
+              <X aria-hidden="true" className="w-5 h-5" />
             </button>
 
             <div className="grid md:grid-cols-2">

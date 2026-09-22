@@ -89,15 +89,18 @@ export default function SiteHeader() {
           type="button"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
           className="p-3 min-h-[44px] min-w-[44px] flex items-center justify-center text-white/70 hover:text-white transition-colors"
         >
-          {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {menuOpen ? <X aria-hidden="true" className="w-5 h-5" /> : <Menu aria-hidden="true" className="w-5 h-5" />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
         <div
+          id="mobile-menu"
           className="absolute top-20 left-0 w-full md:hidden"
           style={{
             background: "rgba(0,0,0,0.95)",

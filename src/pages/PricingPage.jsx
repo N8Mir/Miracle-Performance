@@ -52,7 +52,7 @@ export default function PricingPage() {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
-    <div className="overflow-x-hidden w-full">
+    <div role="main" className="overflow-x-hidden w-full">
       {/* Page Header */}
       <section className="bg-black py-24 md:py-32 px-8 text-center">
         <span className="font-headline text-primary-dim font-black tracking-widest text-xs uppercase mb-6 block">
@@ -248,19 +248,28 @@ export default function PricingPage() {
                 <button
                   type="button"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-trigger-${i}`}
                   className="w-full flex justify-between items-center py-5 min-h-[44px] text-left gap-6"
                 >
                   <span className="font-headline font-bold text-sm uppercase tracking-tight text-white">
                     {item.q}
                   </span>
                   <ChevronDown
+                    aria-hidden="true"
                     className="text-on-surface-variant shrink-0 transition-transform duration-300"
                     size={20}
                     style={{ transform: openFaq === i ? "rotate(180deg)" : "rotate(0deg)" }}
                   />
                 </button>
                 {openFaq === i && (
-                  <p className="font-body text-on-surface-variant text-sm leading-relaxed pb-6">
+                  <p
+                    id={`faq-panel-${i}`}
+                    role="region"
+                    aria-labelledby={`faq-trigger-${i}`}
+                    className="font-body text-on-surface-variant text-sm leading-relaxed pb-6"
+                  >
                     {item.a}
                   </p>
                 )}

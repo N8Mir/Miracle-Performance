@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "name": "Miracle Performance",
+  "description": "Elite boutique gym in Beachwood, Ohio offering strength training, conditioning classes, Redwave infrared recovery, and personal training. Month-to-month memberships from $129/month. First week free.",
+  "url": "https://mpcle.com",
+  "contact": {
+    "phone": "+1-216-832-9212",
+    "email": "nate@mpcle.com",
+    "address": {
+      "street": "23400 Mercantile Rd, Suite 5",
+      "city": "Beachwood",
+      "state": "OH",
+      "zip": "44122",
+      "country": "US"
+    }
+  },
+  "categories": ["fitness", "gym", "personal training", "infrared recovery", "group fitness", "strength training"],
+  "services": [
+    {"name": "MP Strength", "type": "group_class", "description": "Barbell and strength-focused group training"},
+    {"name": "Met-Con Circuit", "type": "group_class", "description": "Metabolic conditioning and cardio circuits"},
+    {"name": "BoxFit", "type": "group_class", "description": "Boxing-inspired conditioning class"},
+    {"name": "MP Climb", "type": "group_class", "description": "VersaClimber-based cardio training"},
+    {"name": "Redwave IR Active Recovery", "type": "recovery_session", "description": "30-minute guided post-workout recovery using infrared heat, red light therapy, spinal decompression, and Active Isolated Stretching"},
+    {"name": "Redwave Premium Classes", "type": "group_class", "description": "Group fitness classes inside the Redwave Infrared Studio"},
+    {"name": "Semi-Private Training", "type": "personal_training", "description": "Small group personal training sessions"}
+  ],
+  "pricing": [
+    {"name": "2x/Week Membership", "price": 129, "currency": "USD", "period": "month"},
+    {"name": "3x/Week Membership", "price": 159, "currency": "USD", "period": "month"},
+    {"name": "4x/Week Membership", "price": 179, "currency": "USD", "period": "month"},
+    {"name": "Unlimited Membership", "price": 215, "currency": "USD", "period": "month"},
+    {"name": "Drop-in", "price": 22, "currency": "USD", "period": "single"},
+    {"name": "5-Class Pack", "price": 99, "currency": "USD", "period": "pack"},
+    {"name": "10-Class Pack", "price": 179, "currency": "USD", "period": "pack"},
+    {"name": "20-Class Pack", "price": 319, "currency": "USD", "period": "pack"},
+    {"name": "30-Class Pack", "price": 420, "currency": "USD", "period": "pack"}
+  ],
+  "unique_features": [
+    "Redwave Infrared Studio with infrared heat and red light therapy (630-850nm)",
+    "174 Hz Solfeggio frequency music in recovery sessions",
+    "5-phase guided post-workout recovery protocol",
+    "Month-to-month memberships, no contracts",
+    "Small group coached classes with expert coaches",
+    "First week free trial",
+    "20+ years in business"
+  ]
+}
