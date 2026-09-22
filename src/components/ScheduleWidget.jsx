@@ -35,6 +35,7 @@ export default function ScheduleWidget() {
       {/* Keeps layout stable while widget loads */}
       <div
         ref={containerRef}
+        role="region"
         aria-label="Live class schedule widget"
         className="min-h-[200px]"
       />
