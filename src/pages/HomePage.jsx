@@ -78,25 +78,11 @@ export default function HomePage() {
     <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
   </div>
 
-  {/* Mobile background — LCP element on phones, so it stays eager + high priority */}
-  <div className="md:hidden absolute inset-0">
-    <picture>
-      <source
-        type="image/webp"
-        sizes="100vw"
-        srcSet="/gym-floor-768.webp 768w, /gym-floor-1280.webp 1280w, /gym-floor-1920.webp 1920w"
-      />
-      <img
-        src="/gym-floor.jpeg"
-        alt=""
-        width={1920}
-        height={1440}
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover object-center"
-      />
-    </picture>
-  </div>
+  {/* Mobile background */}
+  <div
+    className="md:hidden absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url(/gym-floor-768.webp)" }}
+  />
   <div className="md:hidden absolute inset-0 bg-black/70" />
 
 </section>
