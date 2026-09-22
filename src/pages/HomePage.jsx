@@ -265,7 +265,7 @@ export default function HomePage() {
             />
             <div className="aspect-[4/3] overflow-hidden red-accent-glow border border-redwave/20">
               <img
-                src="/redwave-studio.jpeg"
+                src="/redwave-studio.webp"
                 alt="Redwave Infrared Studio"
                 width={4032}
                 height={3024}
