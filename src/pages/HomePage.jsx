@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { memberships, packages } from "../data/pricing";
+import { Check, CircleCheck, Dumbbell, Flower2, Zap } from "lucide-react";
 import ScheduleWidget from "../components/ScheduleWidget";
 
 export default function HomePage() {
@@ -131,7 +132,7 @@ export default function HomePage() {
                 {/* Strength */}
                 <div className="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-primary-dim/10 hover:border-primary-dim/30 transition-all duration-500">
                   <div className="mb-6">
-                    <span className="material-symbols-outlined text-primary-dim text-4xl">fitness_center</span>
+                    <Dumbbell className="text-primary-dim" size={36} />
                   </div>
                   <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">STRENGTH</h3>
                   <p className="font-body text-sm text-white/70 leading-relaxed mb-6">
@@ -143,7 +144,7 @@ export default function HomePage() {
                 {/* Conditioning */}
                 <div className="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-primary-dim/10 hover:border-primary-dim/30 transition-all duration-500">
                   <div className="mb-6">
-                    <span className="material-symbols-outlined text-primary-dim text-4xl">bolt</span>
+                    <Zap className="text-primary-dim" size={36} />
                   </div>
                   <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">CONDITIONING</h3>
                   <p className="font-body text-sm text-white/70 leading-relaxed mb-6">
@@ -155,7 +156,7 @@ export default function HomePage() {
                 {/* Recovery */}
                 <div className="group bg-surface-container/40 backdrop-blur-md border border-white/5 p-8 hover:bg-redwave/10 hover:border-redwave/30 transition-all duration-500">
                   <div className="mb-6">
-                    <span className="material-symbols-outlined text-redwave text-4xl">spa</span>
+                    <Flower2 className="text-redwave" size={36} />
                   </div>
                   <h3 className="font-headline text-xl font-bold tracking-tight mb-4 uppercase text-white">RECOVERY</h3>
                   <p className="font-body text-sm text-white/70 leading-relaxed mb-6">
@@ -241,7 +242,7 @@ export default function HomePage() {
                 <ul className="space-y-3 flex-1">
                   {bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2 text-xs font-bold tracking-tight uppercase text-white/80">
-                      <span className="material-symbols-outlined text-primary-dim text-[14px] leading-none mt-px">check_circle</span>
+                      <CircleCheck className="text-primary-dim mt-px shrink-0" size={14} />
                       {b}
                     </li>
                   ))}
@@ -326,7 +327,7 @@ export default function HomePage() {
                   "Beyond just a workout",
                 ].map((benefit) => (
                   <div key={benefit} className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-redwave text-lg">bolt</span>
+                    <Zap className="text-redwave shrink-0" size={18} />
                     <span className="text-xs font-bold tracking-tight uppercase text-white">{benefit}</span>
                   </div>
                 ))}
@@ -412,7 +413,7 @@ export default function HomePage() {
                 <ul className="space-y-3 flex-1">
                   {bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2 text-xs font-bold tracking-tight uppercase text-white/80">
-                      <span className="material-symbols-outlined text-redwave text-[14px] leading-none mt-px">bolt</span>
+                      <Zap className="text-redwave mt-px shrink-0" size={14} />
                       {b}
                     </li>
                   ))}
@@ -458,7 +459,7 @@ export default function HomePage() {
               <ul className="space-y-3 flex-1">
                 {["30-min session", "Video-led", "5 phases"].map((b) => (
                   <li key={b} className="flex items-start gap-2 text-xs font-bold tracking-tight uppercase text-white/80">
-                    <span className="material-symbols-outlined text-redwave text-[14px] leading-none mt-px">bolt</span>
+                    <Zap className="text-redwave mt-px shrink-0" size={14} />
                     {b}
                   </li>
                 ))}
@@ -504,7 +505,7 @@ export default function HomePage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12 max-w-3xl mx-auto">
           {["STRENGTH", "CONDITIONING", "MP CLIMB", "REDWAVE"].map((label) => (
             <div key={label} className="bg-surface-container border border-outline-variant/20 p-4 flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary-dim text-base leading-none">check</span>
+              <Check className="text-primary-dim shrink-0" size={16} />
               <span className="text-xs font-bold uppercase tracking-tight text-white">{label}</span>
             </div>
           ))}
@@ -541,7 +542,7 @@ export default function HomePage() {
                 <ul className="space-y-4 mb-10">
                   {m.features.map((f) => (
                     <li key={f} className="flex gap-2 text-xs font-bold tracking-tight text-white">
-                      <span className="material-symbols-outlined text-primary-dim text-base leading-none mt-px">check</span>
+                      <Check className="text-primary-dim mt-px shrink-0" size={16} />
                       {f}
                     </li>
                   ))}
@@ -594,9 +595,7 @@ export default function HomePage() {
                   <ul className="space-y-3 mb-8">
                     {p.features.map((f) => (
                       <li key={f} className="flex gap-2 text-xs font-bold tracking-tight text-white">
-                        <span className="material-symbols-outlined text-primary-dim text-base leading-none mt-px">
-                          check
-                        </span>
+                        <Check className="text-primary-dim mt-px shrink-0" size={16} />
                         {f}
                       </li>
                     ))}

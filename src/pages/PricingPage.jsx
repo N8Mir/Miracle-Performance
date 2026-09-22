@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Check, ChevronDown } from "lucide-react";
 import { memberships, packages } from "../data/pricing";
 
 const INCLUDED = ["STRENGTH", "CONDITIONING", "MP CLIMB", "REDWAVE"];
@@ -98,7 +99,7 @@ export default function PricingPage() {
             <div className="flex flex-wrap justify-center gap-4">
               {INCLUDED.map((label) => (
                 <div key={label} className="bg-surface-container border border-outline-variant/20 px-6 py-4 flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary-dim text-base leading-none">check</span>
+                  <Check className="text-primary-dim shrink-0" size={16} />
                   <span className="text-xs font-bold uppercase tracking-tight text-white">{label}</span>
                 </div>
               ))}
@@ -143,7 +144,7 @@ export default function PricingPage() {
                   <ul className="space-y-4 mb-10">
                     {m.features.map((f) => (
                       <li key={f} className="flex gap-2 text-xs font-bold tracking-tight text-white">
-                        <span className="material-symbols-outlined text-primary-dim text-base leading-none mt-px">check</span>
+                        <Check className="text-primary-dim mt-px shrink-0" size={16} />
                         {f}
                       </li>
                     ))}
@@ -217,7 +218,7 @@ export default function PricingPage() {
                   <ul className="space-y-3 mb-10">
                     {p.features.map((f) => (
                       <li key={f} className="flex gap-2 text-xs font-bold tracking-tight text-white">
-                        <span className="material-symbols-outlined text-primary-dim text-base leading-none mt-px">check</span>
+                        <Check className="text-primary-dim mt-px shrink-0" size={16} />
                         {f}
                       </li>
                     ))}
@@ -252,12 +253,11 @@ export default function PricingPage() {
                   <span className="font-headline font-bold text-sm uppercase tracking-tight text-white">
                     {item.q}
                   </span>
-                  <span
-                    className="material-symbols-outlined text-on-surface-variant shrink-0 transition-transform duration-300"
+                  <ChevronDown
+                    className="text-on-surface-variant shrink-0 transition-transform duration-300"
+                    size={20}
                     style={{ transform: openFaq === i ? "rotate(180deg)" : "rotate(0deg)" }}
-                  >
-                    expand_more
-                  </span>
+                  />
                 </button>
                 {openFaq === i && (
                   <p className="font-body text-on-surface-variant text-sm leading-relaxed pb-6">
