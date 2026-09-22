@@ -615,7 +615,7 @@ export default function HomePage() {
       <section
         id="reviews"
         aria-label="Member reviews"
-        className="bg-surface-container-lowest py-12 md:py-24 overflow-hidden"
+        className="bg-surface-container-lowest pt-12 md:pt-24 pb-8 overflow-hidden"
       >
         {/* Rating row */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-4 text-center px-8">
