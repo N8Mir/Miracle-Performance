@@ -1,5 +1,27 @@
 User-agent: *
 Allow: /
 
-# Point crawlers to your sitemap
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# AI discovery files
+# llms.txt: https://mpcle.com/llms.txt
+# ai-catalog: https://mpcle.com/ai-catalog.json
+
+# Sitemap
 Sitemap: https://mpcle.com/sitemap.xml
