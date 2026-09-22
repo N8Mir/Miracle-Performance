@@ -1,34 +1,33 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { memberships, packages, topups } from "../data/pricing";
+import { memberships, packages } from "../data/pricing";
 
-const dropins = packages.filter((p) => p.name.startsWith("DROP-IN"));
-const sessionPacks = packages.filter((p) => !p.name.startsWith("DROP-IN"));
+const INCLUDED = ["STRENGTH", "CONDITIONING", "MP CLIMB", "REDWAVE"];
 
 const FAQ_ITEMS = [
   {
-    q: "How do credits work?",
-    a: "Credits are the currency you use to book classes. Each class costs a set number of credits: 3 credits for any MP class (Strength, Met-Con, Climb, Boxfit), 1 credit for a Redwave recovery session, and 4 credits for a Redwave premium class. Buy a membership for monthly credits, or grab a pack or drop-in when you need it.",
+    q: "How do memberships work?",
+    a: "Pick the plan that matches how often you train — 2x, 3x, or 4x a week, or Unlimited. Every membership is billed monthly and includes access to all class types. Book your sessions through the WellnessLiving app.",
   },
   {
-    q: "Do credits roll over if I don't use them?",
-    a: "Yes — unused credits on any active membership roll over month to month automatically. There's no expiry while your membership is active. Package credits have a 1-year expiry from purchase date.",
+    q: "Am I locked into a contract?",
+    a: "No. All memberships are month-to-month with no contracts. Upgrade, downgrade, pause, or cancel anytime through the WellnessLiving app or by contacting us directly. Cancellations take effect at the end of the current billing cycle.",
   },
   {
-    q: "Can I cancel my membership anytime?",
-    a: "Yes. All memberships are month-to-month with no contracts. Cancel, pause, or upgrade through the WellnessLiving app or by contacting us directly. Cancellations take effect at the end of the current billing cycle.",
+    q: "What's included in my membership?",
+    a: "Everything we run — strength, conditioning, MP Climb, and Redwave. There are no add-on fees or premium class surcharges. One price, full access.",
   },
   {
     q: "What's the difference between a membership and a package?",
-    a: "A membership gives you a set number of credits every month at a lower per-credit rate — best if you train regularly. A package is a one-time credit purchase — best if your schedule varies or you want to try us out before committing to a monthly plan.",
+    a: "A membership is a monthly plan at the lowest per-session rate — best if you train on a regular schedule. A package is a one-time purchase of sessions with no monthly commitment — best if your schedule varies or you want to train at your own pace.",
   },
   {
-    q: "Is Redwave included in my membership?",
-    a: "Redwave access is included in the Essential, Performance, Elite, and Ultimate tiers. Starter members can still access Redwave by purchasing a drop-in or top-up credits. Recovery sessions cost 1 credit; premium Redwave classes cost 4 credits.",
+    q: "Is Redwave included?",
+    a: "Yes. Redwave is included in every membership and every package at no extra cost — the same as any other class on the schedule.",
   },
   {
     q: "How do I get started?",
-    a: "Your first full week is free — no credit card, no commitment. Click 'Start Free Week', fill out a short form, and we'll get you booked into your first class. After your trial, pick the plan that fits your training frequency and you're set.",
+    a: "Your first full week is free for new members — no credit card, no commitment. Click 'Start Free Week', fill out a short form, and we'll get you booked into your first class. After your trial, pick the plan that fits your training frequency and you're set.",
   },
 ];
 
@@ -59,11 +58,11 @@ export default function PricingPage() {
           BEACHWOOD, OH
         </span>
         <h1 className="font-headline font-black text-5xl md:text-8xl tracking-tighter italic uppercase text-white leading-none mb-6">
-          SIMPLE CREDITS.<br />
+          SIMPLE PRICING.<br />
           <span className="text-primary-dim">NO CONTRACTS.</span>
         </h1>
         <p className="font-body text-on-surface-variant text-xl max-w-lg mx-auto mb-10">
-          Buy credits. Use them on any class. Roll them over. Cancel whenever.
+          Month-to-month memberships. Every class included. Your first week is free.
         </p>
         <Link
           to="/free-week"
@@ -79,9 +78,9 @@ export default function PricingPage() {
           <SectionTitle title="HOW IT WORKS" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/20 border border-outline-variant/20">
             {[
-              { step: "01", heading: "BUY CREDITS", body: "Pick a monthly membership for the best per-credit rate, or grab a class pack whenever you need it." },
-              { step: "02", heading: "BOOK ANY CLASS", body: "Use credits on any MP or Redwave class. Mix and match all week — strength, conditioning, recovery, and more." },
-              { step: "03", heading: "ROLL THEM OVER", body: "Unused membership credits carry forward automatically. No expiry, no pressure, no waste." },
+              { step: "01", heading: "PICK YOUR PLAN", body: "Choose a membership that matches how often you train, or buy a class pack with no monthly commitment." },
+              { step: "02", heading: "BOOK ANY CLASS", body: "Every plan covers every class we run. Mix and match all week — strength, conditioning, climb, and recovery." },
+              { step: "03", heading: "STAY FLEXIBLE", body: "Month-to-month, no contracts. Upgrade, downgrade, pause, or cancel whenever you need to." },
             ].map(({ step, heading, body }) => (
               <div key={step} className="bg-surface-container p-10 flex flex-col gap-4">
                 <span className="font-headline font-black text-5xl text-primary-dim/30 leading-none">{step}</span>
@@ -91,18 +90,19 @@ export default function PricingPage() {
             ))}
           </div>
 
-          {/* Credit cost reference */}
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            {[
-              { credits: "1 CREDIT", label: "Redwave Recovery Session" },
-              { credits: "3 CREDITS", label: "Any MP Class" },
-              { credits: "4 CREDITS", label: "Redwave Premium Classes" },
-            ].map(({ credits, label }) => (
-              <div key={credits} className="bg-surface-container border border-outline-variant/20 px-6 py-4 flex items-center gap-4">
-                <span className="font-headline font-black text-2xl text-primary-dim">{credits}</span>
-                <span className="text-xs font-bold uppercase tracking-tight text-white">{label}</span>
-              </div>
-            ))}
+          {/* Everything included */}
+          <div className="mt-8">
+            <p className="text-center font-headline text-primary-dim font-black tracking-widest text-xs uppercase mb-4">
+              EVERY PLAN INCLUDES
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {INCLUDED.map((label) => (
+                <div key={label} className="bg-surface-container border border-outline-variant/20 px-6 py-4 flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary-dim text-base leading-none">check</span>
+                  <span className="text-xs font-bold uppercase tracking-tight text-white">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -113,9 +113,9 @@ export default function PricingPage() {
           <SectionTitle
             eyebrow="MONTHLY"
             title="MEMBERSHIPS"
-            sub="Month-to-month. Upgrade, downgrade, or cancel anytime."
+            sub="Month-to-month. No contracts. First week free for new members."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-outline-variant/20 border border-outline-variant/20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 border border-outline-variant/20">
             {memberships.map((m) => (
               <div
                 key={m.name}
@@ -162,6 +162,9 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
+          <p className="text-center mt-8 font-body text-sm text-on-surface-variant">
+            New members train free for a full week before choosing a plan.
+          </p>
         </div>
       </section>
 
@@ -171,7 +174,7 @@ export default function PricingPage() {
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <img src="/redwave-logo.webp" alt="Redwave" className="h-8 w-auto" />
             <p className="font-body text-on-surface-variant text-sm text-center sm:text-left">
-              Included in <span className="text-white font-bold">Essential, Performance, Elite,</span> and <span className="text-white font-bold">Ultimate</span> memberships.
+              Included in <span className="text-white font-bold">every membership and every package</span> — no add-on fee.
             </p>
           </div>
           <Link
@@ -183,76 +186,38 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* Drop-ins */}
+      {/* Packages */}
       <section className="py-16 md:py-24 px-8 bg-surface-container-lowest">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <SectionTitle
             eyebrow="NO COMMITMENT"
-            title="DROP-INS"
-            sub="Pay per visit. No membership required."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-outline-variant/20 border border-outline-variant/20">
-            {dropins.map((p) => {
-              const isRedwave = p.accent === "redwave";
-              return (
-                <div key={p.name} className={`bg-surface-container p-10 flex flex-col justify-between border-b-4 ${isRedwave ? "border-redwave" : "border-primary-dim"}`}>
-                  <div>
-                    <h3 className={`font-headline text-xl font-black mb-1 uppercase tracking-tight ${isRedwave ? "text-redwave" : "text-primary-dim"}`}>
-                      {p.name}
-                    </h3>
-                    <div className="flex items-baseline gap-1 mb-6">
-                      <span className={`font-headline text-5xl font-black ${isRedwave ? "text-redwave" : "text-primary-dim"}`}>${p.price}</span>
-                    </div>
-                    <ul className="space-y-3 mb-10">
-                      {p.features.map((f) => (
-                        <li key={f} className="flex gap-2 text-xs font-bold tracking-tight text-white">
-                          <span className={`material-symbols-outlined text-base leading-none mt-px ${isRedwave ? "text-redwave" : "text-primary-dim"}`}>
-                            confirmation_number
-                          </span>
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`block text-center font-headline text-xs font-bold py-4 min-h-[44px] flex items-center justify-center uppercase tracking-widest transition-all ${
-                      isRedwave ? "bg-redwave text-white hover:bg-redwave-dark" : "bg-primary-dim text-black hover:bg-blue-400"
-                    }`}
-                  >
-                    {p.cta}
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Session Packs */}
-      <section className="py-16 md:py-24 px-8 bg-black">
-        <div className="max-w-3xl mx-auto">
-          <SectionTitle
-            eyebrow="BETTER VALUE"
             title="PACKAGES"
-            sub="One-time credit purchases. Best for flexible athletes."
+            sub="One-time purchases. All classes included. No membership required."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-outline-variant/20 border border-outline-variant/20">
-            {sessionPacks.map((p) => (
-              <div key={p.name} className="bg-surface-container p-10 flex flex-col justify-between border-b-4 border-primary-dim">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-outline-variant/20 border border-outline-variant/20">
+            {packages.map((p) => (
+              <div
+                key={p.name}
+                className="relative bg-surface-container p-8 flex flex-col justify-between border-b-4 border-primary-dim"
+              >
+                {p.badge && (
+                  <div className="absolute top-0 right-0 p-3">
+                    <span className="font-headline text-[9px] font-black tracking-widest px-2 py-1 uppercase bg-primary-dim text-black">
+                      {p.badge}
+                    </span>
+                  </div>
+                )}
                 <div>
                   <h3 className="font-headline text-xl font-black mb-1 uppercase tracking-tight text-primary-dim">
                     {p.name}
                   </h3>
                   <div className="flex items-baseline gap-1 mb-6">
-                    <span className="font-headline text-5xl font-black text-primary-dim">${p.price}</span>
+                    <span className="font-headline text-4xl font-black text-primary-dim">${p.price}</span>
                   </div>
                   <ul className="space-y-3 mb-10">
                     {p.features.map((f) => (
                       <li key={f} className="flex gap-2 text-xs font-bold tracking-tight text-white">
-                        <span className="material-symbols-outlined text-primary-dim text-base leading-none mt-px">confirmation_number</span>
+                        <span className="material-symbols-outlined text-primary-dim text-base leading-none mt-px">check</span>
                         {f}
                       </li>
                     ))}
@@ -265,38 +230,6 @@ export default function PricingPage() {
                   className="block text-center bg-primary-dim text-black font-headline text-xs font-bold py-4 min-h-[44px] flex items-center justify-center uppercase tracking-widest hover:bg-blue-400 transition-all"
                 >
                   {p.cta}
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Top-ups */}
-      <section className="py-16 md:py-24 px-8 bg-surface-container-lowest">
-        <div className="max-w-3xl mx-auto">
-          <SectionTitle
-            eyebrow="NEED MORE?"
-            title="TOP-UPS"
-            sub="Add credits to any active membership mid-month."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-outline-variant/20 border border-outline-variant/20">
-            {topups.map((t) => (
-              <div key={t.name} className="bg-surface-container p-10 flex flex-col justify-between border-b-4 border-primary-dim">
-                <div>
-                  <h3 className="font-headline text-xl font-black mb-1 uppercase tracking-tight text-primary-dim">{t.name}</h3>
-                  <div className="flex items-baseline gap-1 mb-4">
-                    <span className="font-headline text-5xl font-black text-primary-dim">${t.price}</span>
-                  </div>
-                  <p className="text-xs font-bold tracking-tight uppercase text-white mb-10">{t.credits}</p>
-                </div>
-                <a
-                  href={t.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block text-center bg-primary-dim text-black font-headline text-xs font-bold py-4 min-h-[44px] flex items-center justify-center uppercase tracking-widest hover:bg-blue-400 transition-all"
-                >
-                  BUY NOW
                 </a>
               </div>
             ))}
@@ -349,7 +282,7 @@ export default function PricingPage() {
           YOUR FIRST WEEK IS FREE.
         </h2>
         <p className="font-body text-black/70 text-lg mt-4 mb-10">
-          No commitment. No credit card. No obligation. Just show up.
+          New members only. No commitment. No credit card. Just show up.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link

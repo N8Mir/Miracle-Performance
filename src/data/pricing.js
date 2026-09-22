@@ -1,97 +1,78 @@
+// Month-to-month memberships. No contracts, first week free for new members.
+// Every tier includes all class types: strength, conditioning, MP Climb, and Redwave.
 export const memberships = [
   {
-    name: "STARTER",
-    price: 75,
-    features: ["12 CREDITS/MO", "~4 CLASSES", "ROLLOVER INCLUDED", "ALL CLASS ACCESS", "APP BOOKING"],
-    cta: "SELECT PLAN",
-    link: "/free-week",
-  },
-  {
-    name: "ESSENTIAL",
+    name: "2X / WEEK",
     price: 129,
-    features: ["24 CREDITS/MO", "~8 CLASSES", "ROLLOVER INCLUDED", "REDWAVE ACCESS", "APP BOOKING"],
+    features: ["2 CLASSES / WEEK", "ALL CLASS TYPES", "REDWAVE INCLUDED", "MP CLIMB INCLUDED", "MONTH-TO-MONTH"],
     cta: "SELECT PLAN",
     link: "/free-week",
   },
   {
-    name: "PERFORMANCE",
+    name: "3X / WEEK",
     price: 159,
     badge: "★ MOST POPULAR",
     popular: true,
-    features: ["36 CREDITS/MO", "~12 CLASSES", "ROLLOVER INCLUDED", "REDWAVE ACCESS", "1 GUEST PASS / MO"],
+    features: ["3 CLASSES / WEEK", "ALL CLASS TYPES", "REDWAVE INCLUDED", "MP CLIMB INCLUDED", "MONTH-TO-MONTH"],
     cta: "SELECT PLAN",
     link: "/free-week",
   },
   {
-    name: "ELITE",
+    name: "4X / WEEK",
+    price: 179,
+    features: ["4 CLASSES / WEEK", "ALL CLASS TYPES", "REDWAVE INCLUDED", "MP CLIMB INCLUDED", "MONTH-TO-MONTH"],
+    cta: "SELECT PLAN",
+    link: "/free-week",
+  },
+  {
+    name: "UNLIMITED",
     price: 215,
-    features: ["72 CREDITS/MO", "UP TO ~24 CLASSES", "ROLLOVER INCLUDED", "REDWAVE ACCESS", "1 GUEST PASS / MO"],
-    cta: "SELECT PLAN",
-    link: "/free-week",
-  },
-  {
-    name: "ULTIMATE",
-    price: 249,
-    badge: "NEW",
-    badgeColor: "redwave",
-    features: ["UNLIMITED CREDITS", "NO CAP", "ALL REDWAVE OFFERS", "APP BOOKING", "2 GUEST PASSES / MO"],
+    features: ["UNLIMITED CLASSES", "ALL CLASS TYPES", "REDWAVE INCLUDED", "MP CLIMB INCLUDED", "MONTH-TO-MONTH"],
     cta: "SELECT PLAN",
     link: "/free-week",
   },
 ];
 
-export const topups = [
-  {
-    name: "SMALL TOP-UP",
-    price: 32,
-    credits: "12 CREDITS",
-    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685",
-  },
-  {
-    name: "MEDIUM TOP-UP",
-    price: 60,
-    credits: "24 CREDITS",
-    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685",
-  },
-  {
-    name: "LARGE TOP-UP",
-    price: 115,
-    credits: "48 CREDITS",
-    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685",
-  },
-];
+// TODO: 5 PACK and 30 PACK point at the general WellnessLiving catalog until their
+// direct product links (k_id) are available. Swap in exact links when created.
+const CATALOG = "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685";
 
+// One-time purchases. All class types included — strength, conditioning, MP Climb, Redwave.
 export const packages = [
   {
-    name: "DROP-IN (REGULAR)",
+    name: "DROP-IN",
     price: 22,
-    accent: "primary",
-    features: ["3 CREDITS", "ANY MP CLASS"],
+    features: ["1 SESSION", "ANY CLASS TYPE", "NO MEMBERSHIP NEEDED"],
     cta: "BUY NOW",
     link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233847",
   },
   {
-    name: "DROP-IN (REDWAVE)",
-    price: 29,
-    accent: "redwave",
-    features: ["4 CREDITS", "REDWAVE PREMIUM ONLY"],
+    name: "5 PACK",
+    price: 99,
+    features: ["5 SESSIONS", "ANY CLASS TYPE", "$19.80 / SESSION"],
     cta: "BUY NOW",
-    link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233849",
+    link: CATALOG,
   },
   {
-    name: "10-SESSION PACK",
+    name: "10 PACK",
     price: 179,
-    accent: "primary",
-    features: ["30 CREDITS", "AUTO-RENEWS AT 0", "CANCEL ANYTIME"],
+    features: ["10 SESSIONS", "ANY CLASS TYPE", "$17.90 / SESSION"],
     cta: "BUY NOW",
     link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233855",
   },
   {
-    name: "20-SESSION PACK",
+    name: "20 PACK",
     price: 319,
-    accent: "primary",
-    features: ["60 CREDITS", "ONE-TIME", "1-YEAR EXPIRY"],
+    features: ["20 SESSIONS", "ANY CLASS TYPE", "$15.95 / SESSION"],
     cta: "BUY NOW",
     link: "https://www.wellnessliving.com/rs/catalog-view.html?k_business=136685&id_sale=1&k_id=233862",
+  },
+  {
+    name: "30 PACK",
+    price: 420,
+    badge: "BEST VALUE",
+    features: ["30 SESSIONS", "ANY CLASS TYPE", "$14.00 / SESSION", "1-YEAR EXPIRY"],
+    cta: "BUY NOW",
+    link: CATALOG,
   },
 ];
