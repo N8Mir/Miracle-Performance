@@ -11,6 +11,7 @@ import PricingPage from "./pages/PricingPage.jsx";
 import FreeWeekPage from "./pages/FreeWeekPage.jsx";
 import RedwavePage from "./pages/RedwavePage.jsx";
 import SchedulePage from "./pages/SchedulePage.jsx";
+import PilatesPage from "./pages/PilatesPage.jsx";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/schedule" element={<SchedulePage />} />
           <Route path="/free-week" element={<FreeWeekPage />} />
           <Route path="/redwave" element={<RedwavePage />} />
+          <Route path="/pilates" element={<PilatesPage />} />
         </Routes>
         <SiteFooter />
         <MobileStickyCTA />
