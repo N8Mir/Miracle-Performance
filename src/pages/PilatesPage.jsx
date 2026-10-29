@@ -84,7 +84,13 @@ function PhotoSlot({ slot, className = "" }) {
   if (slot.src) {
     return (
       <div className={`overflow-hidden rounded-sm ${className}`}>
-        <img src={slot.src} alt={slot.label} loading="lazy" className="w-full h-full object-cover" />
+        <img
+          src={slot.src}
+          alt={slot.label}
+          loading="lazy"
+          className="w-full h-full object-cover"
+          style={slot.position ? { objectPosition: slot.position } : undefined}
+        />
       </div>
     );
   }

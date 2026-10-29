@@ -1,5 +1,23 @@
 # Changelog: Room 216 (Pilates) page
 
+## v1.7.1 · 2026-10-29 · First studio photos
+
+**Site version:** 1.7.1 (was 1.7.0)
+
+| File | Status | Change |
+|---|---|---|
+| `public/pilates/room-wide.webp` | New | Wide shot of the room: wallpaper wall, arched mirror, both towers. Fills the large gallery frame. |
+| `public/pilates/towers-corner.webp` | New | Corner shot of both towers, window and props. Fills the first small frame. |
+| `public/pilates/liz-cueing.webp` | New | Liz cueing a client on the reformer. Fills the second small frame. |
+| `src/data/pilates.js` | Edited | Gallery slots now point at the three photos, with descriptive alt text and a focal point per photo (`position`). "Duet in session" is still a placeholder. |
+| `src/pages/PilatesPage.jsx` | Edited | Photo frames respect each photo's focal point when cropping, so faces aren't cut off. |
+| `package.json` | Edited | Version 1.7.0 → 1.7.1. |
+
+### Still placeholder
+- Liz headshot and the "Duet in session" photo (coming this weekend).
+
+---
+
 ## v1.7.0 · 2026-10-29 · Liz's content, logo, light theme
 
 **Site version:** 1.7.0 (was 1.6.0)

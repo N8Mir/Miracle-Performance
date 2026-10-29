@@ -120,10 +120,11 @@ export const equipment = {
 };
 
 // Photo slots for the gallery. Order = display order. First slot is the large one.
+// `position` sets the focal point when a photo is cropped to fit its frame (CSS object-position).
 export const gallery = [
-  { src: null, label: "The room, wide", hint: "Landscape 3:2, both reformers + wallpaper wall in frame" },
-  { src: null, label: "Reformer detail", hint: "Square, close on springs, footbar or leather straps" },
-  { src: null, label: "Liz cueing a client", hint: "Square, candid, mid-movement" },
+  { src: "/pilates/room-wide.webp", label: "Room 216: both reformer towers and the wallpaper wall", position: "50% 50%" },
+  { src: "/pilates/towers-corner.webp", label: "Personal Hour reformer towers with props", position: "35% 50%" },
+  { src: "/pilates/liz-cueing.webp", label: "Liz cueing a client on the reformer", position: "50% 0%" },
   { src: null, label: "Duet in session", hint: "Landscape 3:2, two clients side by side" },
 ];
 
