@@ -1,4 +1,31 @@
-# Changelog: Pilates studio page
+# Changelog: Room 216 (Pilates) page
+
+## v1.7.0 · 2026-10-29 · Liz's content, logo, light theme
+
+**Site version:** 1.7.0 (was 1.6.0)
+
+| File | Status | Change |
+|---|---|---|
+| `src/data/pilates.js` | Edited | Liz's real content: name **Room 216 / A Pilates Practice**, welcome intro, Private and Duet descriptions, bio (certifications pulled out into their own list), equipment (Personal Hour Nano Elite Plus towers + features), "Who is Pilates for?" with the three pillars, and two client testimonials (JW, MB). Booking policy now says sessions open **1 week** out. |
+| `src/pages/PilatesPage.jsx` | Rewritten | Light theme to match the logo. Hero shows the logo next to "Welcome to Room 216". Policies moved under pricing. New layouts for certifications, equipment features, the three pillars + closing quote, and two testimonials. Dark wallpaper band kept for the final booking section. |
+| `public/pilates/room216-logo-900.webp`, `room216-logo-480.webp` | New | Web-sized copies of Liz's transparent PNG logo. |
+| `tailwind.config.js` | Edited | Studio palette replaced with one taken from the logo: warm white `pilates-bg #FBF9F5`, navy `pilates-navy #2E3550`, gold `pilates-gold #A87850` (`pilates-gold-ink #8A5F3A` for small text), powder blue `pilates-sky #E6EFF4`, slate blue `pilates-blue #4D6C80`. All text colors pass WCAG AA contrast. |
+| `src/components/MobileStickyCTA.jsx` | Edited | Phone booking bar on `/pilates` recolored to the new palette. |
+| `package.json` | Edited | Version 1.6.0 → 1.7.0. |
+
+### Still placeholder
+- Photos: Liz headshot + 4 studio shots (frames on the page say which shot goes where).
+- `PILATES_BOOK_URL`: still the general schedule; swap for the Intro's direct booking link.
+- Peak Pilates certification year: Liz's doc had it as "[2024]" (bracketed), so it's left off until confirmed.
+
+### Edits made to Liz's copy (for her review)
+- Bio trimmed and split into two paragraphs; the certification sentences moved to the Certifications list. Fixed "even since" → "ever since".
+- "Who is Pilates for?" lightly condensed; all three pillars and her closing line kept word for word.
+- First testimonial: "keeps every session" → "keep every session" (grammar).
+
+---
+
+## v1.6.0 · 2026-10-13 · First draft (placeholders)
 
 **Site version:** 1.6.0 (was 1.5.0)
 **Date:** 2026-10-13
