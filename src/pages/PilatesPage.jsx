@@ -174,38 +174,51 @@ export default function PilatesPage() {
 
   return (
     <main className="bg-pilates-bg text-pilates-body font-body">
-      {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 md:pt-36 md:pb-24 grid md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] gap-10 md:gap-16 items-center">
+      {/* HERO: original navy + wallpaper; logo sits on a framed cream panel so its navy lettering reads */}
+      <section className="relative overflow-hidden bg-pilates-navy-deep text-pilates-cream">
+        <picture>
+          <source media="(max-width: 767px)" srcSet="/pilates/wallpaper-800.webp" />
           <img
-            src={studio.logo.src}
-            srcSet={`${studio.logo.srcSmall} 480w, ${studio.logo.src} 900w`}
-            sizes="(max-width: 767px) 72vw, 440px"
-            alt={`${studio.name}, ${studio.tagline}`}
-            width="900"
-            height="988"
-            className="w-[72%] max-w-[300px] md:w-full md:max-w-[440px] h-auto mx-auto"
+            src="/pilates/wallpaper-1600.webp"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover opacity-45"
             loading="eager"
           />
+        </picture>
+        <div className="absolute inset-0 bg-gradient-to-b from-pilates-navy-deep/80 via-pilates-navy-deep/65 to-pilates-navy-deep/90" />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 md:pt-36 md:pb-24 grid md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] gap-10 md:gap-16 items-center">
+          <div className="mx-auto w-[78%] max-w-[320px] md:w-full md:max-w-[420px] bg-pilates-bg p-5 md:p-7 border border-pilates-gold-light/70 shadow-[0_20px_60px_rgba(0,0,0,0.45)] outline outline-1 outline-offset-[6px] outline-pilates-gold-light/40">
+            <img
+              src={studio.logo.src}
+              srcSet={`${studio.logo.srcSmall} 480w, ${studio.logo.src} 900w`}
+              sizes="(max-width: 767px) 70vw, 380px"
+              alt={`${studio.name}, ${studio.tagline}`}
+              width="900"
+              height="988"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </div>
           <div className="text-center md:text-left">
-            <Eyebrow>{studio.eyebrow}</Eyebrow>
-            <h1 className="mt-4 font-display font-medium text-[2.6rem] sm:text-6xl text-pilates-navy leading-[1.02]">
+            <p className="font-body text-[11px] font-semibold uppercase tracking-[0.28em] text-pilates-gold-light">{studio.eyebrow}</p>
+            <h1 className="mt-4 font-display font-medium text-[2.6rem] sm:text-6xl text-pilates-cream leading-[1.02]">
               {studio.headline}
             </h1>
-            <Ornament className="mt-6 justify-center md:justify-start" />
-            <p className="mt-6 text-lg text-pilates-body leading-relaxed max-w-xl mx-auto md:mx-0">{studio.intro}</p>
+            <Ornament light className="mt-6 justify-center md:justify-start" />
+            <p className="mt-6 text-lg text-pilates-cream/85 leading-relaxed max-w-xl mx-auto md:mx-0">{studio.intro}</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-              <BookButton />
+              <BookButton onDark />
               <a
                 href="#pricing"
-                className="inline-flex items-center justify-center px-7 py-4 min-h-[48px] border border-pilates-navy/30 text-pilates-navy hover:bg-pilates-navy/5 transition-colors"
+                className="inline-flex items-center justify-center px-7 py-4 min-h-[48px] border border-pilates-cream/40 text-pilates-cream hover:bg-pilates-cream/10 transition-colors"
               >
                 See pricing
               </a>
             </div>
-            <ul className="mt-8 flex flex-wrap justify-center md:justify-start gap-2 text-[11px] uppercase tracking-[0.16em] text-pilates-blue">
+            <ul className="mt-8 flex flex-wrap justify-center md:justify-start gap-2 text-[11px] uppercase tracking-[0.16em] text-pilates-cream/85">
               {studio.chips.map((c) => (
-                <li key={c} className="px-3 py-1.5 border border-pilates-line bg-white">
+                <li key={c} className="px-3 py-1.5 border border-pilates-cream/25 bg-pilates-navy-deep/40">
                   {c}
                 </li>
               ))}
@@ -215,7 +228,7 @@ export default function PilatesPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-20 md:py-24 bg-pilates-surface border-y border-pilates-line">
+      <section className="py-20 md:py-24 bg-pilates-surface border-b border-pilates-line">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle eyebrow="How it works" title="Three steps to your first session" />
           <ol className="mt-12 grid md:grid-cols-3 gap-px bg-pilates-line border border-pilates-line">

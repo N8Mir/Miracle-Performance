@@ -1,5 +1,16 @@
 # Changelog: Room 216 (Pilates) page
 
+## v1.7.2 · 2026-10-29 · Navy wallpaper hero is back
+
+**Site version:** 1.7.2 (was 1.7.1)
+
+| File | Status | Change |
+|---|---|---|
+| `src/pages/PilatesPage.jsx` | Edited | Hero returns to the original deep navy with the darkened wallpaper pattern behind it. The logo now sits on a framed cream panel (gold hairline border + offset outline, soft shadow) so its navy lettering stays readable. Headline, intro and chips switch to cream; "Book an intro" becomes a cream button. The rest of the page keeps the light theme. |
+| `package.json` | Edited | Version 1.7.1 → 1.7.2. |
+
+---
+
 ## v1.7.1 · 2026-10-29 · First studio photos
 
 **Site version:** 1.7.1 (was 1.7.0)
