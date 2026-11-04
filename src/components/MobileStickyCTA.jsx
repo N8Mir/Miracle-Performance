@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { PILATES_BOOK_URL } from "../data/pilates";
+import { PILATES_BOOK_URL, PILATES_TEXT } from "../data/pilates";
 
 export default function MobileStickyCTA() {
   const { pathname } = useLocation();
@@ -19,10 +19,10 @@ export default function MobileStickyCTA() {
             Book Intro · $50
           </a>
           <a
-            href="sms:12168329212"
+            href={PILATES_TEXT}
             className="px-4 py-3 border border-pilates-navy/30 text-pilates-navy font-semibold"
           >
-            Text
+            Text Liz
           </a>
         </div>
       </div>

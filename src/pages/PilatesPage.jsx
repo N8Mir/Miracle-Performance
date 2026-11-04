@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { Instagram, MessageSquare, ArrowRight, Camera } from "lucide-react";
+import { Instagram, MessageSquare, ArrowRight, Camera, Phone, Mail } from "lucide-react";
 import {
   PILATES_BOOK_URL,
   PILATES_TEXT,
+  contact,
   studio,
   steps,
   formats,
@@ -74,6 +75,54 @@ function SectionTitle({ eyebrow, title, children, center = false }) {
       {children && (
         <p className={`mt-4 text-pilates-body max-w-2xl leading-relaxed ${center ? "mx-auto" : ""}`}>{children}</p>
       )}
+    </div>
+  );
+}
+
+// Liz's phone, email and Instagram. `compact` is the one-line version for the hero and closing section.
+function ReachOut({ onDark = false, compact = false }) {
+  const linkCls = onDark
+    ? "text-pilates-cream underline decoration-pilates-gold-light/60 underline-offset-4 hover:decoration-pilates-cream"
+    : "text-pilates-navy underline decoration-pilates-gold/60 underline-offset-4 hover:decoration-pilates-navy";
+  if (compact) {
+    return (
+      <p className={`text-sm leading-relaxed ${onDark ? "text-pilates-cream/85" : "text-pilates-body"}`}>
+        <span className="font-semibold">{contact.heading}</span> Text or call Liz at{" "}
+        <a href={`tel:${contact.phone}`} className={`${linkCls} whitespace-nowrap`}>{contact.phoneDisplay}</a>, email{" "}
+        <a href={`mailto:${contact.email}`} className={`${linkCls} break-all sm:break-normal`}>{contact.email}</a>, or DM{" "}
+        <a href={`https://instagram.com/${contact.instagram}`} target="_blank" rel="noreferrer" className={`${linkCls} whitespace-nowrap`}>
+          @{contact.instagram}
+        </a>
+        .
+      </p>
+    );
+  }
+  const items = [
+    { icon: Phone, label: "Text or call", value: contact.phoneDisplay, href: `sms:${contact.phone}` },
+    { icon: Mail, label: "Email", value: contact.email, href: `mailto:${contact.email}` },
+    { icon: Instagram, label: "Instagram", value: `@${contact.instagram}`, href: `https://instagram.com/${contact.instagram}`, external: true },
+  ];
+  return (
+    <div className="border border-pilates-gold/60 bg-white p-8 md:p-10">
+      <h3 className="font-display text-3xl md:text-4xl text-pilates-navy">{contact.heading}</h3>
+      <p className="mt-2 max-w-xl">{contact.line}</p>
+      <ul className="mt-6 grid md:grid-cols-3 gap-3">
+        {items.map(({ icon: Icon, label, value, href, external }) => (
+          <li key={label}>
+            <a
+              href={href}
+              {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+              className="flex items-center gap-3 h-full px-4 py-3 min-h-[56px] border border-pilates-line bg-pilates-bg hover:border-pilates-gold transition-colors"
+            >
+              <Icon className="w-5 h-5 text-pilates-gold shrink-0" aria-hidden="true" />
+              <span className="min-w-0">
+                <span className="block text-[11px] uppercase tracking-[0.16em] text-pilates-gold-ink">{label}</span>
+                <span className="block text-sm text-pilates-navy font-medium break-words">{value}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -218,6 +267,9 @@ export default function PilatesPage() {
                 See pricing
               </a>
             </div>
+            <div className="mt-5 max-w-xl mx-auto md:mx-0">
+              <ReachOut onDark compact />
+            </div>
             <ul className="mt-8 flex flex-wrap justify-center md:justify-start gap-2 text-[11px] uppercase tracking-[0.16em] text-pilates-cream/85">
               {studio.chips.map((c) => (
                 <li key={c} className="px-3 py-1.5 border border-pilates-cream/25 bg-pilates-navy-deep/40">
@@ -303,6 +355,10 @@ export default function PilatesPage() {
               </div>
             ))}
           </dl>
+
+          <div className="mt-8">
+            <ReachOut />
+          </div>
         </div>
       </section>
 
@@ -460,8 +516,11 @@ export default function PilatesPage() {
               className="inline-flex items-center justify-center gap-2 px-7 py-4 min-h-[48px] border border-pilates-cream/40 text-pilates-cream hover:bg-pilates-cream/10 transition-colors"
             >
               <MessageSquare className="w-4 h-4" aria-hidden="true" />
-              Text a question
+              Text Liz
             </a>
+          </div>
+          <div className="mt-8 max-w-xl">
+            <ReachOut onDark compact />
           </div>
         </div>
       </section>

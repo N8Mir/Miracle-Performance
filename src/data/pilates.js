@@ -13,7 +13,18 @@
 export const PILATES_BOOK_URL =
   "https://www.wellnessliving.com/rs/appointment-start.html?id_class_tab=3&id_mode=1&k_business=136685&k_service=329234";
 
-export const PILATES_TEXT = "sms:12168329212";
+// Liz's direct contact for the studio. Shown in the hero, after pricing, and in the closing section.
+export const contact = {
+  phone: "+19176972674",
+  phoneDisplay: "(917) 697-2674",
+  email: "room216pilates@gmail.com",
+  instagram: "releasewithliz",
+  heading: "Can't find a time?",
+  line: "No problem. Reach out to Liz and she'll work with you to find one.",
+};
+
+// "Text" buttons on this page go to Liz's cell.
+export const PILATES_TEXT = `sms:${contact.phone}`;
 
 export const studio = {
   name: "Room 216",
@@ -96,7 +107,7 @@ export const instructor = {
     { title: "Intensive Pilates Mat Certification", detail: "Kelly Kane School · 200 hours · 2014" },
     { title: "Barre Certification", detail: "Barre Fly Cleveland · 2017" },
     // Year was bracketed in Liz's doc; confirm before launch, then add it to the detail line.
-    { title: "Peak Pilates Equipment Certification", detail: "300 hours · Mat, Reformer, Cadillac, Chair, Spine Corrector" },
+    { title: "Peak Pilates Equipment Certification", detail: "300 hours · Mat, Reformer, Cadillac, Chair, Barrel, Spine Corrector" },
   ],
   highlights: ["Practicing Pilates 20+ years", "Teaching since 2014"],
   bio: [

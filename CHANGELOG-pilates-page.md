@@ -1,5 +1,18 @@
 # Changelog: Room 216 (Pilates) page
 
+## v1.10.0 · 2026-11-04 · Liz's contact info, Barrel certification
+
+**Site version:** 1.10.0 (was 1.9.1)
+
+| File | Status | Change |
+|---|---|---|
+| `src/data/pilates.js` | Edited | New `contact` block with Liz's studio contact: (917) 697-2674, room216pilates@gmail.com, @releasewithliz, and her "Can't find a time? No problem" line. "Text" buttons on the page now go to Liz's cell (were the gym's number). Peak Pilates certification now lists Barrel: Mat, Reformer, Cadillac, Chair, Barrel, Spine Corrector. |
+| `src/pages/PilatesPage.jsx` | Edited | Liz's contact shows in three places: a one-line "Can't find a time?" under the hero buttons, a "Can't find a time?" card with Text or call / Email / Instagram tiles right after pricing and policies, and the same line in the closing section. Closing button renamed "Text Liz". |
+| `src/components/MobileStickyCTA.jsx` | Edited | Phone sticky bar's "Text" button now reads "Text Liz" and texts her cell. |
+| `package.json` | Edited | Version 1.9.1 → 1.10.0. |
+
+---
+
 ## v1.9.1 · 2026-11-04 · 10-minute reset between clients
 
 **Site version:** 1.9.1 (was 1.9.0)
