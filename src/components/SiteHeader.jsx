@@ -6,6 +6,7 @@ const navItems = [
   { label: "STUDIO", to: "/" },
   { label: "CLASSES", to: "/#classes" },
   { label: "RECOVERY", to: "/redwave" },
+  { label: "PILATES", to: "/pilates" },
   { label: "MEMBERSHIP", to: "/#pricing" },
   { label: "SCHEDULE", to: "/schedule" },
   { label: "PRICING", to: "/pricing" },
@@ -38,7 +39,7 @@ export default function SiteHeader() {
       </Link>
 
       {/* Desktop nav */}
-      <nav className="hidden md:flex gap-8 items-center">
+      <nav className="hidden lg:flex gap-5 xl:gap-8 items-center">
         {navItems.map((item) => {
           const active = isActive(item.to);
           const isRecovery = item.label === "RECOVERY";
@@ -47,7 +48,7 @@ export default function SiteHeader() {
               key={item.label}
               to={item.to}
               className={[
-                "font-headline uppercase tracking-[0.05em] text-xs font-bold transition-colors",
+                "font-headline uppercase tracking-[0.05em] text-xs font-bold transition-colors whitespace-nowrap",
                 active
                   ? "text-primary-dim border-b-2 border-primary-dim pb-1"
                   : isRecovery
@@ -62,23 +63,23 @@ export default function SiteHeader() {
       </nav>
 
       {/* Desktop CTAs */}
-      <div className="hidden md:flex gap-4 items-center">
+      <div className="hidden lg:flex gap-2 xl:gap-4 items-center">
         <Link
           to="/free-week"
-          className="font-headline uppercase tracking-[0.05em] text-xs font-bold text-white/70 hover:text-white transition-colors px-4 py-2"
+          className="font-headline uppercase tracking-[0.05em] text-xs font-bold text-white/70 hover:text-white transition-colors px-4 py-2 whitespace-nowrap"
         >
           FREE TRIAL
         </Link>
         <Link
           to="/free-week"
-          className="bg-primary-dim text-black font-headline uppercase tracking-[0.05em] text-xs font-bold px-6 py-3 hover:bg-blue-400 transition-all duration-300"
+          className="bg-primary-dim text-black font-headline uppercase tracking-[0.05em] text-xs font-bold px-6 py-3 hover:bg-blue-400 transition-all duration-300 whitespace-nowrap"
         >
           JOIN NOW
         </Link>
       </div>
 
       {/* Mobile actions */}
-      <div className="md:hidden flex items-center gap-3">
+      <div className="lg:hidden flex items-center gap-3">
         <Link
           to="/free-week"
           className="bg-primary-dim text-black font-headline uppercase tracking-[0.05em] text-xs font-bold px-4 py-3 min-h-[44px] flex items-center"
@@ -101,7 +102,7 @@ export default function SiteHeader() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="absolute top-20 left-0 w-full md:hidden"
+          className="absolute top-20 left-0 w-full lg:hidden"
           style={{
             background: "rgba(0,0,0,0.95)",
             borderBottom: "1px solid rgba(255,255,255,0.05)",

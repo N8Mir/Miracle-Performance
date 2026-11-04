@@ -1,5 +1,22 @@
 # Changelog: Room 216 (Pilates) page
 
+## v1.9.0 · 2026-11-04 · Launch: page goes public
+
+**Site version:** 1.9.0 (was 1.8.0)
+
+| File | Status | Change |
+|---|---|---|
+| `src/data/pilates.js` | Edited | Every "Book" button now goes straight to the Intro Reformer Session in WellnessLiving (its direct booking URL) instead of the general schedule. |
+| `src/components/SiteHeader.jsx` | Edited | "PILATES" added to the main nav (desktop and phone menu), after Recovery. The header now switches to the phone menu below 1024px wide and nav labels no longer wrap. It was already overflowing on tablets before this change. |
+| `src/components/SiteFooter.jsx` | Edited | "Room 216 Pilates" link added under Redwave Studio. |
+| `public/sitemap.xml` | Edited | `/pilates` added so Google can find the page. |
+| `package.json` | Edited | Version 1.8.0 → 1.9.0. |
+
+### Still open
+- Peak Pilates certification year (not shown on the page until Liz confirms it).
+
+---
+
 ## v1.8.0 · 2026-11-04 · Professional photos, no placeholders left
 
 **Site version:** 1.8.0 (was 1.7.2)

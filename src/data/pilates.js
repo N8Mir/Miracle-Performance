@@ -8,10 +8,10 @@
 //     the page shows a labeled placeholder frame describing the shot to take.
 //   • Prices come from WellnessLiving. If a price changes there, change it here.
 
-// Booking link. PLACEHOLDER: swap for the Intro Reformer Session's
-// "Direct booking URL" from WellnessLiving (Setup > Appointment > Intro > bottom of page).
+// Booking link: the Intro Reformer Session's "Direct booking URL" from WellnessLiving
+// (Setup > Appointment > Intro Reformer Session > bottom of page).
 export const PILATES_BOOK_URL =
-  "https://www.wellnessliving.com/schedule/miracleperformance";
+  "https://www.wellnessliving.com/rs/appointment-start.html?id_class_tab=3&id_mode=1&k_business=136685&k_service=329234";
 
 export const PILATES_TEXT = "sms:12168329212";
 
