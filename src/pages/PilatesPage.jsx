@@ -86,6 +86,8 @@ function PhotoSlot({ slot, className = "" }) {
       <div className={`overflow-hidden rounded-sm ${className}`}>
         <img
           src={slot.src}
+          srcSet={slot.srcSmall ? `${slot.srcSmall} 800w, ${slot.src} 1600w` : undefined}
+          sizes={slot.srcSmall ? "(max-width: 768px) 100vw, 50vw" : undefined}
           alt={slot.label}
           loading="lazy"
           className="w-full h-full object-cover"
@@ -376,6 +378,17 @@ export default function PilatesPage() {
             <PhotoSlot slot={gallery[2]} className="aspect-square md:aspect-auto" />
             <PhotoSlot slot={gallery[3]} className="col-span-2 aspect-[3/2] md:aspect-auto" />
           </div>
+          {gallery.length > 4 && (
+            <div className="mt-3 md:mt-4 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+              {gallery.slice(4).map((slot, i) => (
+                <PhotoSlot
+                  key={slot.label}
+                  slot={slot}
+                  className={`aspect-[3/2] ${i === 2 ? "col-span-2 md:col-span-1" : ""}`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

@@ -1,5 +1,27 @@
 # Changelog: Room 216 (Pilates) page
 
+## v1.8.0 · 2026-11-04 · Professional photos, no placeholders left
+
+**Site version:** 1.8.0 (was 1.7.2)
+
+| File | Status | Change |
+|---|---|---|
+| `public/pilates/liz-portrait.webp` + `-800` | New | Liz's portrait from the pro shoot. Fills the instructor photo frame. |
+| `public/pilates/room-studio.webp` + `-800` | New | Wide shot of the finished room. Large gallery frame. |
+| `public/pilates/liz-laughing.webp`, `ring-box.webp`, `duet-rings.webp` + `-800` | New | Session shots for the two small frames and the wide "duet" frame (replaces the last placeholder). |
+| `public/pilates/bridge-band.webp`, `tower-straps.webp`, `room-in-session.webp` + `-800` | New | Three more session shots for a new row under the gallery. |
+| `public/pilates/room-wide.webp`, `towers-corner.webp`, `liz-cueing.webp` | Removed | Earlier phone photos, replaced by the pro shoot. Safe to delete from your folder too. |
+| `src/data/pilates.js` | Edited | Instructor photo and all 7 gallery photos set, with alt text and focal points. Each photo has an 800px version for phones. |
+| `src/pages/PilatesPage.jsx` | Edited | Photos load the smaller file on phones (`srcSet`). Gallery shows a second row when there are more than 4 photos. |
+| `package.json` | Edited | Version 1.7.2 → 1.8.0. |
+
+### Still to do before launch
+- Swap `PILATES_BOOK_URL` for the Intro session's direct booking link.
+- Confirm the Peak Pilates certification year.
+- Add the page to the nav and sitemap.
+
+---
+
 ## v1.7.2 · 2026-10-29 · Navy wallpaper hero is back
 
 **Site version:** 1.7.2 (was 1.7.1)

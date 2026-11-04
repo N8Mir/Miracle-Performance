@@ -87,9 +87,10 @@ export const instructor = {
   name: "Liz Newman",
   instagram: "releasewithliz",
   photo: {
-    src: null,
-    label: "Liz headshot",
-    hint: "Portrait 4:5, natural light, in the studio if possible",
+    src: "/pilates/liz-portrait.webp",
+    srcSmall: "/pilates/liz-portrait-800.webp",
+    label: "Liz Newman seated on a Pilates box in Room 216",
+    position: "50% 30%",
   },
   credentials: [
     { title: "Intensive Pilates Mat Certification", detail: "Kelly Kane School · 200 hours · 2014" },
@@ -119,13 +120,24 @@ export const equipment = {
     "No detail has been overlooked. Every element has been thoughtfully selected to create an intimate, elegant, and exceptionally well-equipped studio where precision, strength, and movement come together beautifully.",
 };
 
-// Photo slots for the gallery. Order = display order. First slot is the large one.
+// Photo slots for the gallery. Order = display order.
+// Slots 1–4 fill the feature grid (1 = large, 4 = wide); slots 5–7 form the row beneath it.
 // `position` sets the focal point when a photo is cropped to fit its frame (CSS object-position).
+// `srcSmall` is an 800px version phones load instead of the full 1600px file.
+const photo = (name, label, position = "50% 50%") => ({
+  src: `/pilates/${name}.webp`,
+  srcSmall: `/pilates/${name}-800.webp`,
+  label,
+  position,
+});
 export const gallery = [
-  { src: "/pilates/room-wide.webp", label: "Room 216: both reformer towers and the wallpaper wall", position: "50% 50%" },
-  { src: "/pilates/towers-corner.webp", label: "Personal Hour reformer towers with props", position: "35% 50%" },
-  { src: "/pilates/liz-cueing.webp", label: "Liz cueing a client on the reformer", position: "50% 0%" },
-  { src: null, label: "Duet in session", hint: "Landscape 3:2, two clients side by side" },
+  photo("room-studio", "Room 216: both reformer towers and the wallpaper wall", "40% 60%"),
+  photo("liz-laughing", "Liz laughing with a client mid-session", "72% 40%"),
+  photo("ring-box", "Liz guiding a client through a ring exercise on the box", "45% 35%"),
+  photo("duet-rings", "A duet session with Liz and two clients", "55% 40%"),
+  photo("bridge-band", "Liz cueing a bridge with a resistance band", "55% 45%"),
+  photo("tower-straps", "Leg work in the tower straps", "45% 30%"),
+  photo("room-in-session", "Both towers in use during a session", "45% 55%"),
 ];
 
 export const forWho = {
