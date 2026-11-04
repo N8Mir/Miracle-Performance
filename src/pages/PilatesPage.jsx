@@ -250,7 +250,7 @@ export default function PilatesPage() {
       <section className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle eyebrow="Sessions" title="Private or duet">
-            Every session is 50 minutes on a reformer tower, with a 5-minute reset between clients.
+            Every session is 50 minutes on a reformer tower, with a 10-minute reset between clients.
           </SectionTitle>
           <div className="mt-12 grid md:grid-cols-2 gap-6">
             {formats.map((f) => (

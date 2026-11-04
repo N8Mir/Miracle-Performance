@@ -1,5 +1,16 @@
 # Changelog: Room 216 (Pilates) page
 
+## v1.9.1 · 2026-11-04 · 10-minute reset between clients
+
+**Site version:** 1.9.1 (was 1.9.0)
+
+| File | Status | Change |
+|---|---|---|
+| `src/pages/PilatesPage.jsx` | Edited | Formats section now says "a 10-minute reset between clients" (was 5), matching the 10-minute gap set on all three Pilates services in WellnessLiving. |
+| `package.json` | Edited | Version 1.9.0 → 1.9.1. |
+
+---
+
 ## v1.9.0 · 2026-11-04 · Launch: page goes public
 
 **Site version:** 1.9.0 (was 1.8.0)
