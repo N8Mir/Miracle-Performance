@@ -1,5 +1,15 @@
 # Changelog: Room 216 (Pilates) page
 
+## 2026-11-05 · MP logo for email (no page change)
+
+**Site version:** unchanged (1.10.0)
+
+| File | Status | Change |
+|---|---|---|
+| `public/email/mp-logo.png` | New | MP logo on black, 1000px wide, for the WellnessLiving member email header. |
+
+---
+
 ## 2026-11-05 · Email images (no page change)
 
 **Site version:** unchanged (1.10.0)
