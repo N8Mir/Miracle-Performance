@@ -1,5 +1,20 @@
 # Changelog: Room 216 (Pilates) page
 
+## 2026-11-05 · Email images (no page change)
+
+**Site version:** unchanged (1.10.0)
+
+| File | Status | Change |
+|---|---|---|
+| `public/email/room216-logo.png` | New | Room 216 logo on cream, for the launch email. |
+| `public/email/room216-studio.jpg` | New | Room photo cropped 1200×640 for the email header. |
+| `public/email/room216-duet.jpg` | New | Duet session photo, 1200×720. |
+| `public/email/room216-liz.jpg` | New | Liz portrait, 600×750. |
+
+JPG/PNG because Outlook can't show WebP. These are only used by the WellnessLiving email template and aren't linked from any page.
+
+---
+
 ## v1.10.0 · 2026-11-04 · Liz's contact info, Barrel certification
 
 **Site version:** 1.10.0 (was 1.9.1)
